@@ -1,0 +1,67 @@
+#
+# SECURITY WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+#
+# If you don't protect this directory from direct web access, anybody will be able to see your passwords.
+# http://nette.org/security-warning
+#
+parameters:
+	security:
+		salt: Sh7ihCZNxkwjGblcHT2eCTjNglHezbahvrfOJaWmE
+	page:
+		title: Science slam
+		keywords: "Science slam, věda, výzkum, osvětlujeme vědu, jak se dělá věda, co se zkoumá"
+		description: "Science slam je projekt Masarykovy univerzity, jehož cílem je osvětlit probíhající výzkum lidem."
+	mails:
+		noreply: noreply@dispostable.com
+	form:
+		ticket:
+			mail: tickets@dispostable.com
+			from: "2013-05-12 10:30:00"
+			to: "2013-05-13 10:30:00"
+		signup:
+			mail: speakers@dispostable.com
+			from: "2013-05-11 10:30:00"
+			to: "2013-05-13 10:30:00"
+	database:
+		driver: mysql
+		host: localhost
+		database: scienceslam
+		username: root
+		password:
+
+
+php:
+	date.timezone: Europe/Prague
+	# zlib.output_compression: yes
+
+nette:
+	application:
+		errorPresenter: Error
+
+	database:
+		dsn: '%database.driver%:host=%database.host%;dbname=%database.database%'
+		user: %database.username%
+		password: %database.password%
+
+	session:
+		expiration: 14 days
+
+services:
+	authenticator: Authenticator
+	routerFactory: RouterFactory
+	router: @routerFactory::createRouter
+
+
+factories:
+	componentTicket:
+		class: TicketForm
+		setup:
+			- injectMessagePrototype(@message)
+	componentSignup:
+		class: SignupForm
+		setup:
+			- injectMessagePrototype(@message)
+	message:
+		class: Nette\Mail\Message
+		setup:
+			- setMailer

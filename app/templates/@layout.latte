@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="content-language" content="cz" />
+		<meta name="description" content="{$pageDescription}" n:ifset="$pageDescription" />
+		<meta name="description" content="{$pageKeywords}" n:ifset="$pageKeywords" />
+		<link href="{$basePath}/css/screen.css" media="screen,projection,tv" rel="stylesheet" type="text/css" />
+		<link rel="icon" href="{$basePath}/favicon.ico" type="image/x-icon" />
+		<title>{$pageTitle}</title>
+		{block scripts}
+			<script src="{$basePath}/js/jquery.js"></script>
+			<script src="{$basePath}/js/netteForms.js"></script>
+			<script src="{$basePath}/js/main.js"></script>
+		{/block}
+	</head>
+	<body>
+		<div class="root">
+			<div class="header">
+				<div class="contents">
+					<div class="header-lamp right" >
+						<img src="{$basePath}/images/lamp1a.png" class="header-lamp-image" alt="výzkum v jiném světle"/>
+					</div>
+
+					<div class="header-claim right">
+						<span class="bold">Science slam</span><br />
+						výzkum v jiném světle
+					</div>
+					<a href="{plink Homepage:}">
+						<span class="header-logo left">&nbsp;</span>
+					</a>
+
+					<div class="header-menu left">
+						<ul class="menu-ul">
+							<li><a href="{plink Homepage:about}">O co jde</a></li>
+							<li><a href="{plink Homepage:schedule}">Průběh</a></li>
+							<li><a href="{plink Homepage:rules}">Pravidla</a></li>
+							<li><a href="{plink Homepage:people}">Kdo je za tím</a></li>
+						</ul>
+					</div>
+					<div class="cleaner">&nbsp;</div>
+				</div>
+			</div>
+			<div class="main">
+				<div class="contents">
+					{block content}
+					{/block}
+					<div class="cleaner">&nbsp;</div>
+				</div>
+			</div>
+
+			<div class="footer">
+				<div class="contents">
+					<div class="footer-text right">
+						© 2013 Masarykova univerzita
+						{* <br /> add email contact scienceslam@muni.cz *}
+					</div>
+
+					<div class="footer-lamp left">
+						<img src="{$basePath}/images/lamp2a.png" class="footer-lamp-image" alt="Science slam pořádá Masarykova univerzita, Brno" />
+					</div>
+
+					<div class="footer-logo left">
+						<a href="http://www.muni.cz/">
+							<img src="{$basePath}/images/mu_logo.png" class="footer-munilogo-image left" alt="Masarykova univerzita"/>
+						</a>
+						<div class="footer-logo-text left">
+							<span class="bold">Science slam</span> pořádá<br /><a href="http://www.muni.cz/">Masarykova univerzita, Brno</a>
+						</div>
+						<div class="cleaner">&nbsp;</div>
+					</div>
+					<div class="cleaner">&nbsp;</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
