@@ -19,7 +19,7 @@ parameters:
 			from: "2013-05-12 10:30:00"
 			to: "2013-05-12 10:30:00"
 		signup:
-			mail: [speakers@dispostable.com, speakers2@dispostable.com]
+			mail: []
 			from: "2013-05-11 10:30:00"
 			to: "2013-05-24 23:59:59"
 	database:
@@ -47,6 +47,7 @@ nette:
 	session:
 		save_path: "%tempDir%/sessions"
 		expiration: 14 days
+		autoStart: true
 	mailer:
 		smtp: true
 		host:
