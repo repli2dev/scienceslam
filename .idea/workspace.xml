@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="75a82fb5-4378-4dbb-b635-444767b4e648" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/SignupForm/SignupForm.php" afterPath="$PROJECT_DIR$/app/components/SignupForm/SignupForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/form.css" afterPath="$PROJECT_DIR$/css/form.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="science-slam.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -130,7 +128,7 @@
       <file leaf-file-name="SignupForm.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/components/SignupForm/SignupForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="37" selection-start="699" selection-end="699" vertical-scroll-proportion="0.06896552">
+            <state line="79" column="85" selection-start="2737" selection-end="2737" vertical-scroll-proportion="0.79310346">
               <folding />
             </state>
           </provider>
@@ -824,7 +822,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/SignupForm/SignupForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="37" selection-start="699" selection-end="699" vertical-scroll-proportion="0.06896552">
+        <state line="79" column="85" selection-start="2737" selection-end="2737" vertical-scroll-proportion="0.79310346">
           <folding />
         </state>
       </provider>

@@ -77,7 +77,7 @@ class SignupForm extends VisualControl {
 			$form->addError('Odeslání přihlášky se nezdařilo. Prosím, kontaktujte nás.');
 			return;
 		}
-		$this->flashMessage('Vaše přihláška byla úspěšně odeslána. Vyčkejte prosím.');
+		$this->flashMessage('Vaše přihláška byla úspěšně odeslána. Vyčkejte prosím.','success');
 		$this->redirect('this');
 	}
 }
