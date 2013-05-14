@@ -312,6 +312,8 @@ p { margin: 0.5em 0 0.5em 0; }
 	padding: 20px;
 }
 
+.margin-top { margin-top: 30px; }
+
 .back_posltova { background: url("../images/posltova.jpg"); }
 .back_drazan { background: url("../images/drazan.jpg"); }
 .back_tyc { background: url("../images/tyc.jpg"); }
