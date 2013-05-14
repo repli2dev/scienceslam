@@ -37,6 +37,7 @@ php:
 nette:
 	application:
 		errorPresenter: Error
+		catchException: true
 
 	database:
 		dsn: '%database.driver%:host=%database.host%;dbname=%database.database%'
