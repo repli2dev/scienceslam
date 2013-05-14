@@ -56,7 +56,6 @@ class SignupForm extends VisualControl {
 			return;
 		}
 		$values = $form->getValues();
-		// mail na scienceslam a dalsi adresa na svena.
 		$message = clone $this->messagePrototype;
 		foreach($this->mail as $rcpt) {
 			$message->addTo($rcpt);

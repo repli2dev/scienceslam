@@ -53,3 +53,32 @@ form span.block-description {
 	margin-left: 5px;
 	font-size: 90%;
 }
+
+div.flash {
+	padding: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+div.info {
+	background: rgb(205, 213, 235);
+}
+
+div.success {
+	background: rgb(194, 224, 182);
+}
+
+div.error, ul.error {
+	background: rgb(242, 225, 225);
+}
+
+ul.error {
+	list-style: none;
+	padding: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-weight: bold;
+	border-radius: 10px;
+}
