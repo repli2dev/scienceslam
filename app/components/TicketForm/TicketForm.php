@@ -29,7 +29,7 @@ class TicketForm extends VisualControl {
 	}
 
 	protected function createComponentForm() {
-		$form = new Nette\Application\UI\Form();
+		$form = new ResponsiveForm();
 		$form->addGroup('Osobní údaje');
 		$form->addText('name', 'Jméno a příjmení:')
 			->setRequired('Zadejte, prosím, své celé jméno.');
@@ -40,19 +40,21 @@ class TicketForm extends VisualControl {
 
 		$form->addGroup('Počty vstupenek');
 		$s = $form->addText('students','Studentů', 4)
-			->setOption('description', 'á 70 Kč')
+			->setOption('description', '70 Kč/lístek')
 			->setDefaultValue(1)
 			->addCondition(Form::FILLED)
 				->addRule(Form::INTEGER, 'Počet objednávaných vstupenek musí být číslo.')
 				->addRule(Form::RANGE, 'Počet objednávaných vstupenek musí být mezi 0 a 10.', array(0,10));
 
 		$a = $form->addText('adults','Dospělých', 4)
-			->setOption('description', 'á 100 Kč')
+			->setOption('description', '100 Kč/lístek')
 			->setDefaultValue(0)
 			->addCondition(Form::FILLED)
 				->addRule(Form::INTEGER, 'Počet objednávaných vstupenek musí být číslo.')
 				->addRule(Form::RANGE, 'Počet objednávaných vstupenek musí být mezi 0 a 10.', array(0,10));
 
+		$form->addRadioList('handover', 'Vyzvednutí', array('Před akcí', 'Na rektorátu MU'))
+			->setRequired('Zvolte, prosím, způsob vyzvednutí.');
 		$form->setCurrentGroup();
 		$form->addSubmit('send', 'Odeslat objednávku');
 		$form->onSuccess[] = $this->formSucceeded;
@@ -71,7 +73,7 @@ class TicketForm extends VisualControl {
 		}
 
 		$message = clone $this->messagePrototype;
-		$message->addTo($this->mail);
+		$message->addTo($this->mail); // poslat oběma stranám
 		$message->setFrom($values['email'], $values['name']);
 		$message->setSubject('Science slam: objednávka lístků');
 		$message->setHtmlBody(

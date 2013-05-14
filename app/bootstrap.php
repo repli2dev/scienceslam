@@ -28,5 +28,4 @@ if(!$configurator->isProductionMode()) {
 // Tuning config with local only settings like passwords etc.
 $configurator->addConfig(__DIR__ . '/config/config.local.neon', $configurator::NONE);
 $container = $configurator->createContainer();
-
 return $container;

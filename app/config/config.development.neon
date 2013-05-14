@@ -5,7 +5,6 @@ nette:
 		bar: [JanDrabek\MailPanel\MailPanel]
 
 services:
-	nette.mailer:
-		class: JanDrabek\MailPanel\SessionDumpMailer
+
 
 factories:

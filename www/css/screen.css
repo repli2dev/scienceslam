@@ -1,10 +1,11 @@
-/* Science Slam stylesheet 
+/* Science Slam stylesheet
 used colors:
     blue: rgb(0,39,118)
     black: rgb(42,42,42)
 */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,latin-ext);
+@import url(form.css);
 
 body {
 	font-family: 'Open Sans', Verdana, Arial, Helvetica, sans-serif;

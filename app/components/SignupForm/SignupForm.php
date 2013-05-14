@@ -27,7 +27,7 @@ class SignupForm extends VisualControl {
 	}
 
 	protected function createComponentForm() {
-		$form = new Nette\Application\UI\Form();
+		$form = new ResponsiveForm();
 		$form->addGroup('Osobní údaje');
 		$form->addText('name', 'Jméno a příjmení:')
 			->setRequired('Zadejte, prosím, své celé jméno.');
@@ -37,14 +37,13 @@ class SignupForm extends VisualControl {
 			->addRule($form::EMAIL, 'Zadejte, prosím, svoji e-mailovou adresu ve tvaru nekdo@nekde.koncovka.');
 		$form->addText('phone', 'Telefonní číslo:')
 			->setRequired('Zadejte, prosím, své telefonní číslo.');
-		$form->addText('uco', 'UČO')
+		$form->addText('uco', 'UČO:')
 			->setRequired('Zadejte, prosím, své UČO (univerzitní číslo osobnosti).')
 			->addRule(\Nette\Forms\Form::INTEGER, 'UČO musí být číslo');
 
 		$form->addGroup('Téma vystoupení');
-		$form->addTextArea('content','', 45,5)
-			->setRequired('Zadejte, prosím, téma vystoupení.')
-			->setOption('description', 'Jedním odstavcem představte jaké téma nebo myšlenku chcete předat.');
+		$form->addTextArea('content','Krátce představte téma nebo myšlenku vašeho Science slamu:', 45,5)
+			->setRequired('Zadejte, prosím, téma vystoupení.');
 		$form->setCurrentGroup();
 		$form->addSubmit('send', 'Odeslat přihlášku');
 		$form->onSuccess[] = $this->formSucceeded;
@@ -57,9 +56,11 @@ class SignupForm extends VisualControl {
 			return;
 		}
 		$values = $form->getValues();
-
+		// mail na scienceslam a dalsi adresa na svena.
 		$message = clone $this->messagePrototype;
-		$message->addTo($this->mail);
+		foreach($this->mail as $rcpt) {
+			$message->addTo($rcpt);
+		}
 		$message->setFrom($values['email'], $values['name']);
 		$message->setSubject('Science slam: přihláška');
 		$message->setHtmlBody(

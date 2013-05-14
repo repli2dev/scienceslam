@@ -17,11 +17,11 @@ parameters:
 		ticket:
 			mail: tickets@dispostable.com
 			from: "2013-05-12 10:30:00"
-			to: "2013-05-13 10:30:00"
+			to: "2013-05-12 10:30:00"
 		signup:
-			mail: speakers@dispostable.com
+			mail: [speakers@dispostable.com, speakers2@dispostable.com]
 			from: "2013-05-11 10:30:00"
-			to: "2013-05-13 10:30:00"
+			to: "2013-05-24 23:59:59"
 	database:
 		driver: mysql
 		host: localhost
@@ -44,7 +44,15 @@ nette:
 		password: %database.password%
 
 	session:
+		save_path: "%tempDir%/sessions"
 		expiration: 14 days
+	mailer:
+		smtp: true
+		host:
+		port: 25
+		username:
+		password:
+		secure: tls
 
 services:
 	authenticator: Authenticator

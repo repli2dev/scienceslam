@@ -2,71 +2,66 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a82fb5-4378-4dbb-b635-444767b4e648" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/block_1x05_a.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/block_1x05_b.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/block_1x1_a.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/block_1x1_b.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/block_1x1_c.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/block_2x1_c.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/drabek.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/drazan.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/gradient-bottom.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/gradient-top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/gradient-top2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/lamp1a.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/lamp2a.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/logo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/mu_logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/novakova.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/postlova.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/pribyla.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/slam1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/slam2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/slam3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/tyc.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/images/ukrop.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/components/BaseControl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/presenters/FormPresenter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/components/VisualControl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Homepage/about.latte" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/config.development.neon" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/flashes.latte" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Homepage/people.latte" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Homepage/rules.latte" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Homepage/schedule.latte" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Form/signup.latte" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Form/ticket.latte" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/components/ResponsiveForm.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/form.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/templates/Form/ticket.latte" afterPath="$PROJECT_DIR$/app/templates/Homepage/ticket.latte" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/@layout.latte" afterPath="$PROJECT_DIR$/app/templates/@layout.latte" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/SignupForm/SignupForm.php" afterPath="$PROJECT_DIR$/app/components/SignupForm/SignupForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/TicketForm/TicketForm.php" afterPath="$PROJECT_DIR$/app/components/TicketForm/TicketForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/Homepage/about.latte" afterPath="$PROJECT_DIR$/app/templates/Homepage/about.latte" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bootstrap.php" afterPath="$PROJECT_DIR$/app/bootstrap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.development.neon" afterPath="$PROJECT_DIR$/app/config/config.development.neon" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.neon" afterPath="$PROJECT_DIR$/app/config/config.neon" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/Homepage/default.latte" afterPath="$PROJECT_DIR$/app/templates/Homepage/default.latte" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/Homepage/people.latte" afterPath="$PROJECT_DIR$/app/templates/Homepage/people.latte" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/Homepage/rules.latte" afterPath="$PROJECT_DIR$/app/templates/Homepage/rules.latte" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/Homepage/schedule.latte" afterPath="$PROJECT_DIR$/app/templates/Homepage/schedule.latte" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/screen.css" afterPath="$PROJECT_DIR$/www/css/screen.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/Form/signup.latte" afterPath="$PROJECT_DIR$/app/templates/Form/signup.latte" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="science-slam.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/dummy.txt" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1367484667873" ignored="false" />
-    <file path="/Dummy.txt" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368369623367" ignored="false" />
+    <file path="/Dummy.txt" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368520992247" ignored="false" />
     <file path="/config.production.neon" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368363111082" ignored="false" />
     <file path="/a.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368362231249" ignored="false" />
-    <file path="/bootstrap.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368363404966" ignored="false" />
+    <file path="/bootstrap.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368522472914" ignored="false" />
     <file path="/.maintenance.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368363866847" ignored="false" />
     <file path="/robots.txt" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368363913859" ignored="false" />
-    <file path="/@layout.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368366413035" ignored="false" />
+    <file path="/@layout.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368458204142" ignored="false" />
     <file path="/BasePresenter.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368364325162" ignored="false" />
     <file path="/license.md" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368364540508" ignored="false" />
-    <file path="/screen.css" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368365388207" ignored="false" />
-    <file path="/about.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368366569494" ignored="false" />
-    <file path="/schedule.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368372890897" ignored="false" />
-    <file path="/rules.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368372968274" ignored="false" />
-    <file path="/people.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368366966298" ignored="false" />
-    <file path="/default.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368373226769" ignored="false" />
+    <file path="/screen.css" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368458737986" ignored="false" />
+    <file path="/about.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368464844971" ignored="false" />
+    <file path="/schedule.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368465916328" ignored="false" />
+    <file path="/rules.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368521612149" ignored="false" />
+    <file path="/people.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368464473391" ignored="false" />
+    <file path="/default.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368521267469" ignored="false" />
     <file path="/FormPresenter.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368371674040" ignored="false" />
-    <file path="/signup.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368372741031" ignored="false" />
-    <file path="/ticket.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368369328118" ignored="false" />
-    <file path="/config.neon" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368371483348" ignored="false" />
+    <file path="/signup.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368521161318" ignored="false" />
+    <file path="/ticket.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368521530474" ignored="false" />
+    <file path="/config.neon" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368522591164" ignored="false" />
     <file path="/a.dummy" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368369254032" ignored="false" />
-    <file path="/TicketForm.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368371806110" ignored="false" />
-    <file path="/SignupForm.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368372481054" ignored="false" />
+    <file path="/TicketForm.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368461170111" ignored="false" />
+    <file path="/SignupForm.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368522098757" ignored="false" />
     <file path="/TicketForm.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368371790676" ignored="false" />
     <file path="/SignupForm.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368372267538" ignored="false" />
+    <file path="/readme.md" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368457715735" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Edookit/parentportal/app/components/Content/Messages/Messages.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368458343492" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Edookit/parentportal/app/model/MessageComments.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368458343492" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Edookit/parentportal/app/components/Content/Messages/Messages.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368458343492" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Edookit/parentportal/app/components/Content/Messages/MessagesOverview.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368458343492" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Edookit/parentportal/resources/css/default/Main.css" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368458343492" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Edookit/parentportal/resources/css/default/Boxes.css" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368458343492" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Edookit/parentportal/app/templates/@layout.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368458343492" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Edookit/parentportal/resources/css/default/Tmp.css" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368458343492" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Edookit/parentportal/resources/css/default/Layout.css" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368458343492" ignored="false" />
+    <file path="/ResponsiveForm.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368458568368" ignored="false" />
+    <file path="/form.css" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368461346688" ignored="false" />
+    <file path="/LogSmtpMailer.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368460812943" ignored="false" />
+    <file path="/dummy.xml" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368468028650" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,73 +84,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SignupForm.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/SignupForm/SignupForm.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="43" selection-start="2715" selection-end="2715" vertical-scroll-proportion="-28.458334">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SignupForm.latte" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/SignupForm/SignupForm.latte">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="4" selection-start="176" selection-end="176" vertical-scroll-proportion="-2.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ticket.latte" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/Form/ticket.latte">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="27" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="signup.latte" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/Form/signup.latte">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="20" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about.latte" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/Homepage/about.latte">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="38" selection-start="739" selection-end="739" vertical-scroll-proportion="-8.75">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default.latte" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/Homepage/default.latte">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="77" selection-start="1663" selection-end="1663" vertical-scroll-proportion="-13.791667">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="screen.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/css/screen.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="8" selection-start="607" selection-end="607" vertical-scroll-proportion="0.59615386">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="schedule.latte" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/Homepage/schedule.latte">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="26" selection-start="68" selection-end="68" vertical-scroll-proportion="-1.875">
+            <state line="10" column="25" selection-start="298" selection-end="298" vertical-scroll-proportion="-6.25">
               <folding />
             </state>
           </provider>
@@ -164,16 +96,70 @@
       <file leaf-file-name="rules.latte" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/Homepage/rules.latte">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="122" selection-start="2957" selection-end="2957" vertical-scroll-proportion="-16.25">
+            <state line="27" column="10" selection-start="2987" selection-end="2987" vertical-scroll-proportion="-13.958333">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="people.latte" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/Homepage/people.latte">
+      <file leaf-file-name="signup.latte" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/Form/signup.latte">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="1719" selection-end="1719" vertical-scroll-proportion="-22.5">
+            <state line="8" column="20" selection-start="829" selection-end="829" vertical-scroll-proportion="-5.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.latte" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/Homepage/default.latte">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="35" selection-start="859" selection-end="859" vertical-scroll-proportion="-13.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.neon" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config.neon">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="17" selection-start="1341" selection-end="1341" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.development.neon" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config.development.neon">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SignupForm.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/SignupForm/SignupForm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="9" selection-start="2064" selection-end="2064" vertical-scroll-proportion="-5.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="48" selection-start="227" selection-end="227" vertical-scroll-proportion="-3.75">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/bootstrap.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="46" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.73214287">
               <folding />
             </state>
           </provider>
@@ -205,31 +191,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/components/BaseControl.php" />
-        <option value="$PROJECT_DIR$/app/templates/Form/ticket.latte" />
-        <option value="$PROJECT_DIR$/app/components/VisualControl.php" />
-        <option value="$PROJECT_DIR$/app/config/config.neon" />
-        <option value="$PROJECT_DIR$/app/presenters/FormPresenter.php" />
-        <option value="$PROJECT_DIR$/app/components/TicketForm/TicketForm.latte" />
-        <option value="$PROJECT_DIR$/app/components/TicketForm/TicketForm.php" />
-        <option value="$PROJECT_DIR$/app/components/SignupForm/SignupForm.latte" />
-        <option value="$PROJECT_DIR$/app/components/SignupForm/SignupForm.php" />
-        <option value="$PROJECT_DIR$/app/templates/Form/signup.latte" />
-        <option value="$PROJECT_DIR$/app/templates/Homepage/about.latte" />
-        <option value="$PROJECT_DIR$/app/templates/Homepage/schedule.latte" />
-        <option value="$PROJECT_DIR$/app/templates/Homepage/rules.latte" />
+        <option value="$PROJECT_DIR$/app/utils/LogSmtpMailer.php" />
+        <option value="$PROJECT_DIR$/www/css/form.css" />
         <option value="$PROJECT_DIR$/app/templates/Homepage/people.latte" />
+        <option value="$PROJECT_DIR$/app/templates/Homepage/about.latte" />
+        <option value="$PROJECT_DIR$/app/templates/@layout.latte" />
+        <option value="$PROJECT_DIR$/app/templates/Homepage/schedule.latte" />
+        <option value="$PROJECT_DIR$/app/components/TicketForm/TicketForm.php" />
+        <option value="$PROJECT_DIR$/app/templates/Form/ticket.latte" />
+        <option value="$PROJECT_DIR$/app/templates/Form/signup.latte" />
         <option value="$PROJECT_DIR$/app/templates/Homepage/default.latte" />
-        <option value="$PROJECT_DIR$/www/css/screen.css" />
+        <option value="$PROJECT_DIR$/app/templates/Homepage/ticket.latte" />
+        <option value="$PROJECT_DIR$/app/templates/Homepage/rules.latte" />
+        <option value="$PROJECT_DIR$/app/components/SignupForm/SignupForm.php" />
+        <option value="$PROJECT_DIR$/app/config/config.development.neon" />
+        <option value="$PROJECT_DIR$/app/config/config.neon" />
+        <option value="$PROJECT_DIR$/app/bootstrap.php" />
       </list>
     </option>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP54" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="System PHP 5.4" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="11" />
-    <option name="y" value="22" />
-    <option name="width" value="1900" />
-    <option name="height" value="983" />
+    <option name="y" value="29" />
+    <option name="width" value="1366" />
+    <option name="height" value="681" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -391,7 +376,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="temp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -405,15 +390,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="temp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jandrabek" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nette-mailpanel" />
+              <option name="myItemId" value="sessions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -597,25 +578,53 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="117" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="124" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.fileTypes" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="117" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/www" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="128" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="917" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="917" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="128" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="124" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="PublishConfig">
+    <servers>
+      <server id="a0a42390-cf73-4635-b02b-03de96c46a20">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+    </servers>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/www/css" />
       <recent name="$PROJECT_DIR$/app/components" />
       <recent name="$PROJECT_DIR$/app/components/TicketForm" />
       <recent name="$PROJECT_DIR$/app/templates/Form" />
       <recent name="$PROJECT_DIR$/app/presenters" />
-      <recent name="$PROJECT_DIR$/app/templates/Homepage" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/templates/Homepage" />
       <recent name="$PROJECT_DIR$/www/images" />
       <recent name="$PROJECT_DIR$/www" />
     </key>
@@ -636,9 +645,12 @@
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <configuration default="false" name="Localy" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" singleton="true" document_root="$PROJECT_DIR$/www" port="8005">
@@ -697,19 +709,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="11" y="22" width="1900" height="983" extended-state="0" />
+    <frame x="0" y="29" width="1366" height="681" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25782093" sideWeight="0.6709154" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25911853" sideWeight="0.6710775" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289225" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289225" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -746,7 +758,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
@@ -781,114 +793,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/config.neon">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="23" selection-start="1567" selection-end="1567" vertical-scroll-proportion="-31.916666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/BaseControl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/presenters/FormPresenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="40" selection-start="384" selection-end="384" vertical-scroll-proportion="-9.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/VisualControl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="10" selection-start="1347" selection-end="1347" vertical-scroll-proportion="-27.541666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/TicketForm/TicketForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="1903" selection-end="2922" vertical-scroll-proportion="-13.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/TicketForm/TicketForm.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="200" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/SignupForm/SignupForm.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="4" selection-start="176" selection-end="176" vertical-scroll-proportion="-2.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/SignupForm/SignupForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="43" selection-start="2715" selection-end="2715" vertical-scroll-proportion="-28.458334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Form/ticket.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="27" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Form/signup.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="20" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Homepage/schedule.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="26" selection-start="68" selection-end="68" vertical-scroll-proportion="-1.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Homepage/rules.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="122" selection-start="2957" selection-end="2957" vertical-scroll-proportion="-16.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/Homepage/people.latte">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1719" selection-end="1719" vertical-scroll-proportion="-22.5">
+        <state line="7" column="38" selection-start="1060" selection-end="1060" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/Homepage/about.latte">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="38" selection-start="739" selection-end="739" vertical-scroll-proportion="-8.75">
+        <state line="28" column="39" selection-start="1449" selection-end="1449" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/@layout.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="130" selection-start="2642" selection-end="2642" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Homepage/rules.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="10" selection-start="2987" selection-end="2987" vertical-scroll-proportion="-13.958333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Form/signup.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="20" selection-start="829" selection-end="829" vertical-scroll-proportion="-5.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/Homepage/default.latte">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="77" selection-start="1663" selection-end="1663" vertical-scroll-proportion="-13.791667">
+        <state line="21" column="35" selection-start="859" selection-end="859" vertical-scroll-proportion="-13.125">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/screen.css">
+    <entry file="file://$PROJECT_DIR$/temp/sessions/.placeholder">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="8" selection-start="607" selection-end="607" vertical-scroll-proportion="0.59615386">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Homepage/ticket.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="74" selection-start="248" selection-end="248" vertical-scroll-proportion="0.12658228">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/TicketForm/TicketForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="19" selection-start="2413" selection-end="2413" vertical-scroll-proportion="0.1626898">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Homepage/schedule.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="25" selection-start="298" selection-end="298" vertical-scroll-proportion="-6.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/nette/nette/Nette/Mail/Message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="20" selection-start="2687" selection-end="2687" vertical-scroll-proportion="0.35021096">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/SignupForm/SignupForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="9" selection-start="2064" selection-end="2064" vertical-scroll-proportion="-5.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="48" selection-start="227" selection-end="227" vertical-scroll-proportion="-3.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.development.neon">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.neon">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="17" selection-start="1341" selection-end="1341" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="46" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.73214287">
           <folding />
         </state>
       </provider>
