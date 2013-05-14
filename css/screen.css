@@ -2,6 +2,7 @@
 used colors:
     blue: rgb(0,39,118)
     black: rgb(42,42,42)
+    yellow: rgb(255,204,0)
 */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,latin-ext);
@@ -324,3 +325,17 @@ p { margin: 0.5em 0 0.5em 0; }
 .back_slam1 { background: url("../images/slam1.jpg"); }
 .back_slam2 { background: url("../images/slam2.jpg"); }
 .back_slam3 { background: url("../images/slam3.jpg"); }
+
+.button {
+display: block;
+height: 50px;
+width: 200px;
+text-align: center;
+background-color: rgb(0,39,118);
+color: rgb(242,242,242);
+font-size: 120%;
+font-weight: bold;
+line-height: 50px;
+}
+
+.button:hover { color: rgb(255,204,0); }
