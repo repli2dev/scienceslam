@@ -43,14 +43,14 @@ body {
 	width: 640px;
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1000px) {
 	.contents {
 		width: 960px;
 	}
 	body { text-align: justify; }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1320px) {
 	.contents {
 		width: 1280px;
 	}
@@ -128,7 +128,7 @@ body {
 	margin: 20px 10px 20px 10px;
 	text-align: right;
 	position: relative;
-	top: 180px;
+	top: 160px;
 }
 
 .footer-lamp {
@@ -145,8 +145,8 @@ body {
 	width: 400px;
 	margin-left: 10px;
 	position: relative;
-	left: 110px;
-	top: 40px;
+	left: 105px;
+	top: 15px;
 	z-index: 2;
 }
 
@@ -266,7 +266,7 @@ a {
 .link { color: rgb(0,39,118); }
 .link:hover { text-decoration: underline; }
 
-.footer-logo a:hover { text-decoration: underline; }
+.footer a:hover { text-decoration: underline; }
 a img { border: none; }
 
 h1, h2, h3 { color: rgb(0,39,118); }
@@ -279,12 +279,15 @@ p { margin: 0.5em 0 0.5em 0; }
 .image_1x1 {
 	width: 300px;
 	height: 300px;
-	margin: 0 0 20px 0;
+	margin: 10px;
 }
 
-.image-margin-left { margin-left: 20px; }
-.image-margin-right{ margin-right: 20px; }
-.clear { clear: both; }
+.clear { clear: right; }
+
+.wide-text-block {
+	max-width: 920px;
+	margin: 10px;
+}
 
 .sub-block_picture {
 	display: block;
@@ -309,7 +312,7 @@ p { margin: 0.5em 0 0.5em 0; }
 	padding: 20px;
 }
 
-.back_postlova { background: url("../images/postlova.jpg"); }
+.back_posltova { background: url("../images/posltova.jpg"); }
 .back_drazan { background: url("../images/drazan.jpg"); }
 .back_tyc { background: url("../images/tyc.jpg"); }
 .back_drabek { background: url("../images/drabek.jpg"); }
