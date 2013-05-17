@@ -187,7 +187,7 @@ body {
 	height: 36px;
 	line-height: 36px;
 	font-size: 14pt;
-	font-weight: bold;
+	font-weight: 800;
 	display: block;
 }
 
@@ -256,7 +256,7 @@ body {
 }
 .sub-block_half2:hover { background-position: 300px 0; }
 
-.bold { font-weight: bold; }
+.bold { font-weight: 800; }
 .center { text-align: center; }
 
 a {
@@ -334,7 +334,7 @@ text-align: center;
 background-color: rgb(0,39,118);
 color: rgb(242,242,242);
 font-size: 120%;
-font-weight: bold;
+font-weight: 800;
 line-height: 50px;
 }
 

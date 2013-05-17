@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a82fb5-4378-4dbb-b635-444767b4e648" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/SignupForm/SignupForm.php" afterPath="$PROJECT_DIR$/app/components/SignupForm/SignupForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/screen.css" afterPath="$PROJECT_DIR$/css/screen.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="science-slam.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/dummy.txt" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1367484667873" ignored="false" />
-    <file path="/Dummy.txt" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368542027467" ignored="false" />
+    <file path="/Dummy.txt" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368804813906" ignored="false" />
     <file path="/config.production.neon" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368363111082" ignored="false" />
     <file path="/a.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368362231249" ignored="false" />
     <file path="/bootstrap.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368537609542" ignored="false" />
@@ -16,7 +17,7 @@
     <file path="/@layout.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368458204142" ignored="false" />
     <file path="/BasePresenter.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368537396056" ignored="false" />
     <file path="/license.md" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368364540508" ignored="false" />
-    <file path="/screen.css" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368458737986" ignored="false" />
+    <file path="/screen.css" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368804994306" ignored="false" />
     <file path="/about.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368464844971" ignored="false" />
     <file path="/schedule.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368465916328" ignored="false" />
     <file path="/rules.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368521612149" ignored="false" />
@@ -71,15 +72,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ErrorPresenter.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/presenters/ErrorPresenter.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="59" selection-start="562" selection-end="562" vertical-scroll-proportion="-0.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="500.latte" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/Error/500.latte">
           <provider selected="true" editor-type-id="text-editor">
@@ -125,10 +117,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignupForm.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SignupForm.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/SignupForm/SignupForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="85" selection-start="2737" selection-end="2737" vertical-scroll-proportion="0.79310346">
+            <state line="49" column="21" selection-start="1655" selection-end="1655" vertical-scroll-proportion="-12.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="screen.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/screen.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="321" column="55" selection-start="5764" selection-end="5764" vertical-scroll-proportion="0.570011">
               <folding />
             </state>
           </provider>
@@ -187,7 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/templates/Form/signup.latte" />
         <option value="$PROJECT_DIR$/app/templates/Homepage/default.latte" />
         <option value="$PROJECT_DIR$/app/templates/Homepage/ticket.latte" />
         <option value="$PROJECT_DIR$/app/templates/Homepage/rules.latte" />
@@ -203,14 +203,14 @@
         <option value="$PROJECT_DIR$/app/config/config.neon" />
         <option value="$PROJECT_DIR$/css/form.css" />
         <option value="$PROJECT_DIR$/app/components/SignupForm/SignupForm.php" />
+        <option value="$PROJECT_DIR$/css/screen.css" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="System PHP 5.4" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="29" />
-    <option name="width" value="1366" />
-    <option name="height" value="681" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -294,7 +294,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -495,20 +494,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="117" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="124" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="117" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/www" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="128" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="917" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="917" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="917" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="128" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="124" />
@@ -524,17 +524,6 @@
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="options.searchVisible" value="true" />
-  </component>
-  <component name="PublishConfig">
-    <servers>
-      <server id="a0a42390-cf73-4635-b02b-03de96c46a20">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
-      </server>
-    </servers>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -566,14 +555,14 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
       <JSDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <configuration default="false" name="Localy" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" singleton="true" document_root="$PROJECT_DIR$/" port="8005">
@@ -637,14 +626,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="29" width="1366" height="681" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289225" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3806991" sideWeight="0.6710775" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38527215" sideWeight="0.6710775" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -687,7 +676,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
@@ -723,11 +712,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/libs/nette/nette/Nette/Mail/Message.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="20" selection-start="2687" selection-end="2687" vertical-scroll-proportion="0.35021096" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -752,7 +736,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/presenters/ErrorPresenter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="59" selection-start="562" selection-end="562" vertical-scroll-proportion="-0.625">
+        <state line="25" column="59" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -822,7 +806,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/SignupForm/SignupForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="85" selection-start="2737" selection-end="2737" vertical-scroll-proportion="0.79310346">
+        <state line="49" column="21" selection-start="1655" selection-end="1655" vertical-scroll-proportion="-12.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/screen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="321" column="55" selection-start="5764" selection-end="5764" vertical-scroll-proportion="0.570011">
           <folding />
         </state>
       </provider>
