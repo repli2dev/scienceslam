@@ -270,7 +270,7 @@ a {
 .footer a:hover { text-decoration: underline; }
 a img { border: none; }
 
-h1, h2, h3 { color: rgb(0,39,118); }
+h1, h2, h3 { color: rgb(0,39,118); font-weight: 800; }
 
 h1 { font-size: 175%; margin: 0 0 0.5em 0; }
 h2 { font-size: 125%; margin: 1em 0 0.5em 0; }
@@ -325,6 +325,7 @@ p { margin: 0.5em 0 0.5em 0; }
 .back_slam1 { background: url("../images/slam1.jpg"); }
 .back_slam2 { background: url("../images/slam2.jpg"); }
 .back_slam3 { background: url("../images/slam3.jpg"); }
+.back_poster { background: url("../images/poster.png"); }
 
 .button {
 display: block;
