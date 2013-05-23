@@ -28,5 +28,5 @@ if(!$configurator->isProductionMode()) {
 // Tuning config with local only settings like passwords etc.
 $configurator->addConfig(__DIR__ . '/config/config.local.neon', $configurator::NONE);
 $container = $configurator->createContainer();
-$container->router = new Nette\Application\Routers\SimpleRouter('Homepage:default');
+//$container->router = new Nette\Application\Routers\SimpleRouter('Homepage:default');
 return $container;
