@@ -8,6 +8,12 @@ Options -Indexes
 	RewriteEngine On
 	# RewriteBase /
 
+	# Canonize all addresses to scienceslam.muni.cz
+	RewriteCond %{HTTP_HOST} ^scienceslam.cz [NC,OR]
+	RewriteCond %{HTTP_HOST} ^www.scienceslam.cz [NC,OR]
+	RewriteCond %{HTTP_HOST} ^www.scienceslam.muni.cz
+	RewriteRule (.*) http://scienceslam.muni.cz/$1 [R=301,L]
+
 	# Rewrite not cool address to cool ones
 	RewriteCond %{QUERY_STRING} ^presenter=(.*)&action=(.*)$
 	RewriteRule ^$ /%1/%2 [L,R=301]
