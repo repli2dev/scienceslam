@@ -326,6 +326,11 @@ p { margin: 0.5em 0 0.5em 0; }
 .back_slam2 { background: url("../images/slam2.jpg"); }
 .back_slam3 { background: url("../images/slam3.jpg"); }
 .back_poster { background: url("../images/poster.png"); }
+.back_question { background: url("../images/question.jpg"); }
+
+.back_rabova { background: url("../images/rabova.jpg"); }
+.back_suchacek { background: url("../images/suchacek.jpg"); }
+.back_sychrova { background: url("../images/sychrova.jpg"); }
 
 .button {
 display: block;
