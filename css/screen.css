@@ -16,7 +16,7 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	background-image: url("../images/background.png");
+	background-image: url("../images/design/background.png");
 	background-repeat: repeat;
 }
 
@@ -62,7 +62,7 @@ body {
 	border-style: solid;
 	border-color: rgb(204,204,204);
 	border-width: 5px 0 0 0;
-	background: url("../images/gradient-top.png");
+	background: url("../images/design/gradient-top.png");
 	height: 230px;
 }
 
@@ -75,7 +75,7 @@ body {
 	border-style: solid;
 	border-color: rgb(204,204,204);
 	border-width: 0 0 20px 0;
-	background: url("../images/gradient-bottom.png");
+	background: url("../images/design/gradient-bottom.png");
 	position: absolute;
 	height: 230px;
 	bottom: 0;
@@ -90,7 +90,7 @@ body {
 	width: 150px;
 	margin: 40px 40px 40px 10px;
 	position: relative;
-	background: url("../images/logo2.png");
+	background: url("../images/design/logo2.png");
 }
 .header-logo:hover { background-position: 150px 0; }
 
@@ -230,15 +230,15 @@ body {
 
 .left { float: left; }
 .right{ float: right; }
-.back_2x1_c { background: url("../images/block_2x1_c.png"); }
-.back_1x1_a { background: url("../images/block_1x1_a.png"); }
-.back_1x1_b { background: url("../images/block_1x1_b.png"); }
-.back_1x1_c { background: url("../images/block_1x1_c.png"); }
+.back_2x1_c { background: url("../images/design/block_2x1_c.png"); }
+.back_1x1_a { background: url("../images/design/block_1x1_a.png"); }
+.back_1x1_b { background: url("../images/design/block_1x1_b.png"); }
+.back_1x1_c { background: url("../images/design/block_1x1_c.png"); }
 
 .sub-block_half1 {
 	display: block;
 	background-color: rgb(224,224,224);
-	background: url("../images/block_1x05_a.png");
+	background: url("../images/design/block_1x05_a.png");
 	height: 90px;
 	width: 260px;
 	padding: 30px 20px 20px 20px;
@@ -248,7 +248,7 @@ body {
 .sub-block_half2 {
 	display: block;
 	background-color: rgb(224,224,224);
-	background: url("../images/block_1x05_b.png");
+	background: url("../images/design/block_1x05_b.png");
 	height: 90px;
 	width: 260px;
 	padding: 30px 20px 20px 20px;
@@ -315,24 +315,16 @@ p { margin: 0.5em 0 0.5em 0; }
 
 .margin-top { margin-top: 30px; }
 
-.back_posltova { background: url("../images/posltova.jpg"); }
-.back_drazan { background: url("../images/drazan.jpg"); }
-.back_tyc { background: url("../images/tyc.jpg"); }
-.back_drabek { background: url("../images/drabek.jpg"); }
-.back_ukrop { background: url("../images/ukrop.jpg"); }
-.back_novakova { background: url("../images/novakova.jpg"); }
-.back_pribyla { background: url("../images/pribyla.jpg"); }
-.back_slam1 { background: url("../images/slam1.jpg"); }
-.back_slam2 { background: url("../images/slam2.jpg"); }
-.back_slam3 { background: url("../images/slam3.jpg"); }
-.back_poster { background: url("../images/poster.png"); }
+.back_posltova { background: url("../images/blocks/posltova.jpg"); }
+.back_drazan { background: url("../images/blocks/drazan.jpg"); }
+.back_tyc { background: url("../images/blocks/tyc.jpg"); }
+.back_drabek { background: url("../images/blocks/drabek.jpg"); }
+.back_ukrop { background: url("../images/blocks/ukrop.jpg"); }
+.back_novakova { background: url("../images/blocks/novakova.jpg"); }
+.back_pribyla { background: url("../images/blocks/pribyla.jpg"); }
+.back_slam2 { background: url("../images/blocks/slam2.jpg"); }
+.back_slam3 { background: url("../images/blocks/slam3.jpg"); }
 .back_question { background: url("../images/question.jpg"); }
-
-.back_rabova { background: url("../images/rabova.jpg"); }
-.back_suchacek { background: url("../images/suchacek.jpg"); }
-.back_sychrova { background: url("../images/sychrova.jpg"); }
-.back_tejkalova { background: url("../images/tejkalova.jpg"); }
-.back_hrbacek { background: url("../images/hrbacek.jpg"); }
 
 .button {
 display: block;
@@ -347,3 +339,11 @@ line-height: 50px;
 }
 
 .button:hover { color: rgb(255,204,0); }
+
+/* 2013 specific ! */
+.back_poster2013-1 { background: url("../images/2013-1/poster.png"); }
+.back_rabova { background: url("../images/2013-1/rabova.jpg"); }
+.back_suchacek { background: url("../images/2013-1/suchacek.jpg"); }
+.back_sychrova { background: url("../images/2013-1/sychrova.jpg"); }
+.back_tejkalova { background: url("../images/2013-1/tejkalova.jpg"); }
+.back_hrbacek { background: url("../images/2013-1/hrbacek.jpg"); }
