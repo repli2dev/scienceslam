@@ -7,3 +7,6 @@ libs/*
 !.htaccess
 !web.config
 app/config/config.local.neon
+
+# gedit autosave files
+*~

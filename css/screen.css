@@ -35,26 +35,18 @@ body {
 	overflow: hidden;
 }
 
-.contents-text {
-	padding: 0 10px 0 10px;
-}
-
-.contents {
-	margin: 0 auto 0 auto;
-	width: 640px;
-}
+.contents-text { padding: 0 10px 0 10px; }
+.contents { margin: 0 auto 0 auto; width: 640px; }
+.video { height: 360px; width: 640px; }
 
 @media only screen and (min-width: 1000px) {
-	.contents {
-		width: 960px;
-	}
+	.contents { width: 960px; }
 	body { text-align: justify; }
+	.video { height: 480px; width: 853px; }
 }
 
 @media only screen and (min-width: 1320px) {
-	.contents {
-		width: 1280px;
-	}
+	.contents { width: 1280px; }
 }
 
 .header {
@@ -327,21 +319,30 @@ p { margin: 0.5em 0 0.5em 0; }
 .back_question { background: url("../images/question.jpg"); }
 
 .button {
-display: block;
-height: 50px;
-width: 200px;
-text-align: center;
-background-color: rgb(0,39,118);
-color: rgb(242,242,242);
-font-size: 120%;
-font-weight: 800;
-line-height: 50px;
+	display: block;
+	height: 50px;
+	width: 200px;
+	text-align: center;
+	background-color: rgb(0,39,118);
+	color: rgb(242,242,242);
+	font-size: 120%;
+	font-weight: 800;
+	line-height: 50px;
 }
 
 .button:hover { color: rgb(255,204,0); }
 
+ul.gallery { text-align: center; }
+ul.gallery>li { display: inline-block; }
+
+img.gallery-item { height: 200px; margin: 10px; }
+
+.back_slam_2013-1 { background: url("../images/2013-1/slam.jpg"); }
+
 /* 2013 specific ! */
-.back_poster2013-1 { background: url("../images/2013-1/poster.png"); }
+.back_poster_2013-1 { background: url("../images/2013-1/poster.png"); }
+.back_gallery_2013-1 { background: url("../images/2013-1/gallery.jpg"); }
+.back_press_2013-1 { background: url("../images/2013-1/press.jpg"); }
 .back_rabova { background: url("../images/2013-1/rabova.jpg"); }
 .back_suchacek { background: url("../images/2013-1/suchacek.jpg"); }
 .back_sychrova { background: url("../images/2013-1/sychrova.jpg"); }
