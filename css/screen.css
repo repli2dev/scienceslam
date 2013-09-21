@@ -317,6 +317,8 @@ p { margin: 0.5em 0 0.5em 0; }
 .back_slam2 { background: url("../images/blocks/slam2.jpg"); }
 .back_slam3 { background: url("../images/blocks/slam3.jpg"); }
 .back_question { background: url("../images/question.jpg"); }
+.back_press { background: url("../images/blocks/press.jpg"); }
+.back_video{ background: url("../images/blocks/video.jpg"); }
 
 .button {
 	display: block;
@@ -342,7 +344,6 @@ img.gallery-item { height: 200px; margin: 10px; }
 /* 2013 specific ! */
 .back_poster_2013-1 { background: url("../images/2013-1/poster.png"); }
 .back_gallery_2013-1 { background: url("../images/2013-1/gallery.jpg"); }
-.back_press_2013-1 { background: url("../images/2013-1/press.jpg"); }
 .back_rabova { background: url("../images/2013-1/rabova.jpg"); }
 .back_suchacek { background: url("../images/2013-1/suchacek.jpg"); }
 .back_sychrova { background: url("../images/2013-1/sychrova.jpg"); }
