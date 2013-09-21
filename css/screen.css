@@ -37,7 +37,7 @@ body {
 
 .contents-text { padding: 0 10px 0 10px; }
 .contents { margin: 0 auto 0 auto; width: 640px; }
-.video { height: 360px; width: 640px; }
+.video { height: 360px; width: 640px; margin: 20px 0 20px 0; }
 
 @media only screen and (min-width: 1000px) {
 	.contents { width: 960px; }
@@ -269,16 +269,17 @@ h2 { font-size: 125%; margin: 1em 0 0.5em 0; }
 h3 { font-size: 125%; margin: 0; }
 p { margin: 0.5em 0 0.5em 0; }
 
-.image_1x1 {
+.image_right {
+	float: right;
 	width: 300px;
 	height: 300px;
-	margin: 10px;
+	margin: 10px 10px 10px 30px;
 }
 
 .clear { clear: right; }
 
 .wide-text-block {
-	max-width: 920px;
+	max-width: 1280px;
 	margin: 10px;
 }
 
@@ -334,7 +335,7 @@ p { margin: 0.5em 0 0.5em 0; }
 
 .button:hover { color: rgb(255,204,0); }
 
-ul.gallery { text-align: center; }
+ul.gallery { position: relative; left: -10px; text-align: left; padding: 0; margin: 0; }
 ul.gallery>li { display: inline-block; }
 
 img.gallery-item { height: 200px; margin: 10px; }
@@ -344,8 +345,8 @@ img.gallery-item { height: 200px; margin: 10px; }
 /* 2013 specific ! */
 .back_poster_2013-1 { background: url("../images/2013-1/poster.png"); }
 .back_gallery_2013-1 { background: url("../images/2013-1/gallery.jpg"); }
-.back_rabova { background: url("../images/2013-1/rabova.jpg"); }
-.back_suchacek { background: url("../images/2013-1/suchacek.jpg"); }
-.back_sychrova { background: url("../images/2013-1/sychrova.jpg"); }
-.back_tejkalova { background: url("../images/2013-1/tejkalova.jpg"); }
-.back_hrbacek { background: url("../images/2013-1/hrbacek.jpg"); }
+.back_rabova { background: url("../images/2013-1/rabova2.jpg"); }
+.back_suchacek { background: url("../images/2013-1/suchacek2.jpg"); }
+.back_sychrova { background: url("../images/2013-1/sychrova2.jpg"); }
+.back_tejkalova { background: url("../images/2013-1/tejkalova2.jpg"); }
+.back_hrbacek { background: url("../images/2013-1/hrbacek2.jpg"); }

@@ -11,7 +11,7 @@
             "source": {
                 "type": "git",
                 "url": "git://git.yavanna.cz/mailpanel.git",
-                "reference": "2.1"
+                "reference": "c4f21898f0605c24b2be70ae82ca02727dc28b99"
             },
             "require": {
                 "nette/nette": "2.0.*",
@@ -43,16 +43,16 @@
         },
         {
             "name": "nette/nette",
-            "version": "v2.0.10",
+            "version": "v2.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/nette.git",
-                "reference": "v2.0.10"
+                "reference": "80a7e460badc3d71b1469bb23810ebf235b06b11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/nette/zipball/v2.0.10",
-                "reference": "v2.0.10",
+                "url": "https://api.github.com/repos/nette/nette/zipball/80a7e460badc3d71b1469bb23810ebf235b06b11",
+                "reference": "80a7e460badc3d71b1469bb23810ebf235b06b11",
                 "shasum": ""
             },
             "require": {
@@ -61,7 +61,7 @@
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "nette/tester": "@dev"
+                "nette/tester": "0.9.*"
             },
             "suggest": {
                 "ext-fileinfo": "*",
@@ -113,7 +113,7 @@
                 "neon",
                 "templating"
             ],
-            "time": "2013-03-08 15:44:35"
+            "time": "2013-08-07 23:14:19"
         }
     ],
     "packages-dev": [
@@ -123,19 +123,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tester.git",
-                "reference": "dd4f7e25ff6175b598cbc3462ca13a411e3c27f4"
+                "reference": "4f46271816885ed38e8d55b9d3d9fa37182cd312"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tester/zipball/dd4f7e25ff6175b598cbc3462ca13a411e3c27f4",
-                "reference": "dd4f7e25ff6175b598cbc3462ca13a411e3c27f4",
+                "url": "https://api.github.com/repos/nette/tester/zipball/4f46271816885ed38e8d55b9d3d9fa37182cd312",
+                "reference": "4f46271816885ed38e8d55b9d3d9fa37182cd312",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "bin": [
-                "Tester/tester"
+                "Tester/tester",
+                "Tester/coverage-report"
             ],
             "type": "library",
             "autoload": {
@@ -166,7 +167,7 @@
                 "testing",
                 "unit"
             ],
-            "time": "2013-04-25 13:48:02"
+            "time": "2013-09-13 12:50:22"
         }
     ],
     "aliases": [
