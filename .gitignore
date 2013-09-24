@@ -8,5 +8,9 @@ libs/*
 !web.config
 app/config/config.local.neon
 
+.bash_history
+.ssh
+.viminfo
+
 # gedit autosave files
 *~
