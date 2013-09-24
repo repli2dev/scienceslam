@@ -322,6 +322,7 @@ p { margin: 0.5em 0 0.5em 0; }
 .back_video{ background: url("../images/blocks/video.jpg"); }
 
 .button {
+	border: none;
 	display: block;
 	height: 50px;
 	width: 200px;
