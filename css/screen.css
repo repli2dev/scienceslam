@@ -346,6 +346,7 @@ img.gallery-item { height: 200px; margin: 10px; }
 /* 2013 specific ! */
 .back_poster_2013-1 { background: url("../images/2013-1/poster.png"); }
 .back_gallery_2013-1 { background: url("../images/2013-1/gallery.jpg"); }
+.back_udif_2013-1 { background: url("../images/2013-1/udif.jpg"); }
 .back_rabova { background: url("../images/2013-1/rabova2.jpg"); }
 .back_suchacek { background: url("../images/2013-1/suchacek2.jpg"); }
 .back_sychrova { background: url("../images/2013-1/sychrova2.jpg"); }
