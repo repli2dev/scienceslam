@@ -25,6 +25,9 @@
 </script>
 	</head>
 	<body>
+		{if $user->isLoggedIn()}
+			<a href="{plink Admin:}" class="admin-door">&nbsp;</a>
+		{/if}
 		<div class="root">
 			<div class="header">
 				<div class="contents">

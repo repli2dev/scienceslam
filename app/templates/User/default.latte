@@ -1,0 +1,35 @@
+{var $pageTitle = "Správa uživatelů"}
+{var $robots = noindex}
+
+{block #content}
+
+<h1>Správa uživatelů</h1>
+
+<p><a href="{plink user:add}">Přidat uživatele</a></p>
+{if count($data) > 0}
+	<table class="admin-grid">
+		<tr>
+			<th>ID</th>
+			<th>Celé jméno</th>
+			<th>Přezdívka</th>
+			<th>Role</th>
+			<th>Poslední přihlášení</th>
+			<th class="admin-grid-actions">Akce</th>
+		</tr>
+		{foreach $data as $row}
+			<tr>
+				<td>{$row->user_id}</td>
+				<td>{$row->name}</td>
+				<td>{$row->nickname}</td>
+				<td>{$roles[$row->role]}</td>
+				<td>{$row->last_login|date:"j. n. Y H.i"}</td>
+				<td class="admin-grid-actions">
+					<a href="{plink User:edit, $row->user_id}">Upravit</a><br />
+					<a href="{plink user:delete, $row->user_id}">Smazat</a>
+				</td>
+			</tr>
+		{/foreach}
+	</table>
+{else}
+	<p>Žádní dostupní uživatelé.</p>
+{/if}

@@ -45,7 +45,9 @@ INSERT INTO `layout_parameter` (`layout_id`, `parameter_type_id`, `weight`) VALU
 (2,	1,	1),
 (2,	2,	2),
 (3,	1,	1),
-(3,	3,	2);
+(3,	3,	2),
+(4,	1,	1),
+(4,	4,	2);
 
 DROP TABLE IF EXISTS `list_block_type`;
 CREATE TABLE `list_block_type` (
@@ -57,7 +59,8 @@ CREATE TABLE `list_block_type` (
 INSERT INTO `list_block_type` (`block_type_id`, `name`) VALUES
 (1,	'vtext'),
 (2,	'text'),
-(3,	'image');
+(3,	'image'),
+(4,	'video');
 
 DROP TABLE IF EXISTS `list_layout`;
 CREATE TABLE `list_layout` (
@@ -82,7 +85,8 @@ CREATE TABLE `list_parameter_type` (
 INSERT INTO `list_parameter_type` (`parameter_type_id`, `name`) VALUES
 (1,	'name'),
 (2,	'content'),
-(3,	'gallery_path');
+(3,	'gallery_path'),
+(4,	'video_path');
 
 DROP TABLE IF EXISTS `page`;
 CREATE TABLE `page` (
@@ -117,7 +121,9 @@ CREATE TABLE `page_parameter` (
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
 	`user_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+	`role` enum('ADMIN','MANAGER','GUEST') NOT NULL,
 	`nickname` varchar(255) COLLATE utf8_czech_ci NOT NULL,
+	`name` tinytext COLLATE utf8_czech_ci NOT NULL,
 	`password` varchar(64) COLLATE utf8_czech_ci NOT NULL,
 	`salt` varchar(255) COLLATE utf8_czech_ci NOT NULL,
 	`inserted` datetime NOT NULL,
@@ -126,3 +132,6 @@ CREATE TABLE `user` (
 	PRIMARY KEY (`user_id`),
 	UNIQUE KEY `nickname` (`nickname`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
+
+INSERT INTO `user` (`user_id`, `role`, `nickname`, `name`, `password`, `salt`, `inserted`, `updated`, `last_login`) VALUES
+(1,	'ADMIN',	'repli2dev',	'Jan Drábek',	'53d887d55459501cd34d7a18fbb94e882a165926970bb00cce1fe5ca3af93612',	'',	NOW(),	NOW(),	'0000-00-00 00:00:00');

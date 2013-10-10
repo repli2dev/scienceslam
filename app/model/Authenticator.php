@@ -1,57 +1,54 @@
 <?php
+namespace Muni\ScienceSlam\Model;
 
+use JanDrabek\Database\WatchingActiveRow;
+use Nette\DateTime;
+use Nette\InvalidStateException;
+use Nette\Object;
 use Nette\Security,
 	Nette\Utils\Strings;
-
-
-/*
-CREATE TABLE users (
-	id int(11) NOT NULL AUTO_INCREMENT,
-	username varchar(50) NOT NULL,
-	password char(60) NOT NULL,
-	role varchar(20) NOT NULL,
-	PRIMARY KEY (id)
-);
-*/
 
 /**
  * Users authenticator.
  */
-class Authenticator extends Nette\Object implements Security\IAuthenticator
-{
-	/** @var Nette\Database\Connection */
-	private $database;
+class Authenticator extends Object implements Security\IAuthenticator {
 
+	/** @var User */
+	private $user;
+	private $salt;
 
-
-	public function __construct(Nette\Database\Connection $database)
-	{
-		$this->database = $database;
+	public function injectUser(User $user) {
+		$this->user = $user;
 	}
-
-
+	public function injectSalt($salt) {
+		$this->salt = $salt;
+	}
 
 	/**
 	 * Performs an authentication.
-	 * @return Nette\Security\Identity
-	 * @throws Nette\Security\AuthenticationException
+	 * @return Security\Identity
+	 * @throws Security\AuthenticationException
 	 */
 	public function authenticate(array $credentials)
 	{
-		list($username, $password) = $credentials;
-		$row = $this->database->table('users')->where('username', $username)->fetch();
+		list($nickname, $password) = $credentials;
+		$user = $this->user->findByNickname($nickname);
+		$user = WatchingActiveRow::fromActiveRow($user);
+		$user->last_login = new DateTime();
+		$this->user->save($user);
 
-		if (!$row) {
+		if (!$user) {
 			throw new Security\AuthenticationException('The username is incorrect.', self::IDENTITY_NOT_FOUND);
 		}
 
-		if ($row->password !== $this->calculateHash($password, $row->password)) {
+		if ($user->password !== $this->calculateHash($password)) {
 			throw new Security\AuthenticationException('The password is incorrect.', self::INVALID_CREDENTIAL);
 		}
 
-		$arr = $row->toArray();
+		$arr = $user->toArray();
 		unset($arr['password']);
-		return new Nette\Security\Identity($row->id, $row->role, $arr);
+		$arr['role'] = Strings::lower($arr['role']);
+		return new Security\Identity($user->user_id, $arr['role'], $arr);
 	}
 
 
@@ -61,12 +58,11 @@ class Authenticator extends Nette\Object implements Security\IAuthenticator
 	 * @param  string
 	 * @return string
 	 */
-	public static function calculateHash($password, $salt = NULL)
-	{
-		if ($password === Strings::upper($password)) { // perhaps caps lock is on
-			$password = Strings::lower($password);
+	public function calculateHash($password) {
+		if(empty($this->salt)) {
+			throw new InvalidStateException('No salt present, check config.');
 		}
-		return crypt($password, $salt ?: '$2a$07$' . Strings::random(22));
+		return hash('sha256', $this->salt . "#" . $password);
 	}
 
 }

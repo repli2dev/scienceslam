@@ -332,6 +332,7 @@ p { margin: 0.5em 0 0.5em 0; }
 	font-size: 120%;
 	font-weight: 800;
 	line-height: 50px;
+	margin-bottom: 10px;
 }
 
 .button:hover { color: rgb(255,204,0); }
@@ -351,3 +352,30 @@ img.gallery-item { height: 200px; margin: 10px; }
 .back_sychrova { background: url("../images/2013-1/sychrova2.jpg"); }
 .back_tejkalova { background: url("../images/2013-1/tejkalova2.jpg"); }
 .back_hrbacek { background: url("../images/2013-1/hrbacek2.jpg"); }
+
+/* Adminsitration styles */
+
+table.admin-grid {
+	width: 100%;
+	border-collapse: collapse;
+}
+table.admin-grid td,
+table.admin-grid th {
+	padding: 3px;
+}
+table.admin-grid th {
+	background: #CCC;
+}
+table.admin-grid td.admin-grid-actions,
+table.admin-grid th.admin-grid-actions {
+	text-align: center;
+}
+a.admin-door {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	display: block;
+	z-index: 1000;
+}

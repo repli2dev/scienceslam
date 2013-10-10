@@ -24,7 +24,7 @@ parameters:
 			to: "2013-10-31 23:59:59"
 	database:
 		driver: mysql
-		host: localhost
+		host: 127.0.0.1
 		database: scienceslam
 		username: root
 		password:
@@ -57,7 +57,13 @@ nette:
 		secure: tls
 
 services:
-	authenticator: Authenticator
+	userDAO: \Muni\ScienceSlam\Model\User
+	authenticator:
+		class: \Muni\ScienceSlam\Model\Authenticator
+		setup:
+			- injectUser
+			- injectSalt(%security.salt%)
+	authorizator: \Muni\ScienceSlam\Model\Authorizator
 	routerFactory: RouterFactory
 	router: @routerFactory::createRouter
 

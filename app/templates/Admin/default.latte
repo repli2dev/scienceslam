@@ -1,0 +1,13 @@
+{var $pageTitle = "Administrace"}
+{var $robots = noindex}
+
+{block #content}
+
+<h1>Administrace</h1>
+
+<p>Jste přihlášeni jako {$user->getIdentity()->name} ({$user->getIdentity()->nickname}).</p>
+<ul>
+	<li><a href="{plink Admin:password}">Změnit heslo</a></li>
+	<li><a href="{plink Admin:logout}">Odhlásit</a></li>
+	<li><a href="{plink User:default}">Správa uživatelů</a></li>
+</ul>
