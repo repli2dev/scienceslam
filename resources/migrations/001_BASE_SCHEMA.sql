@@ -21,10 +21,15 @@ DROP TABLE IF EXISTS `event`;
 CREATE TABLE `event` (
 	`event_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
 	`name` tinytext COLLATE utf8_czech_ci NOT NULL,
+	`url` varchar(255) COLLATE utf8_czech_ci NOT NULL,
 	`description` tinytext COLLATE utf8_czech_ci NOT NULL,
+	`extra_styles` text COLLATE utf8_czech_ci NOT NULL,
 	`date` date NOT NULL,
 	`time` time NOT NULL,
+	`registration_opened` datetime NOT NULL,
+	`registration_closed` datetime NOT NULL,
 	`hidden` tinyint(1) NOT NULL,
+	UNIQUE KEY `url` (`url`),
 	PRIMARY KEY (`event_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
 
@@ -125,7 +130,6 @@ CREATE TABLE `user` (
 	`nickname` varchar(255) COLLATE utf8_czech_ci NOT NULL,
 	`name` tinytext COLLATE utf8_czech_ci NOT NULL,
 	`password` varchar(64) COLLATE utf8_czech_ci NOT NULL,
-	`salt` varchar(255) COLLATE utf8_czech_ci NOT NULL,
 	`inserted` datetime NOT NULL,
 	`updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 	`last_login` datetime NOT NULL,
@@ -133,5 +137,5 @@ CREATE TABLE `user` (
 	UNIQUE KEY `nickname` (`nickname`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
 
-INSERT INTO `user` (`user_id`, `role`, `nickname`, `name`, `password`, `salt`, `inserted`, `updated`, `last_login`) VALUES
-(1,	'ADMIN',	'repli2dev',	'Jan Drábek',	'53d887d55459501cd34d7a18fbb94e882a165926970bb00cce1fe5ca3af93612',	'',	NOW(),	NOW(),	'0000-00-00 00:00:00');
+INSERT INTO `user` (`user_id`, `role`, `nickname`, `name`, `password`, `inserted`, `updated`, `last_login`) VALUES
+(1,	'ADMIN',	'repli2dev',	'Jan Drábek',	'53d887d55459501cd34d7a18fbb94e882a165926970bb00cce1fe5ca3af93612',	NOW(),	NOW(),	'0000-00-00 00:00:00');

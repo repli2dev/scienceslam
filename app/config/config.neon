@@ -58,6 +58,7 @@ nette:
 
 services:
 	userDAO: \Muni\ScienceSlam\Model\User
+	eventDAO: \Muni\ScienceSlam\Model\Event
 	authenticator:
 		class: \Muni\ScienceSlam\Model\Authenticator
 		setup:

@@ -33,9 +33,6 @@ class Authenticator extends Object implements Security\IAuthenticator {
 	{
 		list($nickname, $password) = $credentials;
 		$user = $this->user->findByNickname($nickname);
-		$user = WatchingActiveRow::fromActiveRow($user);
-		$user->last_login = new DateTime();
-		$this->user->save($user);
 
 		if (!$user) {
 			throw new Security\AuthenticationException('The username is incorrect.', self::IDENTITY_NOT_FOUND);
@@ -44,6 +41,10 @@ class Authenticator extends Object implements Security\IAuthenticator {
 		if ($user->password !== $this->calculateHash($password)) {
 			throw new Security\AuthenticationException('The password is incorrect.', self::INVALID_CREDENTIAL);
 		}
+
+		$user = WatchingActiveRow::fromActiveRow($user);
+		$user->last_login = new DateTime();
+		$this->user->save($user);
 
 		$arr = $user->toArray();
 		unset($arr['password']);

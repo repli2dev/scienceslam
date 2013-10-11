@@ -67,7 +67,7 @@ class UserPresenter extends BasePresenter {
 	protected function createComponentEditForm() {
 		$form = $this->prepareForm();
 		$form['password']->setOption('description', '(pouze pokud se mění)');
-		$form->addSubmit('send', 'Přidat uživatele');
+		$form->addSubmit('send', 'Upravit uživatele');
 		$form->onSuccess[] = $this->editFormSucceeded;
 		return $form;
 	}
@@ -89,7 +89,7 @@ class UserPresenter extends BasePresenter {
 			$form->addError('Použitá přezdívka již existuje, zadejte, prosím, jinou.');
 			return;
 		}
-		$this->flashMessage('Uživatel byl úspěšně přidán.', 'success');
+		$this->flashMessage('Uživatel byl úspěšně upraven.', 'success');
 		$this->redirect('default');
 	}
 

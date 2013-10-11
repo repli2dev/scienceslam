@@ -26,7 +26,10 @@ class WatchingActiveRow extends ActiveRow {
 		return $this->tempModified;
 	}
 
-	public static function fromActiveRow(ActiveRow $row) {
+	public static function fromActiveRow($row) {
+		if(!($row instanceof ActiveRow)) {
+			return false;
+		}
 		return new self($row->toArray(), $row->getTable());
 	}
 }

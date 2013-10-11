@@ -2,36 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a82fb5-4378-4dbb-b635-444767b4e648" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/Authorizator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/DAO.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/DatabaseMigrator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/User.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/presenters/UserPresenter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/WatchingActiveRow.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/User/add.latte" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Admin/default.latte" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/User/default.latte" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/User/delete.latte" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/User/edit.latte" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Admin/password.latte" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/updatedb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/Event.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/presenters/SlamPresenter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Slam/add.latte" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Slam/delete.latte" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Slam/edit.latte" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Slam/list.latte" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/tests/ExampleTest.phpt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/tests/bootstrap.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/presenters/SignPresenter.php" afterPath="$PROJECT_DIR$/app/presenters/AdminPresenter.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/templates/Sign/in.latte" afterPath="$PROJECT_DIR$/app/templates/Admin/login.latte" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/schema.sql" afterPath="$PROJECT_DIR$/resources/migrations/001_BASE_SCHEMA.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/@layout.latte" afterPath="$PROJECT_DIR$/app/templates/@layout.latte" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/migrations/001_BASE_SCHEMA.sql" afterPath="$PROJECT_DIR$/resources/migrations/001_BASE_SCHEMA.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/Authenticator.php" afterPath="$PROJECT_DIR$/app/model/Authenticator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/presenters/BasePresenter.php" afterPath="$PROJECT_DIR$/app/presenters/BasePresenter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bootstrap.php" afterPath="$PROJECT_DIR$/app/bootstrap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/Authorizator.php" afterPath="$PROJECT_DIR$/app/model/Authorizator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/presenters/UserPresenter.php" afterPath="$PROJECT_DIR$/app/presenters/UserPresenter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/WatchingActiveRow.php" afterPath="$PROJECT_DIR$/app/model/WatchingActiveRow.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.neon" afterPath="$PROJECT_DIR$/app/config/config.neon" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/screen.css" afterPath="$PROJECT_DIR$/css/screen.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/Admin/default.latte" afterPath="$PROJECT_DIR$/app/templates/Admin/default.latte" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="science-slam.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/dummy.txt" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381429180382" ignored="false" />
-    <file path="/Dummy.txt" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381427352633" ignored="false" />
+    <file path="/dummy.txt" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381519755570" ignored="false" />
+    <file path="/Dummy.txt" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381518867131" ignored="false" />
     <file path="/config.production.neon" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368363111082" ignored="false" />
     <file path="/a.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368362231249" ignored="false" />
     <file path="/bootstrap.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1380222230990" ignored="false" />
@@ -45,11 +37,11 @@
     <file path="/schedule.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368465916328" ignored="false" />
     <file path="/rules.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1369554092878" ignored="false" />
     <file path="/people.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1369553905735" ignored="false" />
-    <file path="/default.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381433139151" ignored="false" />
+    <file path="/default.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381520194951" ignored="false" />
     <file path="/FormPresenter.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368371674040" ignored="false" />
     <file path="/signup.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368521161318" ignored="false" />
     <file path="/ticket.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368521530474" ignored="false" />
-    <file path="/config.neon" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1380480254684" ignored="false" />
+    <file path="/config.neon" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381519900537" ignored="false" />
     <file path="/a.dummy" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1380480269257" ignored="false" />
     <file path="/TicketForm.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368461170111" ignored="false" />
     <file path="/SignupForm.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1368542147133" ignored="false" />
@@ -87,12 +79,16 @@
     <file path="/Authorizator.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381428928422" ignored="false" />
     <file path="/password.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1380481646771" ignored="false" />
     <file path="/003_USER_ADD_ROLE.sql" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381428320351" ignored="false" />
-    <file path="/001_BASE_SCHEMA.sql" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381429029323" ignored="false" />
-    <file path="/WatchingActiveRow.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381432459772" ignored="false" />
+    <file path="/001_BASE_SCHEMA.sql" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381519152821" ignored="false" />
+    <file path="/WatchingActiveRow.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381519361898" ignored="false" />
     <file path="/UserPresenter.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381434133113" ignored="false" />
-    <file path="/add.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381431632986" ignored="false" />
-    <file path="/edit.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381432950879" ignored="false" />
-    <file path="/delete.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381434216941" ignored="false" />
+    <file path="/add.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381519971121" ignored="false" />
+    <file path="/edit.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381520007374" ignored="false" />
+    <file path="/delete.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381519995825" ignored="false" />
+    <file path="/Event.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381519873204" ignored="false" />
+    <file path="/manage.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381521013372" ignored="false" />
+    <file path="/list.latte" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381520295261" ignored="false" />
+    <file path="/SlamPresenter.php" changelist="75a82fb5-4378-4dbb-b635-444767b4e648" time="1381521462701" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,19 +111,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AdminPresenter.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/presenters/AdminPresenter.php">
+      <file leaf-file-name="Event.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/model/Event.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="39" selection-start="439" selection-end="439" vertical-scroll-proportion="15.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/model/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="42" selection-start="627" selection-end="627" vertical-scroll-proportion="-13.791667">
+            <state line="29" column="5" selection-start="808" selection-end="808" vertical-scroll-proportion="-18.125">
               <folding>
                 <element signature="e#41#68#0" expanded="true" />
               </folding>
@@ -138,16 +125,16 @@
       <file leaf-file-name="default.latte" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/Admin/default.latte">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="64" selection-start="373" selection-end="373" vertical-scroll-proportion="-6.875">
+            <state line="12" column="33" selection-start="404" selection-end="404" vertical-scroll-proportion="-7.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.latte" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/User/default.latte">
+      <file leaf-file-name="add.latte" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/Slam/add.latte">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="66" selection-start="738" selection-end="738" vertical-scroll-proportion="-16.583334">
+            <state line="5" column="20" selection-start="101" selection-end="101" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
@@ -156,55 +143,62 @@
       <file leaf-file-name="UserPresenter.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/presenters/UserPresenter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="35" selection-start="3195" selection-end="3195" vertical-scroll-proportion="-14.333333">
+            <state line="91" column="57" selection-start="2647" selection-end="2647" vertical-scroll-proportion="-20.333334">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="delete.latte" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/User/delete.latte">
+        <entry file="file://$PROJECT_DIR$/app/templates/Slam/delete.latte">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="15" selection-start="240" selection-end="240" vertical-scroll-proportion="-5.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="@layout.latte" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/@layout.latte">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="65" selection-start="1414" selection-end="1414" vertical-scroll-proportion="-14.375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="screen.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/screen.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="334" column="24" selection-start="6696" selection-end="6696" vertical-scroll-proportion="0.6571936">
+            <state line="9" column="20" selection-start="199" selection-end="199" vertical-scroll-proportion="-5.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="edit.latte" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/User/edit.latte">
+        <entry file="file://$PROJECT_DIR$/app/templates/Slam/edit.latte">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="139" selection-end="139" vertical-scroll-proportion="-3.75">
+            <state line="5" column="16" selection-start="108" selection-end="108" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WatchingActiveRow.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/model/WatchingActiveRow.php">
+      <file leaf-file-name="list.latte" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/Slam/list.latte">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="39" selection-start="468" selection-end="468" vertical-scroll-proportion="-12.5">
-              <folding>
-                <element signature="e#37#57#0" expanded="true" />
-              </folding>
+            <state line="12" column="27" selection-start="245" selection-end="245" vertical-scroll-proportion="-5.3333335">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SlamPresenter.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/presenters/SlamPresenter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="36" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.67116356">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Authorizator.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/model/Authorizator.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="66" selection-start="794" selection-end="794" vertical-scroll-proportion="-11.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.neon" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config.neon">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="9" selection-start="1402" selection-end="1402" vertical-scroll-proportion="-6.5833335">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -233,11 +227,11 @@
       <command text="php app/updatedb.php" />
       <command text="php app/updatedb.php" />
       <command text="php app/updatedb.php" />
-      <command text="php app/updatedb.php" />
-      <command text="php app/updatedb.php" />
-      <command text="php app/updatedb.php" />
-      <command text="php app/updatedb.php" />
       <command text="php utils/updatedb.php" />
+      <command text="php app/updatedb.php" />
+      <command text="php app/updatedb.php" />
+      <command text="php app/updatedb.php" />
+      <command text="php app/updatedb.php" />
       <command text="php app/updatedb.php" />
       <command text="php app/updatedb.php" />
       <command text="php app/updatedb.php" />
@@ -264,30 +258,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resources/migrations/003_USER_ADD_ROLE.sql" />
-        <option value="$PROJECT_DIR$/app/model/Authorizator.php" />
-        <option value="$PROJECT_DIR$/resources/migrations/001_BASE_SCHEMA.sql" />
-        <option value="$PROJECT_DIR$/app/model/DAO.php" />
-        <option value="$PROJECT_DIR$/app/templates/Admin/default.latte" />
-        <option value="$PROJECT_DIR$/app/model/Authenticator.php" />
-        <option value="$PROJECT_DIR$/app/templates/User/add.latte" />
-        <option value="$PROJECT_DIR$/app/model/WatchingActiveRow.php" />
-        <option value="$PROJECT_DIR$/app/model/User.php" />
-        <option value="$PROJECT_DIR$/app/presenters/AdminPresenter.php" />
-        <option value="$PROJECT_DIR$/app/templates/User/edit.latte" />
-        <option value="$PROJECT_DIR$/app/templates/User/default.latte" />
-        <option value="$PROJECT_DIR$/app/templates/@layout.latte" />
         <option value="$PROJECT_DIR$/app/templates/User/delete.latte" />
-        <option value="$PROJECT_DIR$/app/presenters/UserPresenter.php" />
         <option value="$PROJECT_DIR$/css/screen.css" />
+        <option value="$PROJECT_DIR$/app/model/WatchingActiveRow.php" />
+        <option value="$PROJECT_DIR$/app/model/Authenticator.php" />
+        <option value="$PROJECT_DIR$/resources/migrations/001_BASE_SCHEMA.sql" />
+        <option value="$PROJECT_DIR$/app/model/Event.php" />
+        <option value="$PROJECT_DIR$/app/config/config.neon" />
+        <option value="$PROJECT_DIR$/app/templates/Slam/add.latte" />
+        <option value="$PROJECT_DIR$/app/templates/Slam/delete.latte" />
+        <option value="$PROJECT_DIR$/app/templates/Slam/edit.latte" />
+        <option value="$PROJECT_DIR$/app/templates/Slam/manage.latte" />
+        <option value="$PROJECT_DIR$/app/templates/Admin/default.latte" />
+        <option value="$PROJECT_DIR$/app/model/Authorizator.php" />
+        <option value="$PROJECT_DIR$/app/templates/Slam/list.latte" />
+        <option value="$PROJECT_DIR$/app/presenters/UserPresenter.php" />
+        <option value="$PROJECT_DIR$/app/presenters/SlamPresenter.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP54" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1851" />
-    <option name="height" value="1058" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -413,7 +406,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="log" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -521,6 +518,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Slam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="science-slam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="science-slam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -602,7 +621,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
@@ -628,11 +647,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/templates/User" />
       <recent name="$PROJECT_DIR$/app/presenters" />
+      <recent name="$PROJECT_DIR$/app/templates/Slam" />
+      <recent name="$PROJECT_DIR$/app/model" />
+      <recent name="$PROJECT_DIR$/app/templates/User" />
       <recent name="$PROJECT_DIR$/app/templates/Admin" />
-      <recent name="$PROJECT_DIR$/resources" />
-      <recent name="$PROJECT_DIR$/www/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/migrations" />
@@ -735,19 +754,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1851" height="1058" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299389" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289225" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28808865" sideWeight="0.6545842" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2945571" sideWeight="0.6554878" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32825205" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32765958" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34541577" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32723576" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3445122" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32825205" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -823,120 +842,121 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/model/DAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="38" selection-start="766" selection-end="766" vertical-scroll-proportion="0.35106382">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/Authorizator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="40" selection-start="456" selection-end="456" vertical-scroll-proportion="-9.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/Authenticator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="1335" selection-end="1335" vertical-scroll-proportion="-16.916666">
-          <folding>
-            <element signature="e#41#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/User/add.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="-4.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/nette/nette/Nette/Database/Table/ActiveRow.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="20" selection-start="1634" selection-end="1634" vertical-scroll-proportion="0.29128015">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/nette/nette/Nette/Application/UI/PresenterComponent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="13" selection-start="5679" selection-end="5679" vertical-scroll-proportion="0.34790874">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Admin/default.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="64" selection-start="373" selection-end="373" vertical-scroll-proportion="-6.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/User/default.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="66" selection-start="738" selection-end="738" vertical-scroll-proportion="-16.583334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/@layout.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="65" selection-start="1414" selection-end="1414" vertical-scroll-proportion="-14.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="42" selection-start="627" selection-end="627" vertical-scroll-proportion="-13.791667">
-          <folding>
-            <element signature="e#41#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/User/delete.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="15" selection-start="240" selection-end="240" vertical-scroll-proportion="-5.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/WatchingActiveRow.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="39" selection-start="468" selection-end="468" vertical-scroll-proportion="-12.5">
-          <folding>
-            <element signature="e#37#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/User/edit.latte">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="139" selection-end="139" vertical-scroll-proportion="-3.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/presenters/AdminPresenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="39" selection-start="439" selection-end="439" vertical-scroll-proportion="15.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/presenters/UserPresenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="35" selection-start="3195" selection-end="3195" vertical-scroll-proportion="-14.333333">
+        <state line="6" column="0" selection-start="139" selection-end="139" vertical-scroll-proportion="0.09656652">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/screen.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="334" column="24" selection-start="6696" selection-end="6696" vertical-scroll-proportion="0.6571936">
+        <state line="347" column="71" selection-start="7086" selection-end="7086" vertical-scroll-proportion="0.39644352">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/WatchingActiveRow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="42" selection-start="626" selection-end="626" vertical-scroll-proportion="-17.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/Authenticator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="33" selection-start="1160" selection-end="1160" vertical-scroll-proportion="-12.041667">
+          <folding>
+            <element signature="e#41#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/migrations/001_BASE_SCHEMA.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="83" selection-start="5503" selection-end="5503" vertical-scroll-proportion="0.84745765">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="42" selection-start="627" selection-end="627" vertical-scroll-proportion="-10.166667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="5" selection-start="808" selection-end="808" vertical-scroll-proportion="-18.125">
+          <folding>
+            <element signature="e#41#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.neon">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="9" selection-start="1402" selection-end="1402" vertical-scroll-proportion="-6.5833335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Admin/default.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="33" selection-start="404" selection-end="404" vertical-scroll-proportion="-7.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Slam/delete.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="20" selection-start="199" selection-end="199" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Slam/add.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="20" selection-start="101" selection-end="101" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Slam/edit.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="16" selection-start="108" selection-end="108" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/Authorizator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="66" selection-start="794" selection-end="794" vertical-scroll-proportion="-11.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Slam/list.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="27" selection-start="245" selection-end="245" vertical-scroll-proportion="-5.3333335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/presenters/UserPresenter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="57" selection-start="2647" selection-end="2647" vertical-scroll-proportion="-20.333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/presenters/SlamPresenter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="36" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.67116356">
           <folding />
         </state>
       </provider>
