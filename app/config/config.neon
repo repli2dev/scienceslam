@@ -21,7 +21,7 @@ parameters:
 		signup:
 			mail: []
 			from: "2013-09-24 00:00:00"
-			to: "2013-10-31 23:59:59"
+			to: "2013-11-08 23:59:59"
 	database:
 		driver: mysql
 		host: localhost
