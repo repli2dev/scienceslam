@@ -324,6 +324,7 @@ p { margin: 0.5em 0 0.5em 0; }
 .back_video{ background: url("../images/blocks/video.jpg"); }
 
 .button {
+	margin-top: 10px;
 	border: none;
 	display: block;
 	height: 50px;
@@ -356,7 +357,7 @@ img.gallery-item { height: 200px; margin: 10px; }
 .back_hrbacek { background: url("../images/2013-1/hrbacek2.jpg"); }
 
 /* 2013-2 specific */
-.back_poster_2013-2 { background: url("../images/2013-2/poster.png"); }
+.back_poster_2013-2 { background: url("../images/2013-2/poster.jpg"); }
 .back_buryska { background: url("../images/2013-2/buryska.jpg"); }
 .back_pracny { background: url("../images/2013-2/pracny.jpg"); }
 .back_vrtalova { background: url("../images/2013-2/vrtalova.jpg"); }
