@@ -356,5 +356,7 @@ img.gallery-item { height: 200px; margin: 10px; }
 .back_hrbacek { background: url("../images/2013-1/hrbacek2.jpg"); }
 
 /* 2013-2 specific */
-.back_poster_2013-1 { background: url("../images/2013-2/poster.png"); }
+.back_poster_2013-2 { background: url("../images/2013-2/poster.png"); }
 .back_buryska { background: url("../images/2013-2/buryska.jpg"); }
+.back_pracny { background: url("../images/2013-2/pracny.jpg"); }
+.back_vrtalova { background: url("../images/2013-2/vrtalova.jpg"); }
