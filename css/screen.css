@@ -316,8 +316,10 @@ p { margin: 0.5em 0 0.5em 0; }
 .back_novakova { background: url("../images/blocks/novakova.jpg"); }
 .back_pribyla { background: url("../images/blocks/pribyla.jpg"); }
 .back_slam2 { background: url("../images/blocks/slam2.jpg"); }
-.back_slam3 { background: url("../images/blocks/slam3.jpg"); }
-.back_question { background: url("../images/question.jpg"); }
+.back_person1 { background: url("../images/blocks/person1.jpg"); }
+.back_person2 { background: url("../images/blocks/person2.jpg"); }
+.back_person3 { background: url("../images/blocks/person3.jpg"); }
+.back_question { background: url("../images/blocks/question.jpg"); }
 .back_press { background: url("../images/blocks/press.jpg"); }
 .back_video{ background: url("../images/blocks/video.jpg"); }
 
@@ -343,7 +345,7 @@ img.gallery-item { height: 200px; margin: 10px; }
 
 .back_slam_2013-1 { background: url("../images/2013-1/slam.jpg"); }
 
-/* 2013 specific ! */
+/* 2013-1 specific ! */
 .back_poster_2013-1 { background: url("../images/2013-1/poster.png"); }
 .back_gallery_2013-1 { background: url("../images/2013-1/gallery.jpg"); }
 .back_udif_2013-1 { background: url("../images/2013-1/udif.jpg"); }
@@ -352,3 +354,7 @@ img.gallery-item { height: 200px; margin: 10px; }
 .back_sychrova { background: url("../images/2013-1/sychrova2.jpg"); }
 .back_tejkalova { background: url("../images/2013-1/tejkalova2.jpg"); }
 .back_hrbacek { background: url("../images/2013-1/hrbacek2.jpg"); }
+
+/* 2013-2 specific */
+.back_poster_2013-1 { background: url("../images/2013-2/poster.png"); }
+.back_buryska { background: url("../images/2013-2/buryska.jpg"); }
