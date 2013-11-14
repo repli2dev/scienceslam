@@ -361,3 +361,9 @@ img.gallery-item { height: 200px; margin: 10px; }
 .back_buryska { background: url("../images/2013-2/buryska.jpg"); }
 .back_pracny { background: url("../images/2013-2/pracny.jpg"); }
 .back_vrtalova { background: url("../images/2013-2/vrtalova.jpg"); }
+.back_kalabova { background: url("../images/2013-2/kalabova.jpg"); }
+.back_zounkova { background: url("../images/2013-2/zounkova.jpg"); }
+.back_fiala { background: url("../images/2013-2/fiala.jpg"); }
+.back_holik { background: url("../images/2013-2/holik.jpg"); }
+.krmitko { width: 220px; height: 123px; margin: 10px 5px 5px 5px; }
+.center-block { display: block; margin-left: auto; margin-right: auto; }
