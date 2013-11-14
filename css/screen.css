@@ -342,7 +342,9 @@ p { margin: 0.5em 0 0.5em 0; }
 ul.gallery { position: relative; left: -10px; text-align: left; padding: 0; margin: 0; }
 ul.gallery>li { display: inline-block; }
 
+img { margin: 10px; }
 img.gallery-item { height: 200px; margin: 10px; }
+.center-block { display: block; margin-left: auto; margin-right: auto; }
 
 .back_slam_2013-1 { background: url("../images/2013-1/slam.jpg"); }
 
@@ -365,5 +367,3 @@ img.gallery-item { height: 200px; margin: 10px; }
 .back_zounkova { background: url("../images/2013-2/zounkova.jpg"); }
 .back_fiala { background: url("../images/2013-2/fiala.jpg"); }
 .back_holik { background: url("../images/2013-2/holik.jpg"); }
-.krmitko { width: 220px; height: 123px; margin: 10px 5px 5px 5px; }
-.center-block { display: block; margin-left: auto; margin-right: auto; }
