@@ -309,14 +309,13 @@ p { margin: 0.5em 0 0.5em 0; }
 .margin-top { margin-top: 30px; }
 
 .back_posltova { background: url("../images/blocks/posltova.jpg"); }
-.back_drazan { background: url("../images/blocks/drazan.jpg"); }
-.back_tyc { background: url("../images/blocks/tyc.jpg"); }
+.back_drazan { background: url("../images/blocks/drazan2.jpg"); }
 .back_drabek { background: url("../images/blocks/drabek.jpg"); }
 .back_ukrop { background: url("../images/blocks/ukrop.jpg"); }
 .back_novakova { background: url("../images/blocks/novakova.jpg"); }
 .back_pribyla { background: url("../images/blocks/pribyla.jpg"); }
-.back_forman { background: url("../images/blocks/forman.jpg"); }
-.back_klusacek { background: url("../images/blocks/klusacek.jpg"); }
+.back_forman { background: url("../images/blocks/forman2.jpg"); }
+.back_klusacek { background: url("../images/blocks/klusacek2.jpg"); }
 .back_slam2 { background: url("../images/blocks/slam2.jpg"); }
 .back_person1 { background: url("../images/blocks/person1.jpg"); }
 .back_person2 { background: url("../images/blocks/person2.jpg"); }
@@ -324,6 +323,8 @@ p { margin: 0.5em 0 0.5em 0; }
 .back_question { background: url("../images/blocks/question.jpg"); }
 .back_press { background: url("../images/blocks/press.jpg"); }
 .back_video{ background: url("../images/blocks/video.jpg"); }
+.back_slam_2013-1 { background: url("../images/2013-1/slam.jpg"); }
+.back_slam_2013-2 { background: url("../images/2013-2/slam.jpg"); }
 
 .button {
 	margin-top: 10px;
@@ -348,8 +349,6 @@ img { margin: 10px; }
 img.gallery-item { height: 200px; margin: 10px; }
 .center-block { display: block; margin-left: auto; margin-right: auto; }
 
-.back_slam_2013-1 { background: url("../images/2013-1/slam.jpg"); }
-
 /* 2013-1 specific ! */
 .back_poster_2013-1 { background: url("../images/2013-1/poster.png"); }
 .back_gallery_2013-1 { background: url("../images/2013-1/gallery.jpg"); }
@@ -362,10 +361,12 @@ img.gallery-item { height: 200px; margin: 10px; }
 
 /* 2013-2 specific */
 .back_poster_2013-2 { background: url("../images/2013-2/poster.jpg"); }
-.back_buryska { background: url("../images/2013-2/buryska.jpg"); }
-.back_pracny { background: url("../images/2013-2/pracny.jpg"); }
-.back_vrtalova { background: url("../images/2013-2/vrtalova.jpg"); }
-.back_kalabova { background: url("../images/2013-2/kalabova.jpg"); }
-.back_zounkova { background: url("../images/2013-2/zounkova.jpg"); }
-.back_fiala { background: url("../images/2013-2/fiala.jpg"); }
-.back_holik { background: url("../images/2013-2/holik.jpg"); }
+.back_gallery_2013-2 { background: url("../images/2013-2/gallery.jpg"); }
+.back_science-sven { background: url("../images/2013-2/science-sven.jpg"); }
+.back_buryska { background: url("../images/2013-2/buryska2.jpg"); }
+.back_pracny { background: url("../images/2013-2/pracny2.jpg"); }
+.back_vrtalova { background: url("../images/2013-2/vrtalova2.jpg"); }
+.back_kalabova { background: url("../images/2013-2/kalabova2.jpg"); }
+.back_zounkova { background: url("../images/2013-2/zounkova2.jpg"); }
+.back_fiala { background: url("../images/2013-2/fiala2.jpg"); }
+.back_holik { background: url("../images/2013-2/holik2.jpg"); }
