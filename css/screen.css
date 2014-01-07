@@ -42,11 +42,11 @@ body {
 @media only screen and (min-width: 1000px) {
 	.contents { width: 960px; }
 	body { text-align: justify; }
-	.video { height: 480px; width: 853px; }
 }
 
 @media only screen and (min-width: 1320px) {
 	.contents { width: 1280px; }
+	.video { height: 480px; width: 853px; }
 }
 
 .header {
