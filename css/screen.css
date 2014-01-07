@@ -37,7 +37,7 @@ body {
 
 .contents-text { padding: 0 10px 0 10px; }
 .contents { margin: 0 auto 0 auto; width: 640px; }
-.video { height: 360px; width: 640px; margin: 10px 0 0 0; }
+.video { height: 342px; width: 608px; margin: 10px 0 0 0; }
 
 @media only screen and (min-width: 1000px) {
 	.contents { width: 960px; }
@@ -46,7 +46,7 @@ body {
 
 @media only screen and (min-width: 1320px) {
 	.contents { width: 1280px; }
-	.video { height: 480px; width: 853px; }
+	.video { height: 522px; width: 928px; }
 }
 
 .header {
