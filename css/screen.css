@@ -323,6 +323,7 @@ p { margin: 0.5em 0 0.5em 0; }
 .back_question { background: url("../images/blocks/question.jpg"); }
 .back_press { background: url("../images/blocks/press.jpg"); }
 .back_video{ background: url("../images/blocks/video.jpg"); }
+.back_winners{ background: url("../images/blocks/winners.jpg"); }
 .back_slam_2013-1 { background: url("../images/2013-1/slam.jpg"); }
 .back_slam_2013-2 { background: url("../images/2013-2/slam.jpg"); }
 
