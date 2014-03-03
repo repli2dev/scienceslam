@@ -110,12 +110,9 @@ class SlamPresenter extends BasePresenter {
 		$form->addTextArea('description', 'Popis', 40, 15)
 			->setRequired('Vyplňte, prosím, popis.');
 		$form->addGroup('Termíny');
-		$form->addText('date', 'Den konání')
+		$form->addText('date', 'Den a čas konání')
 			->setRequired('Vyplňte, prosím, termín konání.')
-			->setOption('description', 've tvaru 2012-12-24');
-		$form->addText('time', 'Čas konání')
-			->setRequired('Vyplňte, prosím, čas konání.')
-			->setOption('description', 've tvaru 10:12:14');
+			->setOption('description', 've tvaru 2012-12-24 10:12:14');
 		$form->addText('registration_opened', 'Otevření registrace')
 			->setRequired('Vyplňte, prosím, čas otevření registrace')
 			->setOption('description', 've tvaru 2012-12-24 10:12:14');

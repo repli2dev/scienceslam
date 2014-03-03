@@ -51,6 +51,7 @@ class UserPresenter extends BasePresenter {
 	public function addFormSucceeded(\Nette\Forms\Form $form) {
 		$values = $form->getValues();
 		$values['password'] = $this->user->getAuthenticator()->calculateHash($values['password']);
+		$values['inserted'] = new \Nette\DateTime();
 
 		$user = $this->userDAO->create();
 		$user->addAll($values);
@@ -103,6 +104,11 @@ class UserPresenter extends BasePresenter {
 
 	public function deleteFormSucceeded(\Nette\Forms\Form $form) {
 		$values = $form->getValues();
+		$userCount = $this->userDAO->findAll()->count();
+		if($userCount == 1) {
+			$form->addError('Poslední uživatel nemůže být smazán.');
+			return;
+		}
 		if($form['yes']->isSubmittedBy()) {
 			$this->userDAO->delete($this->getParameter('id'));
 			$this->flashMessage('Uživatel byl úspěšně smazán.', 'success');

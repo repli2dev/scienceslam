@@ -3,6 +3,7 @@
 namespace JanDrabek\Database;
 
 use Nette\Database\Connection;
+use Nette\Database\Context;
 use Nette\Database\Table\ActiveRow;
 use Nette\Database\Table\Selection;
 use Nette\InvalidArgumentException;
@@ -14,11 +15,11 @@ abstract class DAO extends Object {
 	protected $tableName; // Can override name based on class name
 	protected $primary;
 
-	/** @var Connection */
-	private $connection;
+	/** @var Context */
+	private $context;
 
-	public function __construct(Connection $connection) {
-		$this->connection = $connection;
+	public function __construct(Context $context) {
+		$this->context = $context;
 	}
 
 	public function create() {
@@ -106,7 +107,11 @@ abstract class DAO extends Object {
 	 * @return Selection
 	 */
 	protected function getTable() {
-		return $this->connection->table($this->getName());
+		return $this->context->table($this->getName());
+	}
+
+	protected function getConnection() {
+		return $this->context->getConnection();
 	}
 
 	/**

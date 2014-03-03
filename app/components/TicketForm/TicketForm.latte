@@ -1,6 +1,0 @@
-{if new Nette\DateTime() < $from || new Nette\DateTime() > $to}
-	<p>Bohužel si momentálně nelze objednat lístky. Omlouváme se.</p>
-{else}
-	{include ../../templates/flashes.latte}
-	{control form}
-{/if}

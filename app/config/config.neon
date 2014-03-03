@@ -24,7 +24,7 @@ parameters:
 			to: "2013-10-31 23:59:59"
 	database:
 		driver: mysql
-		host: 127.0.0.1
+		host: localhost
 		database: scienceslam
 		username: root
 		password:
@@ -37,7 +37,6 @@ php:
 nette:
 	application:
 		errorPresenter: Error
-		catchException: true
 
 	database:
 		dsn: '%database.driver%:host=%database.host%;dbname=%database.database%'
@@ -59,26 +58,8 @@ nette:
 services:
 	userDAO: \Muni\ScienceSlam\Model\User
 	eventDAO: \Muni\ScienceSlam\Model\Event
-	authenticator:
-		class: \Muni\ScienceSlam\Model\Authenticator
-		setup:
-			- injectUser
-			- injectSalt(%security.salt%)
+	authenticator: \Muni\ScienceSlam\Model\Authenticator(@userDAO, %security.salt%)
 	authorizator: \Muni\ScienceSlam\Model\Authorizator
 	routerFactory: RouterFactory
 	router: @routerFactory::createRouter
-
-
-factories:
-	componentTicket:
-		class: TicketForm
-		setup:
-			- injectMessagePrototype(@message)
-	componentSignup:
-		class: SignupForm
-		setup:
-			- injectMessagePrototype(@message)
-	message:
-		class: Nette\Mail\Message
-		setup:
-			- setMailer
+	signupFormFactory: ISignupFormFactory

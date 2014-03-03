@@ -17,10 +17,8 @@ class Authenticator extends Object implements Security\IAuthenticator {
 	private $user;
 	private $salt;
 
-	public function injectUser(User $user) {
+	public function __construct(User $user, $salt) {
 		$this->user = $user;
-	}
-	public function injectSalt($salt) {
 		$this->salt = $salt;
 	}
 
@@ -29,8 +27,7 @@ class Authenticator extends Object implements Security\IAuthenticator {
 	 * @return Security\Identity
 	 * @throws Security\AuthenticationException
 	 */
-	public function authenticate(array $credentials)
-	{
+	public function authenticate(array $credentials) {
 		list($nickname, $password) = $credentials;
 		$user = $this->user->findByNickname($nickname);
 

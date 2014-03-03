@@ -3,19 +3,25 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "4205c3c6ee75d2c248c5d58dd691a5ee",
+    "hash": "0f5361744fd23be0aeed99e7e82b14ca",
     "packages": [
         {
             "name": "jandrabek/nette-mailpanel",
-            "version": "2.1",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
-                "url": "git://git.yavanna.cz/mailpanel.git",
-                "reference": "c4f21898f0605c24b2be70ae82ca02727dc28b99"
+                "url": "https://github.com/repli2dev/nette-mailpanel.git",
+                "reference": "636efaad41960c004a50cf809919d4138bffc5cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/repli2dev/nette-mailpanel/zipball/636efaad41960c004a50cf809919d4138bffc5cc",
+                "reference": "636efaad41960c004a50cf809919d4138bffc5cc",
+                "shasum": ""
             },
             "require": {
-                "nette/nette": "2.0.*",
-                "php": ">=5.3.0"
+                "nette/nette": "2.0.* | 2.1.*",
+                "php": ">=5.3.1"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -39,46 +45,43 @@
                 "mailpanel",
                 "sessionmailer"
             ],
-            "time": "2012-09-20 19:19:26"
+            "time": "2014-03-03 09:02:30"
         },
         {
             "name": "nette/nette",
-            "version": "v2.0.12",
+            "version": "v2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/nette.git",
-                "reference": "80a7e460badc3d71b1469bb23810ebf235b06b11"
+                "reference": "9e7e5fc5921053172dbacecda2c06d749f89a71b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/nette/zipball/80a7e460badc3d71b1469bb23810ebf235b06b11",
-                "reference": "80a7e460badc3d71b1469bb23810ebf235b06b11",
+                "url": "https://api.github.com/repos/nette/nette/zipball/9e7e5fc5921053172dbacecda2c06d749f89a71b",
+                "reference": "9e7e5fc5921053172dbacecda2c06d749f89a71b",
                 "shasum": ""
             },
             "require": {
                 "ext-iconv": "*",
                 "ext-tokenizer": "*",
-                "php": ">=5.3.0"
+                "php": ">=5.3.1"
             },
             "require-dev": {
-                "nette/tester": "0.9.*"
+                "nette/tester": "~1.0.0"
             },
             "suggest": {
                 "ext-fileinfo": "*",
                 "ext-gd": "*",
                 "ext-mbstring": "*",
-                "ext-memcache": "*",
                 "ext-pdo": "*"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1-dev"
-                }
-            },
             "autoload": {
+                "classmap": [
+                    "Nette/"
+                ],
                 "files": [
-                    "Nette/loader.php"
+                    "Nette/common/shortcuts.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -102,18 +105,13 @@
             "keywords": [
                 "Forms",
                 "database",
-                "dbal",
                 "debugging",
                 "framework",
-                "images",
-                "latte",
                 "mailing",
-                "micro",
                 "mvc",
-                "neon",
                 "templating"
             ],
-            "time": "2013-08-07 23:14:19"
+            "time": "2014-02-11 04:51:20"
         }
     ],
     "packages-dev": [
@@ -123,12 +121,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tester.git",
-                "reference": "4f46271816885ed38e8d55b9d3d9fa37182cd312"
+                "reference": "d0bb114e5ff8e4f94edc889e8d8892992c335db8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tester/zipball/4f46271816885ed38e8d55b9d3d9fa37182cd312",
-                "reference": "4f46271816885ed38e8d55b9d3d9fa37182cd312",
+                "url": "https://api.github.com/repos/nette/tester/zipball/d0bb114e5ff8e4f94edc889e8d8892992c335db8",
+                "reference": "d0bb114e5ff8e4f94edc889e8d8892992c335db8",
                 "shasum": ""
             },
             "require": {
@@ -139,6 +137,11 @@
                 "Tester/coverage-report"
             ],
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
             "autoload": {
                 "classmap": [
                     "Tester/"
@@ -167,7 +170,7 @@
                 "testing",
                 "unit"
             ],
-            "time": "2013-09-13 12:50:22"
+            "time": "2014-02-28 15:42:12"
         }
     ],
     "aliases": [
@@ -178,7 +181,7 @@
         "nette/tester": 20
     },
     "platform": {
-        "php": ">= 5.3.0"
+        "php": ">= 5.3.1"
     },
     "platform-dev": [
 

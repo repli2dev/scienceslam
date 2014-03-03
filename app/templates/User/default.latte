@@ -22,7 +22,7 @@
 				<td>{$row->name}</td>
 				<td>{$row->nickname}</td>
 				<td>{$roles[$row->role]}</td>
-				<td>{$row->last_login|date:"j. n. Y H.i"}</td>
+				<td>{if $row->last_login == "-0001-11-30 00:00:00"}Dosud žádné přihlášení{else}{$row->last_login|date:"j. n. Y H.i"}{/if}</td>
 				<td class="admin-grid-actions">
 					<a href="{plink User:edit, $row->user_id}">Upravit</a><br />
 					<a href="{plink user:delete, $row->user_id}">Smazat</a>

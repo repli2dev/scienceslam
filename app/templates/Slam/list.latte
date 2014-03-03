@@ -23,7 +23,7 @@
 				<td>{if $row->hidden}ANO{else}NE{/if}</td>
 				<td>{$row->name}</td>
 				<td>{$row->url}</td>
-				<td>{$row->date|date:"j. n. Y"} {$row->time|date:"H:i"}</td>
+				<td>{$row->date|date:"j. n. Y"} {$row->date|date:"H:i"}</td>
 				<td>{$row->registration_opened|date:"j. n. Y H:i"}<br />{$row->registration_closed|date:"j. n. Y H:i"}</td>
 				<td class="admin-grid-actions">
 					<a href="{plink Slam:manage, $row->event_id}">Spravovat stránky tohoto ročníku</a><br />

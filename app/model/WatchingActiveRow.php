@@ -10,7 +10,6 @@ class WatchingActiveRow extends ActiveRow {
 
 	public function __set($key, $value) {
 		$this->tempModified[$key] = $value;
-		parent::__set($key, $value);
 	}
 
 	public function addAll($values) {
