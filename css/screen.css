@@ -37,16 +37,16 @@ body {
 
 .contents-text { padding: 0 10px 0 10px; }
 .contents { margin: 0 auto 0 auto; width: 640px; }
-.video { height: 360px; width: 640px; margin: 20px 0 20px 0; }
+.video { height: 342px; width: 608px; margin: 10px 0 0 0; }
 
 @media only screen and (min-width: 1000px) {
 	.contents { width: 960px; }
 	body { text-align: justify; }
-	.video { height: 480px; width: 853px; }
 }
 
 @media only screen and (min-width: 1320px) {
 	.contents { width: 1280px; }
+	.video { height: 522px; width: 928px; }
 }
 
 .header {
@@ -309,19 +309,26 @@ p { margin: 0.5em 0 0.5em 0; }
 .margin-top { margin-top: 30px; }
 
 .back_posltova { background: url("../images/blocks/posltova.jpg"); }
-.back_drazan { background: url("../images/blocks/drazan.jpg"); }
-.back_tyc { background: url("../images/blocks/tyc.jpg"); }
+.back_drazan { background: url("../images/blocks/drazan2.jpg"); }
 .back_drabek { background: url("../images/blocks/drabek.jpg"); }
 .back_ukrop { background: url("../images/blocks/ukrop.jpg"); }
 .back_novakova { background: url("../images/blocks/novakova.jpg"); }
 .back_pribyla { background: url("../images/blocks/pribyla.jpg"); }
+.back_forman { background: url("../images/blocks/forman2.jpg"); }
+.back_klusacek { background: url("../images/blocks/klusacek2.jpg"); }
 .back_slam2 { background: url("../images/blocks/slam2.jpg"); }
-.back_slam3 { background: url("../images/blocks/slam3.jpg"); }
-.back_question { background: url("../images/question.jpg"); }
+.back_person1 { background: url("../images/blocks/person1.jpg"); }
+.back_person2 { background: url("../images/blocks/person2.jpg"); }
+.back_person3 { background: url("../images/blocks/person3.jpg"); }
+.back_question { background: url("../images/blocks/question.jpg"); }
 .back_press { background: url("../images/blocks/press.jpg"); }
 .back_video{ background: url("../images/blocks/video.jpg"); }
+.back_winners{ background: url("../images/blocks/winners.jpg"); }
+.back_slam_2013-1 { background: url("../images/2013-1/slam.jpg"); }
+.back_slam_2013-2 { background: url("../images/2013-2/slam.jpg"); }
 
 .button {
+	margin-top: 10px;
 	border: none;
 	display: block;
 	height: 50px;
@@ -340,18 +347,9 @@ p { margin: 0.5em 0 0.5em 0; }
 ul.gallery { position: relative; left: -10px; text-align: left; padding: 0; margin: 0; }
 ul.gallery>li { display: inline-block; }
 
+img { margin: 10px; }
 img.gallery-item { height: 200px; margin: 10px; }
-
-.back_slam_2013-1 { background: url("../images/2013-1/slam.jpg"); }
-
-/* 2013 specific ! */
-.back_poster_2013-1 { background: url("../images/2013-1/poster.png"); }
-.back_gallery_2013-1 { background: url("../images/2013-1/gallery.jpg"); }
-.back_rabova { background: url("../images/2013-1/rabova2.jpg"); }
-.back_suchacek { background: url("../images/2013-1/suchacek2.jpg"); }
-.back_sychrova { background: url("../images/2013-1/sychrova2.jpg"); }
-.back_tejkalova { background: url("../images/2013-1/tejkalova2.jpg"); }
-.back_hrbacek { background: url("../images/2013-1/hrbacek2.jpg"); }
+.center-block { display: block; margin-left: auto; margin-right: auto; }
 
 /* Adminsitration styles */
 
@@ -379,3 +377,26 @@ a.admin-door {
 	display: block;
 	z-index: 1000;
 }
+
+/* 2013-1 specific ! */
+.back_poster_2013-1 { background: url("../images/2013-1/poster.png"); }
+.back_gallery_2013-1 { background: url("../images/2013-1/gallery.jpg"); }
+.back_udif_2013-1 { background: url("../images/2013-1/udif.jpg"); }
+.back_rabova { background: url("../images/2013-1/rabova2.jpg"); }
+.back_suchacek { background: url("../images/2013-1/suchacek2.jpg"); }
+.back_sychrova { background: url("../images/2013-1/sychrova2.jpg"); }
+.back_tejkalova { background: url("../images/2013-1/tejkalova2.jpg"); }
+.back_hrbacek { background: url("../images/2013-1/hrbacek2.jpg"); }
+
+/* 2013-2 specific */
+.back_poster_2013-2 { background: url("../images/2013-2/poster.jpg"); }
+.back_gallery_2013-2 { background: url("../images/2013-2/gallery.jpg"); }
+.back_science-sven { background: url("../images/2013-2/science-sven.jpg"); }
+.back_buryska { background: url("../images/2013-2/buryska2.jpg"); }
+.back_pracny { background: url("../images/2013-2/pracny2.jpg"); }
+.back_vrtalova { background: url("../images/2013-2/vrtalova2.jpg"); }
+.back_kalabova { background: url("../images/2013-2/kalabova2.jpg"); }
+.back_zounkova { background: url("../images/2013-2/zounkova2.jpg"); }
+.back_fiala { background: url("../images/2013-2/fiala2.jpg"); }
+.back_holik { background: url("../images/2013-2/holik2.jpg"); }
+>>>>>>> master
