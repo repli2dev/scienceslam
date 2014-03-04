@@ -1,0 +1,85 @@
+{var $pageTitle = $page->name}
+{var $robots = noindex}
+
+{block #content}
+
+{if $page->is_block_page}
+	{if count($blocks) > 0}
+		{foreach $blocks as $block}
+			{if !empty($block->link)}
+				<a href="{$block->link}">
+			{/if}
+			{if $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::VERTICAL_TEXT}
+				<span class="block_1x1 {$block->classes}">
+					<span class="sub-block_1x1_text center">
+						{!$block->param1}
+					</span>
+				</span>
+
+			{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::TEXT}
+				<span class="block_1x1 {$block->classes}">
+					<span class="sub-block_1x1_text">
+						{!$block->param1}
+					</span>
+				</span>
+			{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::REGISTRATION}
+				<div class="block_1x1_halves {$block->classes}">
+					<a href="{plink Sign:up}">
+						<span class="sub-block_half1">Chtěl bys prezentovat svůj vlastní výzkum a vyhrát?
+							<h1>Registrace</h1>
+						</span>
+					</a>
+					<a href="{plink Homepage:ticket}">
+						<span class="sub-block_half2">Zajímalo by tě, jak to vlastně bude vypadat? Kdo zvítězí?
+							<h1>Prodej lístků</h1>
+					</span>
+					</a>
+				</div>
+			{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::IMAGE}
+				<span class="block_1x1 {$block->classes}">
+					<span class="sub-block_picture">
+						<h3>{$block->param1}</h3>{$block->param2}
+					</span>
+				</span>
+			{/if}
+			{if !empty($block->link)}
+				</a>
+			{/if}
+		{/foreach}
+	{else}
+		<p>Tato stránka je zatím prázdná, zkuste to prosím později.</p>
+	{/if}
+{else}
+	<h1>{$page->name}</h1>
+	{!$page->content}
+{/if}
+
+<div class="cleaner"></div>
+{if $admin}
+	<a href="{plink Page:edit, $page->page_id}">Upravit stránku</a>
+	{if $page->is_block_page}<br />
+		<a href="{plink Block:add, $page->page_id}">Přidat blok</a>
+		{if count($blocks) > 0}
+        	<table class="admin-grid">
+        		<tr>
+        			<th>ID</th>
+        			<th>Rozložení</th>
+        			<th>Váha</th>
+        			<th class="admin-grid-actions">Akce</th>
+        		</tr>
+        		{var $types = Muni\ScienceSlam\Model\ListBlockType::getAll()}
+        		{foreach $blocks as $row}
+        			<tr>
+        				<td>{$row->block_id}</td>
+        				<td>{$types[$row->block_type_id]}</td>
+        				<td>{$row->weight}</td>
+        				<td class="admin-grid-actions">
+        					<a href="{plink Block:edit, $row->block_id}">Upravit</a><br />
+        					<a href="{plink Block:delete, $row->block_id}">Smazat</a>
+        				</td>
+        			</tr>
+        		{/foreach}
+        	</table>
+        {/if}
+	{/if}
+{/if}

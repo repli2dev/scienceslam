@@ -378,6 +378,12 @@ a.admin-door {
 	z-index: 1000;
 }
 
+/* Files management */
+table.files { width: 100%; margin-bottom: 50px; border-collapse: collapse; }
+table.files th { background: rgb(222,222,222); padding: 3px; }
+table.files td { border-top: 1px solid rgb(222,222,222); padding: 3px; }
+table.files td a { margin-right: 20px; }
+
 /* 2013-1 specific ! */
 .back_poster_2013-1 { background: url("../images/2013-1/poster.png"); }
 .back_gallery_2013-1 { background: url("../images/2013-1/gallery.jpg"); }
@@ -399,4 +405,3 @@ a.admin-door {
 .back_zounkova { background: url("../images/2013-2/zounkova2.jpg"); }
 .back_fiala { background: url("../images/2013-2/fiala2.jpg"); }
 .back_holik { background: url("../images/2013-2/holik2.jpg"); }
->>>>>>> master

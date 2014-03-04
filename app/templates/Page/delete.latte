@@ -1,0 +1,11 @@
+{var $pageTitle = "Smazat stránku"}
+{var $robots = noindex}
+
+{block #content}
+
+<h1>{$event->name}</h1>
+<h2>Smazat stránku</h2>
+
+<p>Opravdu chcete smazat stránku: {$data->name}?</p>
+
+{control deleteForm}

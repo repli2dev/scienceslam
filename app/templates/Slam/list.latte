@@ -26,7 +26,7 @@
 				<td>{$row->date|date:"j. n. Y"} {$row->date|date:"H:i"}</td>
 				<td>{$row->registration_opened|date:"j. n. Y H:i"}<br />{$row->registration_closed|date:"j. n. Y H:i"}</td>
 				<td class="admin-grid-actions">
-					<a href="{plink Slam:manage, $row->event_id}">Spravovat stránky tohoto ročníku</a><br />
+					<a href="{plink Page:list, $row->event_id}">Spravovat stránky</a><br />
 					<a href="{plink Slam:edit, $row->event_id}">Upravit</a><br />
 					<a href="{plink Slam:delete, $row->event_id}">Smazat</a>
 				</td>

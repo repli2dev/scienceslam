@@ -2,29 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a82fb5-4378-4dbb-b635-444767b4e648" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/components/SignupForm/ISignupFormFactory.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/TicketForm/TicketForm.latte" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/components/TicketForm/TicketForm.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/Block.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/presenters/BlockPresenter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/presenters/FilePresenter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/ListBlockType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/Page.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/presenters/PagePresenter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Block/add.latte" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Page/add.latte" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/File/default.latte" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Block/delete.latte" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Page/delete.latte" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Block/edit.latte" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Page/edit.latte" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Page/list.latte" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Page/show.latte" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/libs/web.config" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/presenters/FormPresenter.php" afterPath="$PROJECT_DIR$/app/presenters/SignPresenter.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/templates/Form/signup.latte" afterPath="$PROJECT_DIR$/app/templates/Sign/up.latte" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.phar" afterPath="$PROJECT_DIR$/composer.phar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/migrations/001_BASE_SCHEMA.sql" afterPath="$PROJECT_DIR$/resources/migrations/001_BASE_SCHEMA.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/Authenticator.php" afterPath="$PROJECT_DIR$/app/model/Authenticator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/DAO.php" afterPath="$PROJECT_DIR$/app/model/DAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/SignupForm/SignupForm.php" afterPath="$PROJECT_DIR$/app/components/SignupForm/SignupForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/presenters/SlamPresenter.php" afterPath="$PROJECT_DIR$/app/presenters/SlamPresenter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/presenters/UserPresenter.php" afterPath="$PROJECT_DIR$/app/presenters/UserPresenter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/WatchingActiveRow.php" afterPath="$PROJECT_DIR$/app/model/WatchingActiveRow.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bootstrap.php" afterPath="$PROJECT_DIR$/app/bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.development.neon" afterPath="$PROJECT_DIR$/app/config/config.development.neon" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/Authorizator.php" afterPath="$PROJECT_DIR$/app/model/Authorizator.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.neon" afterPath="$PROJECT_DIR$/app/config/config.neon" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/Homepage/default.latte" afterPath="$PROJECT_DIR$/app/templates/Homepage/default.latte" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/User/default.latte" afterPath="$PROJECT_DIR$/app/templates/User/default.latte" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/Admin/default.latte" afterPath="$PROJECT_DIR$/app/templates/Admin/default.latte" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/Slam/list.latte" afterPath="$PROJECT_DIR$/app/templates/Slam/list.latte" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/Homepage/rules.latte" afterPath="$PROJECT_DIR$/app/templates/Homepage/rules.latte" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/netteForms.js" afterPath="$PROJECT_DIR$/js/netteForms.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/screen.css" afterPath="$PROJECT_DIR$/css/screen.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="science-slam.iws" />
@@ -51,97 +51,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserPresenter.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/presenters/UserPresenter.php">
+      <file leaf-file-name="show.latte" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/Page/show.latte">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="52" selection-start="2793" selection-end="2793" vertical-scroll-proportion="-8.0" vertical-offset="1248" max-vertical-offset="2130">
+            <state line="57" column="11" selection-start="1661" selection-end="1661" vertical-scroll-proportion="0.0" vertical-offset="671" max-vertical-offset="1350">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.latte" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/Slam/edit.latte">
+      <file leaf-file-name="ListBlockType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/model/ListBlockType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="16" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+            <state line="1" column="10" selection-start="16" selection-end="38" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="390">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.latte" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/templates/Slam/list.latte">
+      <file leaf-file-name="BlockPresenter.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/presenters/BlockPresenter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="59" selection-start="595" selection-end="595" vertical-scroll-proportion="0.57878315" vertical-offset="4" max-vertical-offset="645">
+            <state line="184" column="33" selection-start="6471" selection-end="6471" vertical-scroll-proportion="0.42056075" vertical-offset="2490" max-vertical-offset="3150">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PagePresenter.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/presenters/PagePresenter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="125" column="30" selection-start="3540" selection-end="3689" vertical-scroll-proportion="-10.625" vertical-offset="1620" max-vertical-offset="2760">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FilePresenter.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/presenters/FilePresenter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="75" column="9" selection-start="2343" selection-end="2343" vertical-scroll-proportion="-11.041667" vertical-offset="860" max-vertical-offset="1740">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.latte" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/Page/list.latte">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="247" selection-end="1099" vertical-scroll-proportion="-5.259259" vertical-offset="8" max-vertical-offset="660">
               <folding />
             </state>
           </provider>
           <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="001_BASE_SCHEMA.sql" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/migrations/001_BASE_SCHEMA.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="27" selection-start="1026" selection-end="1026" vertical-scroll-proportion="-14.04" vertical-offset="39" max-vertical-offset="2175">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SlamPresenter.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/presenters/SlamPresenter.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="71" selection-start="3186" selection-end="3186" vertical-scroll-proportion="-11.75" vertical-offset="1428" max-vertical-offset="2085">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasePresenter.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/presenters/BasePresenter.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="23" selection-start="1337" selection-end="1337" vertical-scroll-proportion="-19.083334" vertical-offset="187" max-vertical-offset="855">
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="default.latte" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/User/default.latte">
+        <entry file="file://$PROJECT_DIR$/app/templates/Admin/default.latte">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="23" selection-start="234" selection-end="234" vertical-scroll-proportion="-6.111111" vertical-offset="0" max-vertical-offset="600">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DAO.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/model/DAO.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="0" selection-start="2192" selection-end="2192" vertical-scroll-proportion="-4.875" vertical-offset="1173" max-vertical-offset="1890">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WatchingActiveRow.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/model/WatchingActiveRow.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="445" selection-end="445" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="570">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Event.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/model/Event.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="5" selection-start="808" selection-end="808" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="525">
+            <state line="13" column="13" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
               <folding />
             </state>
           </provider>
@@ -200,14 +170,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/app/templates/User/delete.latte" />
-        <option value="$PROJECT_DIR$/css/screen.css" />
         <option value="$PROJECT_DIR$/app/model/Event.php" />
         <option value="$PROJECT_DIR$/app/templates/Slam/add.latte" />
         <option value="$PROJECT_DIR$/app/templates/Slam/delete.latte" />
         <option value="$PROJECT_DIR$/app/templates/Slam/edit.latte" />
         <option value="$PROJECT_DIR$/app/templates/Slam/manage.latte" />
-        <option value="$PROJECT_DIR$/app/templates/Admin/default.latte" />
-        <option value="$PROJECT_DIR$/app/model/Authorizator.php" />
         <option value="$PROJECT_DIR$/app/bootstrap.php" />
         <option value="$PROJECT_DIR$/app/config/config.local.neon" />
         <option value="$PROJECT_DIR$/app/config/config.development.neon" />
@@ -215,7 +182,6 @@
         <option value="$PROJECT_DIR$/app/components/SignupForm/SignupForm.php" />
         <option value="$PROJECT_DIR$/app/model/Authenticator.php" />
         <option value="$PROJECT_DIR$/app/components/SignupForm/SignupFormFactory.php" />
-        <option value="$PROJECT_DIR$/app/config/config.neon" />
         <option value="$PROJECT_DIR$/app/presenters/SignPresenter.php" />
         <option value="$PROJECT_DIR$/app/templates/Homepage/default.latte" />
         <option value="$PROJECT_DIR$/app/templates/Homepage/rules.latte" />
@@ -225,9 +191,34 @@
         <option value="$PROJECT_DIR$/app/model/User.php" />
         <option value="$PROJECT_DIR$/app/templates/User/default.latte" />
         <option value="$PROJECT_DIR$/app/presenters/UserPresenter.php" />
-        <option value="$PROJECT_DIR$/resources/migrations/001_BASE_SCHEMA.sql" />
         <option value="$PROJECT_DIR$/app/presenters/SlamPresenter.php" />
+        <option value="$PROJECT_DIR$/app/model/ListLayout.php" />
+        <option value="$PROJECT_DIR$/app/templates/Page/add.latte" />
+        <option value="$PROJECT_DIR$/app/templates/Page/edit.latte" />
+        <option value="$PROJECT_DIR$/app/templates/Page/delete.latte" />
+        <option value="$PROJECT_DIR$/app/model/Page.php" />
+        <option value="$PROJECT_DIR$/app/templates/Slam/page.latte" />
+        <option value="$PROJECT_DIR$/app/templates/Page/page.latte" />
+        <option value="$PROJECT_DIR$/app/model/ListParameterType.php" />
         <option value="$PROJECT_DIR$/app/templates/Slam/list.latte" />
+        <option value="$PROJECT_DIR$/app/model/LayoutParameters.php" />
+        <option value="$PROJECT_DIR$/resources/migrations/001_BASE_SCHEMA.sql" />
+        <option value="$PROJECT_DIR$/app/templates/Block/add.latte" />
+        <option value="$PROJECT_DIR$/app/templates/Block/edit.latte" />
+        <option value="$PROJECT_DIR$/app/templates/Block/delete.latte" />
+        <option value="$PROJECT_DIR$/app/model/ListBlockType.php" />
+        <option value="$PROJECT_DIR$/app/config/config.neon" />
+        <option value="$PROJECT_DIR$/app/templates/Admin/default.latte" />
+        <option value="$PROJECT_DIR$/app/model/Authorizator.php" />
+        <option value="$PROJECT_DIR$/css/screen.css" />
+        <option value="$PROJECT_DIR$/app/presenters/FilePresenter.php" />
+        <option value="$PROJECT_DIR$/app/templates/File/default.latte" />
+        <option value="$PROJECT_DIR$/app/templates/Page/list.latte" />
+        <option value="$PROJECT_DIR$/app/presenters/PagePresenter.php" />
+        <option value="$PROJECT_DIR$/app/model/Block.php" />
+        <option value="$PROJECT_DIR$/app/templates/Page/show.latte" />
+        <option value="$PROJECT_DIR$/app/presenters/BlocksPresenter.php" />
+        <option value="$PROJECT_DIR$/app/presenters/BlockPresenter.php" />
       </list>
     </option>
   </component>
@@ -365,6 +356,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="migrations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="science-slam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="science-slam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="science-slam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="science-slam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -516,6 +535,72 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="science-slam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="science-slam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="File" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="science-slam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="science-slam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Block" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="science-slam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="science-slam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -574,46 +659,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="science-slam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="science-slam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="science-slam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="science-slam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SignupForm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -646,23 +691,23 @@
     <property name="options.lastSelected" value="editor.preferences.import" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="options.searchVisible" value="true" />
-    <property name="SearchEverywhereHistory" value="&#10;Authorizator&#10;Context&#10;DAO&#10;Authenticator&#10;bootstrap" />
+    <property name="SearchEverywhereHistory" value="&#10;Blocks&#10;ListBl&#10;Block&#10;Authori&#10;Page&#10;css&#10;contron&#10;Fi&#10;screen&#10;FilePrese&#10;Authoriza&#10;default&#10;config.&#10;Homepage/default&#10;authorizator&#10;Homepage/defau&#10;config.neon&#10;Slam/list&#10;001&#10;Authorizator&#10;Context&#10;DAO&#10;Authenticator&#10;bootstrap" />
     <property name="LayoutCode.rearrangeEntriesNeon" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/templates" />
       <recent name="$PROJECT_DIR$/app/presenters" />
-      <recent name="$PROJECT_DIR$/app/templates/Slam" />
+      <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/app/model" />
-      <recent name="$PROJECT_DIR$/app/templates/User" />
-      <recent name="$PROJECT_DIR$/app/templates/Admin" />
+      <recent name="$PROJECT_DIR$/app/templates/Slam" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/templates/Page" />
       <recent name="$PROJECT_DIR$/resources/migrations" />
       <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app/templates/Homepage" />
-      <recent name="$PROJECT_DIR$/www/images" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Built-in Web Server.Localy">
@@ -730,7 +775,11 @@
       <created>1369554214571</created>
       <updated>1369554214571</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update to Nette 2.1 and MailPanel 3.0.1&#10;Minor fixs and refactoring&#10;Composer update">
+      <created>1393841240066</created>
+      <updated>1393841240066</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -758,21 +807,21 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299389" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289225" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32825205" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32825205" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289225" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30371568" sideWeight="0.6554878" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32825205" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32650274" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32825205" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3260274" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -794,186 +843,67 @@
     <MESSAGE value="Changes from meeting, forms, etc." />
     <MESSAGE value="CSS: change bold to 800" />
     <MESSAGE value="Typo changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Typo changes" />
+    <MESSAGE value="Update to Nette 2.1 and MailPanel 3.0.1&#10;Minor fixs and refactoring&#10;Composer update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update to Nette 2.1 and MailPanel 3.0.1&#10;Minor fixs and refactoring&#10;Composer update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/config.local.neon">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="9" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="150">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.development.neon">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="13" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/presenters/SignPresenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Homepage/default.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="23" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Homepage/rules.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="33" selection-start="3291" selection-end="3291" vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="645">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/utils/DatabaseMigrator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="25" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1305">
-          <folding>
-            <marker date="1393836107000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/updatedb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="15" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="165">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="21" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/Event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="5" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Admin/default.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="33" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Slam/add.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="20" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="195" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/presenters/UserPresenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="57" selection-start="2647" selection-end="2647" vertical-scroll-proportion="0.0" vertical-offset="1365" max-vertical-offset="2040">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Slam/delete.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="20" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Slam/edit.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="195">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Slam/list.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="645">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/presenters/SlamPresenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="36" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="2130">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/Authorizator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="66" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.neon">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="9" selection-start="1402" selection-end="1402" vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="1350" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/User/edit.latte">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="139" selection-end="139" vertical-scroll-proportion="0.09656652" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/screen.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="347" column="71" selection-start="7086" selection-end="7086" vertical-scroll-proportion="0.39644352" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Admin/default.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="33" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="300" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/Slam/delete.latte">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="20" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225" />
+        <state line="9" column="20" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="225">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/Slam/add.latte">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="20" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="195" />
+        <state line="5" column="20" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="195">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/bootstrap.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="27" selection-start="798" selection-end="798" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="585" />
+        <state line="24" column="27" selection-start="798" selection-end="798" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="585">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/nette/nette/Nette/Mail/Message.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="6" selection-start="669" selection-end="669" vertical-scroll-proportion="0.017369727" vertical-offset="338" max-vertical-offset="7560" />
+        <state line="30" column="6" selection-start="669" selection-end="669" vertical-scroll-proportion="0.017369727" vertical-offset="338" max-vertical-offset="7560">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/model/Authenticator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="5" selection-start="451" selection-end="451" vertical-scroll-proportion="-11.25" vertical-offset="60" max-vertical-offset="1080" />
+        <state line="22" column="5" selection-start="451" selection-end="451" vertical-scroll-proportion="-11.25" vertical-offset="60" max-vertical-offset="1080">
+          <folding>
+            <element signature="e#41#82#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/SignupForm/SignupForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="11" selection-start="18" selection-end="18" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="1365" />
+        <state line="2" column="11" selection-start="18" selection-end="18" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="1365">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/SignupForm/ISignupFormFactory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="29" selection-start="92" selection-end="92" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="180" />
+        <state line="5" column="29" selection-start="92" selection-end="92" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="180">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.development.neon">
@@ -990,21 +920,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.neon">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="55" selection-start="329" selection-end="329" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="1065" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/presenters/SignPresenter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="13" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Homepage/default.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="23" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1020">
           <folding />
         </state>
       </provider>
@@ -1039,7 +957,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="156" column="8" selection-start="3104" selection-end="3104" vertical-scroll-proportion="0.36024845" vertical-offset="2108" max-vertical-offset="4260">
           <folding>
-            <element signature="e#7#135#0" expanded="true" />
+            <element signature="e#7#135#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1054,13 +972,6 @@
     <entry file="file://$PROJECT_DIR$/app/model/Event.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="5" selection-start="808" selection-end="808" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/DAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="0" selection-start="2192" selection-end="2192" vertical-scroll-proportion="-4.875" vertical-offset="1173" max-vertical-offset="1890">
           <folding />
         </state>
       </provider>
@@ -1089,20 +1000,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/Authorizator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="40" selection-start="884" selection-end="884" vertical-scroll-proportion="0.53424656" vertical-offset="69" max-vertical-offset="750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/presenters/BasePresenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="23" selection-start="1337" selection-end="1337" vertical-scroll-proportion="-19.083334" vertical-offset="187" max-vertical-offset="855">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/presenters/UserPresenter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="96" column="52" selection-start="2793" selection-end="2793" vertical-scroll-proportion="-8.0" vertical-offset="1248" max-vertical-offset="2130">
@@ -1117,31 +1014,219 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/migrations/001_BASE_SCHEMA.sql">
+    <entry file="file://$PROJECT_DIR$/app/templates/Page/add.latte">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="27" selection-start="1026" selection-end="1026" vertical-scroll-proportion="-14.04" vertical-offset="39" max-vertical-offset="2175">
+        <state line="5" column="18" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Page/edit.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="18" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/presenters/SlamPresenter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="71" selection-start="3186" selection-end="3186" vertical-scroll-proportion="-11.75" vertical-offset="1428" max-vertical-offset="2085">
+        <state line="114" column="71" selection-start="3186" selection-end="3186" vertical-scroll-proportion="-71.25" vertical-offset="0" max-vertical-offset="2085">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/Slam/list.latte">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="59" selection-start="595" selection-end="595" vertical-scroll-proportion="0.57878315" vertical-offset="4" max-vertical-offset="645">
+        <state line="28" column="81" selection-start="827" selection-end="827" vertical-scroll-proportion="-15.333333" vertical-offset="6" max-vertical-offset="645">
           <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Page/delete.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="18" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/Page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="81" selection-start="1099" selection-end="1099" vertical-scroll-proportion="-21.25" vertical-offset="0" max-vertical-offset="645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Block/add.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="15" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Block/delete.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="3" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="679">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/netteForms.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="2" selection-start="528" selection-end="528" vertical-scroll-proportion="0.45045045" vertical-offset="0" max-vertical-offset="7500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/migrations/001_BASE_SCHEMA.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="26" selection-start="335" selection-end="335" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="1380">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Block/edit.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Homepage/default.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="4" selection-start="1340" selection-end="1622" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.neon">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="21" selection-start="721" selection-end="721" vertical-scroll-proportion="0.45327103" vertical-offset="24" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/presenters/BasePresenter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="23" selection-start="1337" selection-end="1337" vertical-scroll-proportion="-26.875" vertical-offset="0" max-vertical-offset="855">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/nette/nette/Nette/Forms/Container.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="277" column="20" selection-start="6512" selection-end="6512" vertical-scroll-proportion="0.34579438" vertical-offset="3888" max-vertical-offset="7230">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/File/default.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="17" selection-start="565" selection-end="565" vertical-scroll-proportion="-4.7777777" vertical-offset="336" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/screen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="224" column="11" selection-start="3799" selection-end="3809" vertical-scroll-proportion="0.0" vertical-offset="4616" max-vertical-offset="6195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/Authorizator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="36" selection-start="611" selection-end="618" vertical-scroll-proportion="0.37557253" vertical-offset="69" max-vertical-offset="840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Admin/default.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Page/list.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="247" selection-end="1099" vertical-scroll-proportion="-5.259259" vertical-offset="8" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/ListBlockType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="10" selection-start="16" selection-end="38" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/nette/nette/Nette/Database/Table/Selection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="239" column="20" selection-start="5215" selection-end="5215" vertical-scroll-proportion="0.34579438" vertical-offset="3318" max-vertical-offset="14550">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/DAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="64" selection-start="1197" selection-end="1197" vertical-scroll-proportion="0.36793894" vertical-offset="404" max-vertical-offset="1890">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/presenters/FilePresenter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="9" selection-start="2343" selection-end="2343" vertical-scroll-proportion="-11.041667" vertical-offset="860" max-vertical-offset="1740">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/Block.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="20" selection-start="348" selection-end="348" vertical-scroll-proportion="0.2519084" vertical-offset="0" max-vertical-offset="655">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Page/show.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="11" selection-start="1661" selection-end="1661" vertical-scroll-proportion="0.0" vertical-offset="671" max-vertical-offset="1350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/presenters/PagePresenter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="30" selection-start="3540" selection-end="3689" vertical-scroll-proportion="-10.625" vertical-offset="1620" max-vertical-offset="2760">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/presenters/BlockPresenter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="184" column="33" selection-start="6471" selection-end="6471" vertical-scroll-proportion="0.42056075" vertical-offset="2490" max-vertical-offset="3150">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

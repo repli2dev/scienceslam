@@ -1,0 +1,59 @@
+{var $icon = "archive"}
+{var $title = "Správa souborů"}
+{block #content}
+	<h1>Správa souborů</h1>
+		
+	{include ../flashes.latte}
+
+	<table class="files">
+		<tr>
+			<th>Typ</th>
+			<th>Název</th>
+			<th>Velikost</th>
+			<th>Možnosti</th>
+		</tr>
+		{if !empty($subpath)}
+			<tr>
+				<td colspan="3">
+					..
+				</td>
+				<td>
+					<a href="{plink File:,$presenter->extractUntilLastSlash($subpath)}">Vstoupit</a>
+				</td>
+			</tr>
+		{/if}
+		<tr n:foreach="$files as $file">
+			<td>
+				{if $file->isFile()}
+					F
+				{elseif $file->isDir()}
+					D
+				{/if}
+			</td>
+			<td>
+				{if $file->isDir()}
+					<strong>
+				{/if}
+				{$file->getBasename()}
+				{if $file->isDir()}
+					</strong>
+				{/if}
+			</td>
+			<td>{$file->getSize()|bytes:1}</td>
+			<td>
+				{if $file->isDir()}
+					<a href="{plink File:,$subpath . '/'. $file->getBasename()}">Vstoupit</a>
+				{/if}
+				<a href="{plink File:delete, $subpath . '/'. $file->getBasename()}" onclick="return confirm('Opravdu chcete smazat tento soubor?');">Smazat</a>
+			</td>
+		</tr>
+	</table>
+
+	<div class="cleaner"></div>
+
+	{if !empty($subpath)}
+		{control addForm}
+		{control uploadForm}
+	{/if}
+
+{/block}
