@@ -53,6 +53,7 @@ class BlockPresenter extends BasePresenter {
 		if($use['layout'] == \Muni\ScienceSlam\Model\ListBlockType::IMAGE) {
 			$use[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['label'] = $use['param1'];
 			$use[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['label2'] = $use['param2'];
+			$use[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['style'] = $use['style'];
 		}
 		$form->setDefaults($use);
 	}
@@ -85,10 +86,12 @@ class BlockPresenter extends BasePresenter {
 		if($layout == \Muni\ScienceSlam\Model\ListBlockType::IMAGE) {
 			$output['param1'] = $values[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['label'];
 			$output['param2'] = $values[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['label2'];
+			$output['style'] = $values[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['style'];
 		}
 		$output['classes'] = $values['classes'];
 		$output['link'] = $values['link'];
 		$output['weight'] = $values['weight'];
+		$output['size'] = $values['size'];
 		$output['page_id'] = $this->getParameter('pageId');
 		// Add checks for dates etc.
 
@@ -102,8 +105,13 @@ class BlockPresenter extends BasePresenter {
 		}
 		$page = $this->pageDAO->find($this->getParameter('pageId'));
 		$event = $this->eventDAO->find($page->event_id);
+		if($event === FALSE) {
+			$eventUrl = null;
+		} else {
+			$eventUrl = $event->url;
+		}
 		$this->flashMessage('Blok byla úspěšně přidán.', 'success');
-		$this->redirect('Page:show', $event->url, $page->url);
+		$this->redirect('Page:show', $eventUrl, $page->url);
 	}
 
 	protected function createComponentEditForm() {
@@ -127,10 +135,12 @@ class BlockPresenter extends BasePresenter {
 		if($layout == \Muni\ScienceSlam\Model\ListBlockType::IMAGE) {
 			$output['param1'] = $values[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['label'];
 			$output['param2'] = $values[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['label2'];
+			$output['style'] = $values[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['style'];
 		}
 		$output['classes'] = $values['classes'];
 		$output['link'] = $values['link'];
 		$output['weight'] = $values['weight'];
+		$output['size'] = $values['size'];
 		// Add checks for dates etc.
 
 		$row = $this->blockDAO->find($this->getParameter('blockId'));
@@ -144,8 +154,13 @@ class BlockPresenter extends BasePresenter {
 		}
 		$page = $this->pageDAO->find($row->page_id);
 		$event = $this->eventDAO->find($page->event_id);
+		if($event === FALSE) {
+			$eventUrl = null;
+		} else {
+			$eventUrl = $event->url;
+		}
 		$this->flashMessage('Blok byla úspěšně upraven.', 'success');
-		$this->redirect('Page:show', $event->url, $page->url);
+		$this->redirect('Page:show', $eventUrl, $page->url);
 	}
 
 	protected function createComponentDeleteForm() {
@@ -164,7 +179,12 @@ class BlockPresenter extends BasePresenter {
 		}
 		$page = $this->pageDAO->find($block->page_id);
 		$event = $this->eventDAO->find($page->event_id);
-		$this->redirect('Page:show', $event->url, $page->url);
+		if($event === FALSE) {
+			$eventUrl = null;
+		} else {
+			$eventUrl = $event->url;
+		}
+		$this->redirect('Page:show', $eventUrl, $page->url);
 	}
 
 	private function prepareForm() {
@@ -172,12 +192,13 @@ class BlockPresenter extends BasePresenter {
 		$form->addGroup('Typ');
 		$form->addSelect('layout', 'Rozložení', \Muni\ScienceSlam\Model\ListBlockType::getAll())
 			->setPrompt('--- Vyberte ---')
-			->setRequired('Vyberte, prosím, rozložení bloku');
+			->setRequired('Vyberte, prosím, rozložení bloku.');
+		$form->addSelect('size', 'Velikost', array('1x1' => '1x1', '2x1' => '2x1'))
+			->setRequired('Vyberte, prosím, velikost bloku.');
 
 		$form->addContainer('general');
 		$form->addGroup('Společená nastavení');
-		$form->addText('classes', 'CSS třídy')
-			->setOption('description', 'Dostupné: back_1x1_a, back_1x1_b, back_1x1_c, back_2x1_c, left, right...');
+		$form->addRadioList('classes', 'Pozadí', array(null => 'Žádné', 'back_1x1_a' => 'back_1x1_a', 'back_1x1_b' => 'back_1x1_b', 'back_1x1_c' => 'back_1x1_c', 'back_2x1_c' => 'back_2x1_c'));
 		$form->addText('link', 'Odkaz')
 			->setOption('description', 'Absolutní/relativní, celý blok');
 		$form->addText('weight', 'Váha')
@@ -197,8 +218,21 @@ class BlockPresenter extends BasePresenter {
 		$c = $form->addContainer(\Muni\ScienceSlam\Model\ListBlockType::IMAGE);
 		$c->addText('label', 'Nadpisek');
 		$c->addText('label2', 'Krátký popis');
+		$c->addSelect('style', 'Obrázek na pozadí', $this->getImages(), 10)
+			->setPrompt('--- Vyberte ---');
 
 		$form->setCurrentGroup(null);
 		return $form;
+	}
+
+	private function getImages() {
+		$dirs = $this->context->parameters['uploads']['dirs'];
+		$finder = \Nette\Utils\Finder::findFiles(array('*.jpg', '*.png'))->from($dirs);
+		$output = array();
+
+		foreach($finder as $file) {
+			$output[$file->getPath().'/'.$file->getBaseName()] = $file->getBaseName() . ' (' .$file->getPath().'/'.$file->getBaseName() . ')';
+		}
+		return $output;
 	}
 }

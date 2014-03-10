@@ -26,15 +26,27 @@ class Page extends DAO {
 	}
 
 	public function findByEventId($eventId) {
-		return $this->findAll()->where('event_id = ?', $eventId)->fetchAll();
+		if(empty($eventId)) {
+			return $this->findAll()->where('event_id IS NULL')->fetchAll();
+		} else {
+			return $this->findAll()->where('event_id = ?', $eventId)->fetchAll();
+		}
+
 	}
 
 	public function findDefaultInEvent($eventId) {
 		return $this->findAll()->where('event_id = ? AND is_default = 1', $eventId)->fetch();
 	}
 
-	public function findByUrlAndEventId($url, $eventId) {
-		return $this->findAll()->where('event_id = ? AND url = ?', $eventId, $url)->fetch();
+	public function findDefaultNotInEvent() {
+		return $this->findAll()->where('event_id IS NULL AND is_default = 1')->fetch();
 	}
 
+	public function findByUrlAndEventId($url, $eventId) {
+		if(empty($eventId)) {
+			return $this->findAll()->where('event_id IS NULL AND url = ?', $url)->fetch();
+		} else {
+			return $this->findAll()->where('event_id = ? AND url = ?', $eventId, $url)->fetch();
+		}
+	}
 }

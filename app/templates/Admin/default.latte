@@ -6,10 +6,5 @@
 <h1>Administrace</h1>
 
 <p>Jste přihlášeni jako {$user->getIdentity()->name} ({$user->getIdentity()->nickname}).</p>
-<ul>
-	<li><a href="{plink Admin:password}">Změnit heslo</a></li>
-	<li><a href="{plink Admin:logout}">Odhlásit</a></li>
-	<li><a href="{plink User:default}">Správa uživatelů</a></li>
-	<li><a href="{plink Slam:list}">Správa slamů</a></li>
-	<li><a href="{plink File:}">Správa souborů</a></li>
-</ul>
+
+{include ../admin-menu.latte}

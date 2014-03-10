@@ -1,0 +1,11 @@
+<div class="admin-menu">
+	<ul>
+		{ifCurrent Page:show}<li><a href="{plink Page:edit, $page->page_id}">Upravit stránku</a></li>{/ifCurrent}
+		<li><a href="{plink Page:list}">Správa nezařazených stránek</a></li>
+		<li><a href="{plink Slam:list}">Správa slamů</a></li>
+		<li><a href="{plink File:}">Správa souborů</a></li>
+		{if $user->isAllowed('user')}<li><a href="{plink User:default}">Správa uživatelů</a></li>{/if}
+		<li><a href="{plink Admin:password}">Změnit heslo</a></li>
+		<li><a href="{plink Admin:logout}">Odhlásit</a></li>
+	</ul>
+</div>

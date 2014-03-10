@@ -3,9 +3,15 @@
 
 {block #content}
 
-<h1>{$event->name}</h1>
+{if $event !== FALSE}
+	<h1>{$event->name}</h1>
+{else}
+	<h1>Nezařazené</h1>
+{/if}
 <h2>Smazat stránku</h2>
 
 <p>Opravdu chcete smazat stránku: {$data->name}?</p>
 
 {control deleteForm}
+
+{include ../admin-menu.latte}

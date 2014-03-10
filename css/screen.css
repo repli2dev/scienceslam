@@ -359,7 +359,7 @@ table.admin-grid {
 }
 table.admin-grid td,
 table.admin-grid th {
-	padding: 3px;
+	padding: 5px;
 }
 table.admin-grid th {
 	background: #CCC;
@@ -369,6 +369,7 @@ table.admin-grid th.admin-grid-actions {
 	text-align: center;
 }
 a.admin-door {
+	background-color: rgb(204,204,204);
 	width: 50px;
 	height: 50px;
 	position: absolute;
@@ -376,6 +377,25 @@ a.admin-door {
 	right: 0px;
 	display: block;
 	z-index: 1000;
+}
+.admin-menu {
+	margin-top: 30px;
+}
+.admin-menu li {
+	list-style: none;
+	float: left;
+	margin-right: 20px;
+}
+.admin-menu li a {
+	padding: 10px;
+	background-color: rgb(224,224,224);
+}
+.admin-menu li a:hover {
+	background-color: rgb(0,39,118);
+	color: white;
+}
+.admin-menu ul {
+	padding-left: 0px;
 }
 
 /* Files management */

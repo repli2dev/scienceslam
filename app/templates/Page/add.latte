@@ -3,7 +3,13 @@
 
 {block #content}
 
-<h1>{$event->name}</h1>
+{if isset($event)}
+	<h1>{$event->name}</h1>
+{else}
+	<h1>Nezařazené</h1>
+{/if}
 <h2>Přidat novou stránku</h2>
 
 {control addForm}
+
+{include ../admin-menu.latte}

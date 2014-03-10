@@ -1,13 +1,25 @@
-{dump $event}
-{var $pageTitle = $event->name . ': Stránky'}
+{if $event === FALSE}
+	{var $pageTitle = "Nezařazené"}
+{else}
+	{var $pageTitle = $event->name . ': Stránky'}
+{/if}
+
 {var $robots = noindex}
 
 {block #content}
 
-<h1>{$event->name}</h1>
+{if $event === FALSE}
+	<h1>Nezařazené</h1>
+{else}
+	<h1>{$event->name}</h1>
+{/if}
 <h2>Správa stránek</h2>
 
-<p><a href="{plink Page:add, $event->event_id}">Přidat novou stránku do tohoto ročníku</a></p>
+{if $event === FALSE}
+	<p><a href="{plink Page:add, null}">Přidat novou stránku</a></p>
+{else}
+	<p><a href="{plink Page:add, $event->event_id}">Přidat novou stránku do tohoto ročníku</a></p>
+{/if}
 {if count($data) > 0}
 	<table class="admin-grid">
 		<tr>
@@ -24,7 +36,13 @@
 				<td>{$row->page_id}</td>
 				<td>{if $row->is_default}ANO{/if}</td>
 				<td>{if $row->is_block_page}ANO{/if}</td>
-				<td>{$row->url}<br /><a href="{plink Page:show, $event->url, $row->url}">{plink Page:show, $event->url, $row->url}</a></td>
+				<td>{$row->url}<br />
+					{if $event === FALSE}
+						<a href="{plink Page:show, null, $row->url}">{plink Page:show, null, $row->url}</a>
+					{else}
+						<a href="{plink Page:show, $event->url, $row->url}">{plink Page:show, $event->url, $row->url}</a>
+					{/if}
+				</td>
 				<td>{$row->inserted|date:"j. n. Y H:i"}</td>
 				<td>{$row->updated|date:"j. n. Y H:i"}</td>
 				<td class="admin-grid-actions">
@@ -37,3 +55,5 @@
 {else}
 	<p>Žádné dostupné stránky.</p>
 {/if}
+
+{include ../admin-menu.latte}

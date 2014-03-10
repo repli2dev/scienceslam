@@ -10,20 +10,20 @@
 				<a href="{$block->link}">
 			{/if}
 			{if $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::VERTICAL_TEXT}
-				<span class="block_1x1 {$block->classes}">
-					<span class="sub-block_1x1_text center">
+				<span class="block_{$block->size} left {$block->classes}">
+					<span class="sub-block_{$block->size}_text center">
 						{!$block->param1}
 					</span>
 				</span>
 
 			{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::TEXT}
-				<span class="block_1x1 {$block->classes}">
-					<span class="sub-block_1x1_text">
+				<span class="block_{$block->size} left {$block->classes}">
+					<span class="sub-block_{$block->size}_text">
 						{!$block->param1}
 					</span>
 				</span>
 			{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::REGISTRATION}
-				<div class="block_1x1_halves {$block->classes}">
+				<div class="block_1x1_halves right {$block->classes}">
 					<a href="{plink Sign:up}">
 						<span class="sub-block_half1">Chtěl bys prezentovat svůj vlastní výzkum a vyhrát?
 							<h1>Registrace</h1>
@@ -36,7 +36,7 @@
 					</a>
 				</div>
 			{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::IMAGE}
-				<span class="block_1x1 {$block->classes}">
+				<span class="block_{$block->size} left {$block->classes}" {if !empty($block->style)}style="background: url('/{!$block->style}');"{/if}>
 					<span class="sub-block_picture">
 						<h3>{$block->param1}</h3>{$block->param2}
 					</span>
@@ -50,15 +50,14 @@
 		<p>Tato stránka je zatím prázdná, zkuste to prosím později.</p>
 	{/if}
 {else}
-	<h1>{$page->name}</h1>
 	{!$page->content}
 {/if}
 
 <div class="cleaner"></div>
 {if $admin}
-	<a href="{plink Page:edit, $page->page_id}">Upravit stránku</a>
-	{if $page->is_block_page}<br />
-		<a href="{plink Block:add, $page->page_id}">Přidat blok</a>
+	{if $page->is_block_page}
+		<h2>Správa bloků</h2><br />
+		<p><a href="{plink Block:add, $page->page_id}">Přidat blok</a></p>
 		{if count($blocks) > 0}
         	<table class="admin-grid">
         		<tr>
@@ -83,3 +82,5 @@
         {/if}
 	{/if}
 {/if}
+
+{include ../admin-menu.latte}

@@ -34,10 +34,17 @@ class PagePresenter extends BasePresenter {
 
 	public function actionShow($eventUrl, $pageUrl) {
 		$event = $this->eventDAO->findByUrl($eventUrl);
-		if($event === FALSE) {
-			throw new \Nette\Application\BadRequestException;
+		$eventId = null;
+		if($event !== FALSE) {
+			$eventId = $event->event_id;
 		}
-		$page = $this->pageDAO->findByUrlAndEventId($pageUrl, $event->event_id);
+		if(empty($pageUrl) && empty($eventId)) {
+			$page = $this->pageDAO->findDefaultNotInEvent();
+		} else if(empty($pageUrl) && !empty($eventId)) {
+			$page = $this->pageDAO->findDefaultInEvent($eventId);
+		} else {
+			$page = $this->pageDAO->findByUrlAndEventId($pageUrl, $eventId);
+		}
 		if($page === FALSE) {
 			throw new \Nette\Application\BadRequestException;
 		}
@@ -50,17 +57,14 @@ class PagePresenter extends BasePresenter {
 
 	public function actionAdd($eventId) {
 		$data = $this->eventDAO->find($eventId);
-		if($data === FALSE) {
-			throw new \Nette\Application\BadRequestException;
+		if($data !== FALSE) {
+			$this->template->event = $data;
 		}
-		$this->template->event = $data;
+
 	}
 
 	public function actionList($eventId) {
 		$event = $this->eventDAO->find($eventId);
-		if($event === FALSE) {
-			throw new \Nette\Application\BadRequestException;
-		}
 		$this->template->event = $event;
 		$data = $this->pageDAO->findByEventId($event);
 		$this->template->data = $data;
@@ -97,6 +101,7 @@ class PagePresenter extends BasePresenter {
 		$values = $form->getValues();
 		$values['event_id'] = $this->getParameter('eventId');
 		$values['inserted'] = new \Nette\DateTime();
+		$values['url'] = \Nette\Utils\Strings::webalize($values['url']);
 		// Add checks for dates etc.
 
 		$row = $this->pageDAO->create();
@@ -120,6 +125,7 @@ class PagePresenter extends BasePresenter {
 
 	public function editFormSucceeded(\Nette\Forms\Form $form) {
 		$values = $form->getValues();
+		$values['url'] = \Nette\Utils\Strings::webalize($values['url']);
 
 		$row = $this->pageDAO->find($this->getParameter('id'));
 		$row = \JanDrabek\Database\WatchingActiveRow::fromActiveRow($row);
@@ -164,7 +170,8 @@ class PagePresenter extends BasePresenter {
 		$form->addGroup('Bloky');
 		$form->addCheckbox('is_block_page', 'Použít');
 		$form->addGroup('Textová stránka');
-		$form->addTextArea('content', '', 53, 15);
+		$form->addTextArea('content', '', 53, 15)
+			->setOption('description', 'HTML obsah');
 		$form->addGroup('Galerie');
 		$form->addText('gallery_path', 'Cesta ke galerii');
 		$form->setCurrentGroup(null);

@@ -112,13 +112,13 @@ class SlamPresenter extends BasePresenter {
 		$form->addGroup('Termíny');
 		$form->addText('date', 'Den a čas konání')
 			->setRequired('Vyplňte, prosím, termín konání.')
-			->setOption('description', 've tvaru 2012-12-24 10:12:14');
+			->setOption('description', 've tvaru '. (new \Nette\DateTime())->format('Y-m-d H:i:s'));
 		$form->addText('registration_opened', 'Otevření registrace')
 			->setRequired('Vyplňte, prosím, čas otevření registrace')
-			->setOption('description', 've tvaru 2012-12-24 10:12:14');
+			->setOption('description', 've tvaru '. (new \Nette\DateTime())->format('Y-m-d H:i:s'));
 		$form->addText('registration_closed', 'Uzavření registrace')
 			->setRequired('Vyplňte, prosím, čas uzavření registrace')
-			->setOption('description', 've tvaru 2012-12-24 10:12:14');
+			->setOption('description', 've tvaru '. (new \Nette\DateTime())->format('Y-m-d H:i:s'));
 		$form->addGroup('Servisní');
 		$form->addText('url', 'URL identifikace')
 			->setRequired('Vyplňte, prosím, identifikaci slamu pro potřeby URL adresy.')

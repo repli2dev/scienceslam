@@ -26,6 +26,9 @@ class Event extends DAO {
 	}
 
 	public function findByUrl($url) {
+		if(empty($url)) {
+			return FALSE;
+		}
 		return $this->findAll()->where('url = ?', $url)->fetch();
 	}
 
