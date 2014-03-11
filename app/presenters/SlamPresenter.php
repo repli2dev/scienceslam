@@ -104,6 +104,7 @@ class SlamPresenter extends BasePresenter {
 
 	private function prepareForm() {
 		$form = new UI\Form;
+		$form->getElementPrototype()->class('wide');
 		$form->addGroup('Obecné');
 		$form->addText('name', 'Název')
 			->setRequired('Vyplňte, prosím, název.');

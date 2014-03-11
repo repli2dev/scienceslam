@@ -189,6 +189,7 @@ class BlockPresenter extends BasePresenter {
 
 	private function prepareForm() {
 		$form = new UI\Form;
+		$form->getElementPrototype()->class('wide');
 		$form->addGroup('Typ');
 		$form->addSelect('layout', 'Rozložení', \Muni\ScienceSlam\Model\ListBlockType::getAll())
 			->setPrompt('--- Vyberte ---')
@@ -233,6 +234,8 @@ class BlockPresenter extends BasePresenter {
 		foreach($finder as $file) {
 			$output[$file->getPath().'/'.$file->getBaseName()] = $file->getBaseName() . ' (' .$file->getPath().'/'.$file->getBaseName() . ')';
 		}
+
+		asort($output);
 		return $output;
 	}
 }

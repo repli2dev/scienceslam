@@ -1,6 +1,13 @@
 {var $pageTitle = $page->name}
 {var $robots = noindex}
 
+{block #style}
+	{include parent}
+	{if !empty($event) && !empty($event->extra_styles)}
+		{!$event->extra_styles}
+	{/if}
+{/block}
+
 {block #content}
 
 {if $page->is_block_page}
@@ -29,7 +36,7 @@
 							<h1>Registrace</h1>
 						</span>
 					</a>
-					<a href="{plink Homepage:ticket}">
+					<a href="{plink Page:show, null, ticket}">
 						<span class="sub-block_half2">Zajímalo by tě, jak to vlastně bude vypadat? Kdo zvítězí?
 							<h1>Prodej lístků</h1>
 					</span>
@@ -52,8 +59,7 @@
 {else}
 	{!$page->content}
 {/if}
-
-<div class="cleaner"></div>
+<div class="cleaner">&nbsp;</div>
 {if $admin}
 	{if $page->is_block_page}
 		<h2>Správa bloků</h2><br />

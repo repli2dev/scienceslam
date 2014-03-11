@@ -31,5 +31,8 @@ class Event extends DAO {
 		}
 		return $this->findAll()->where('url = ?', $url)->fetch();
 	}
+	public function findWithOpenedRegistration() {
+		return $this->findAll()->where('NOW() BETWEEN registration_opened AND registration_closed')->fetch();
+	}
 
 }

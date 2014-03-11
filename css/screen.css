@@ -385,9 +385,11 @@ a.admin-door {
 	list-style: none;
 	float: left;
 	margin-right: 20px;
+	margin-bottom: 10px;
 }
 .admin-menu li a {
 	padding: 10px;
+	display: inline-block;
 	background-color: rgb(224,224,224);
 }
 .admin-menu li a:hover {

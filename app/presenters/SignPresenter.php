@@ -17,8 +17,6 @@ class SignPresenter extends BasePresenter {
 	protected function createComponentSignup($name) {
 		$comp = $this->signupFormFactory->create();
 		$params = $this->context->parameters['form']['signup'];
-		$comp->setFrom($params['from']);
-		$comp->setTo($params['to']);
 		$comp->setMail($params['mail']);
 		return $comp;
 	}

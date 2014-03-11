@@ -3,21 +3,23 @@
 class SignupForm extends VisualControl {
 	/** @var \Nette\Mail\IMailer */
 	private $mailer;
+	/** @var \Muni\ScienceSlam\Model\Event */
+	private $event;
 
 	private $from;
 	private $to;
 	private $mail;
 
-	public function __construct(\Nette\Mail\IMailer $mailer) {
+	public function __construct(\Nette\Mail\IMailer $mailer, \Muni\ScienceSlam\Model\Event $event) {
 		$this->mailer = $mailer;
+		$this->event = $event;
+		$current = $this->event->findWithOpenedRegistration();
+		if($current !== FALSE) {
+			$this->from = $current->registration_opened;
+			$this->to = $current->registration_closed;
+		}
 	}
 
-	public function setFrom($from) {
-		$this->from = Nette\DateTime::from($from);
-	}
-	public function setTo($to) {
-		$this->to = Nette\DateTime::from($to);
-	}
 	public function setMail($mail) {
 		$this->mail = $mail;
 	}

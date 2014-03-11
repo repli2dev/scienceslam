@@ -27,8 +27,26 @@ class PagePresenter extends BasePresenter {
 
 	public function startup() {
 		parent::startup();
-		if($this->getAction() !== 'show') {	// Only show is for public access
+		if($this->getAction() != 'Show' && $this->getAction() != 'show' && $this->getAction() != 'old') {	// Only show is for public access
 			$this->perm();
+		}
+	}
+
+	public function actionOld($pageUrl) {
+		$pages = $this->pageDAO->findByUrl($pageUrl);
+		if(count($pages) == 0) {
+			throw new \Nette\Application\BadRequestException;
+		}
+		$page = reset($pages);
+		if(!empty($page->event_id)) {
+			$event = $this->eventDAO->find($page->event_id);
+			if($event === FALSE) {
+				$this->redirect('Page:show', null, $page->url);
+			} else {
+				$this->redirect('Page:show', $event->url, $page->url);
+			}
+		} else {
+			$this->redirect('Page:show', null, $pageUrl);
 		}
 	}
 
@@ -159,6 +177,7 @@ class PagePresenter extends BasePresenter {
 
 	private function prepareForm() {
 		$form = new UI\Form;
+		$form->getElementPrototype()->class('wide');
 		$form->addGroup('Obecné a servisní');
 		$form->addText('name', 'Název')
 			->setRequired('Vyplňte, prosím, název.');

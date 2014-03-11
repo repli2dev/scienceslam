@@ -18,12 +18,13 @@
 {if $event === FALSE}
 	<p><a href="{plink Page:add, null}">Přidat novou stránku</a></p>
 {else}
-	<p><a href="{plink Page:add, $event->event_id}">Přidat novou stránku do tohoto ročníku</a></p>
+	<p><a href="{plink Page:add, $event->event_id}">Přidat novou stránku</a></p>
 {/if}
 {if count($data) > 0}
 	<table class="admin-grid">
 		<tr>
 			<th>ID</th>
+			<th>Název</th>
 			<th>Výchozí</th>
 			<th>Bloky</th>
 			<th>URL</th>
@@ -34,6 +35,7 @@
 		{foreach $data as $row}
 			<tr>
 				<td>{$row->page_id}</td>
+				<td>{$row->name}</td>
 				<td>{if $row->is_default}ANO{/if}</td>
 				<td>{if $row->is_block_page}ANO{/if}</td>
 				<td>{$row->url}<br />

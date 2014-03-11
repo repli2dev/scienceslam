@@ -31,7 +31,9 @@ class Page extends DAO {
 		} else {
 			return $this->findAll()->where('event_id = ?', $eventId)->fetchAll();
 		}
-
+	}
+	public function findByUrl($url) {
+		return $this->findAll()->where('url', $url)->fetchAll();
 	}
 
 	public function findDefaultInEvent($eventId) {

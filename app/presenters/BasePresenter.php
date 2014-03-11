@@ -22,6 +22,8 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter {
 		$this->template->pageTitle = (empty($this->pageTitle)) ? $this->context->parameters['page']['title'] : $this->pageTitle;
 		$this->template->pageKeywords = (empty($this->pageKeywords)) ? $this->context->parameters['page']['keywords'] : $this->pageKeywords;
 		$this->template->pageDescription = (empty($this->pageDescription)) ? $this->context->parameters['page']['description'] : $this->pageDescription;
+
+		$this->template->admin = $this->user->isInRole('admin') || $this->user->isInRole('manager');
 	}
 
 	/**

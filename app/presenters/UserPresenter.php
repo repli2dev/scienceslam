@@ -118,6 +118,7 @@ class UserPresenter extends BasePresenter {
 
 	private function prepareForm() {
 		$form = new UI\Form;
+		$form->getElementPrototype()->class('wide');
 		$form->addGroup('Přihlašování');
 		$form->addText('nickname', 'Přihlašovací jméno:')
 			->setRequired('Zadejte, prosím, přihlašovací jméno.');
