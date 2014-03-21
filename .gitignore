@@ -11,6 +11,6 @@ app/config/config.local.neon
 .bash_history
 .ssh
 .viminfo
-
+.idea
 # gedit autosave files
 *~
