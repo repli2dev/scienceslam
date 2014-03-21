@@ -22,7 +22,7 @@
 				<td>{$row->event_id}</td>
 				<td>{if $row->hidden}ANO{else}NE{/if}</td>
 				<td>{$row->name}</td>
-				<td>{$row->url}</td>
+				<td>{$row->url}<br /><a href="{plink Page:show, $row->url}">Výchozí stránka</a></td>
 				<td>{$row->date|date:"j. n. Y"} {$row->date|date:"H:i"}</td>
 				<td>{$row->registration_opened|date:"j. n. Y H:i"}<br />{$row->registration_closed|date:"j. n. Y H:i"}</td>
 				<td class="admin-grid-actions">

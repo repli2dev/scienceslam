@@ -16,8 +16,6 @@ parameters:
 	form:
 		signup:
 			mail: []
-			from: "2013-12-01 00:00:00"
-			to: "2014-04-20 23:59:59"
 	uploads:
 		dirs: [images]
 
