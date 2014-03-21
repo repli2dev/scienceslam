@@ -1,23 +1,27 @@
 <?php
 
 class SignupForm extends VisualControl {
+	/** @var \Nette\Mail\IMailer */
+	private $mailer;
+	/** @var \Muni\ScienceSlam\Model\Event */
+	private $event;
+
 	private $from;
 	private $to;
 	private $mail;
-	/** @var \Nette\Mail\Message */
-	private $messagePrototype;
 
-	public function setFrom($from) {
-		$this->from = Nette\DateTime::from($from);
+	public function __construct(\Nette\Mail\IMailer $mailer, \Muni\ScienceSlam\Model\Event $event) {
+		$this->mailer = $mailer;
+		$this->event = $event;
+		$current = $this->event->findWithOpenedRegistration();
+		if($current !== FALSE) {
+			$this->from = $current->registration_opened;
+			$this->to = $current->registration_closed;
+		}
 	}
-	public function setTo($to) {
-		$this->to = Nette\DateTime::from($to);
-	}
+
 	public function setMail($mail) {
 		$this->mail = $mail;
-	}
-	public function injectMessagePrototype(\Nette\Mail\Message $message) {
-		$this->messagePrototype = $message;
 	}
 
 	public function beforeRender() {
@@ -56,7 +60,7 @@ class SignupForm extends VisualControl {
 			return;
 		}
 		$values = $form->getValues();
-		$message = clone $this->messagePrototype;
+		$message = new \Nette\Mail\Message();
 		foreach($this->mail as $rcpt) {
 			$message->addTo($rcpt);
 		}
@@ -72,7 +76,7 @@ class SignupForm extends VisualControl {
 			.'<p>S pozdravem<br />Science Slam web</p>'
 		);
 		try {
-			$message->send();
+			$this->mailer->send($message);
 		} catch (Exception $ex) {
 			$form->addError('Odeslání přihlášky se nezdařilo. Prosím, kontaktujte nás.');
 			return;

@@ -339,6 +339,7 @@ p { margin: 0.5em 0 0.5em 0; }
 	font-size: 120%;
 	font-weight: 800;
 	line-height: 50px;
+	margin-bottom: 10px;
 }
 
 .button:hover { color: rgb(255,204,0); }
@@ -349,6 +350,61 @@ ul.gallery>li { display: inline-block; }
 img { margin: 10px; }
 img.gallery-item { height: 200px; margin: 10px; }
 .center-block { display: block; margin-left: auto; margin-right: auto; }
+
+/* Adminsitration styles */
+
+table.admin-grid {
+	width: 100%;
+	border-collapse: collapse;
+}
+table.admin-grid td,
+table.admin-grid th {
+	padding: 5px;
+}
+table.admin-grid th {
+	background: #CCC;
+}
+table.admin-grid td.admin-grid-actions,
+table.admin-grid th.admin-grid-actions {
+	text-align: center;
+}
+a.admin-door {
+	background-color: rgb(204,204,204);
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	display: block;
+	z-index: 1000;
+}
+.admin-menu {
+	margin-top: 30px;
+}
+.admin-menu li {
+	list-style: none;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+.admin-menu li a {
+	padding: 10px;
+	display: inline-block;
+	background-color: rgb(224,224,224);
+}
+.admin-menu li a:hover {
+	background-color: rgb(0,39,118);
+	color: white;
+}
+.admin-menu ul {
+	padding-left: 0px;
+}
+
+/* Files management */
+table.files { width: 100%; margin-bottom: 50px; border-collapse: collapse; }
+table.files th { background: rgb(222,222,222); padding: 3px; }
+table.files td { border-top: 1px solid rgb(222,222,222); padding: 3px; }
+table.files td a { margin-right: 20px; }
 
 /* 2013-1 specific ! */
 .back_poster_2013-1 { background: url("../images/2013-1/poster.png"); }

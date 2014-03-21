@@ -1,0 +1,15 @@
+{var $pageTitle = "Upravit stránku"}
+{var $robots = noindex}
+
+{block #content}
+
+{if $event !== FALSE}
+	<h1>{$event->name}</h1>
+{else}
+	<h1>Nezařazené</h1>
+{/if}
+<h2>Úprava stránky</h2>
+
+{control editForm}
+
+{include ../admin-menu.latte}

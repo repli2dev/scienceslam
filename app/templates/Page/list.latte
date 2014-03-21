@@ -1,0 +1,61 @@
+{if $event === FALSE}
+	{var $pageTitle = "Nezařazené"}
+{else}
+	{var $pageTitle = $event->name . ': Stránky'}
+{/if}
+
+{var $robots = noindex}
+
+{block #content}
+
+{if $event === FALSE}
+	<h1>Nezařazené</h1>
+{else}
+	<h1>{$event->name}</h1>
+{/if}
+<h2>Správa stránek</h2>
+
+{if $event === FALSE}
+	<p><a href="{plink Page:add, null}">Přidat novou stránku</a></p>
+{else}
+	<p><a href="{plink Page:add, $event->event_id}">Přidat novou stránku</a></p>
+{/if}
+{if count($data) > 0}
+	<table class="admin-grid">
+		<tr>
+			<th>ID</th>
+			<th>Název</th>
+			<th>Výchozí</th>
+			<th>Bloky</th>
+			<th>URL</th>
+			<th>Vloženo</th>
+			<th>Poslední úprava</th>
+			<th class="admin-grid-actions">Akce</th>
+		</tr>
+		{foreach $data as $row}
+			<tr>
+				<td>{$row->page_id}</td>
+				<td>{$row->name}</td>
+				<td>{if $row->is_default}ANO{/if}</td>
+				<td>{if $row->is_block_page}ANO{/if}</td>
+				<td>{$row->url}<br />
+					{if $event === FALSE}
+						<a href="{plink Page:show, null, $row->url}">{plink Page:show, null, $row->url}</a>
+					{else}
+						<a href="{plink Page:show, $event->url, $row->url}">{plink Page:show, $event->url, $row->url}</a>
+					{/if}
+				</td>
+				<td>{$row->inserted|date:"j. n. Y H:i"}</td>
+				<td>{$row->updated|date:"j. n. Y H:i"}</td>
+				<td class="admin-grid-actions">
+					<a href="{plink Page:edit, $row->page_id}">Upravit</a><br />
+					<a href="{plink Page:delete, $row->page_id}">Smazat</a>
+				</td>
+			</tr>
+		{/foreach}
+	</table>
+{else}
+	<p>Žádné dostupné stránky.</p>
+{/if}
+
+{include ../admin-menu.latte}

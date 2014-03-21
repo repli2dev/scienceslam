@@ -1,0 +1,10 @@
+{var $pageTitle = "Administrace"}
+{var $robots = noindex}
+
+{block #content}
+
+<h1>Administrace</h1>
+
+<p>Jste přihlášeni jako {$user->getIdentity()->name} ({$user->getIdentity()->nickname}).</p>
+
+{include ../admin-menu.latte}

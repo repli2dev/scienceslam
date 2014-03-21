@@ -1,0 +1,12 @@
+{var $pageTitle = "Smazat uživatele: ". $data->name}
+{var $robots = noindex}
+
+{block #content}
+
+<h1>Smazat uživatele: {$data->name}</h1>
+
+<p>Opravdu chcete smazat uživatele: {$data->name} s přezdívkou {$data->nickname}?</p>
+
+{control deleteForm}
+
+{include ../admin-menu.latte}

@@ -14,14 +14,11 @@ parameters:
 	mails:
 		noreply: noreply@dispostable.com
 	form:
-		ticket:
-			mail: tickets@dispostable.com
-			from: "2013-05-12 10:30:00"
-			to: "2013-05-12 10:30:00"
 		signup:
 			mail: []
-			from: "2013-12-01 00:00:00"
-			to: "2014-04-20 23:59:59"
+	uploads:
+		dirs: [images]
+
 	database:
 		driver: mysql
 		host: localhost
@@ -37,7 +34,6 @@ php:
 nette:
 	application:
 		errorPresenter: Error
-		catchException: true
 
 	database:
 		dsn: '%database.driver%:host=%database.host%;dbname=%database.database%'
@@ -57,21 +53,12 @@ nette:
 		secure: tls
 
 services:
-	authenticator: Authenticator
+	userDAO: Muni\ScienceSlam\Model\User
+	eventDAO: Muni\ScienceSlam\Model\Event
+	pageDAO: Muni\ScienceSlam\Model\Page
+	blockDAO: Muni\ScienceSlam\Model\Block
+	authenticator: \Muni\ScienceSlam\Model\Authenticator(@userDAO, %security.salt%)
+	authorizator: \Muni\ScienceSlam\Model\Authorizator
 	routerFactory: RouterFactory
 	router: @routerFactory::createRouter
-
-
-factories:
-	componentTicket:
-		class: TicketForm
-		setup:
-			- injectMessagePrototype(@message)
-	componentSignup:
-		class: SignupForm
-		setup:
-			- injectMessagePrototype(@message)
-	message:
-		class: Nette\Mail\Message
-		setup:
-			- setMailer
+	signupFormFactory: ISignupFormFactory

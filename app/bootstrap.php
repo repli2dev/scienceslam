@@ -22,11 +22,12 @@ $configurator->createRobotLoader()
 // Create Dependency Injection container from config.neon file
 $configurator->addConfig(__DIR__ . '/config/config.neon', $configurator::NONE);
 // Overlay config options in debug (~ development mode)
-if(!$configurator->isProductionMode()) {
+if($configurator->isDebugMode()) {
 	$configurator->addConfig(__DIR__ . '/config/config.development.neon', $configurator::NONE);
 }
 // Tuning config with local only settings like passwords etc.
 $configurator->addConfig(__DIR__ . '/config/config.local.neon', $configurator::NONE);
 $container = $configurator->createContainer();
+
 //$container->router = new Nette\Application\Routers\SimpleRouter('Homepage:default');
 return $container;

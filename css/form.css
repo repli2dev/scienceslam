@@ -10,7 +10,8 @@ form dl {
 }
 input[type='text'],
 input[type='password'],
-textarea {
+textarea,
+select {
 	padding: 5px;
 	border: 2px solid #E0E0E0;
 	border-radius: 5px;
@@ -21,7 +22,8 @@ textarea {
 
 input[type='text']:focus,
 input[type='password']:focus,
-textarea:focus {
+textarea:focus,
+select {
 	outline: none;
 	border: 2px solid #FFCC00;
 	box-shadow: 0px 0px 5px #FFCC00;
@@ -32,6 +34,9 @@ fieldset {
 	border-radius: 5px;
 	margin-bottom: 20px;
 	width: 590px;
+}
+form.wide fieldset {
+	width: auto;
 }
 legend {
 	background: #E0E0E0;

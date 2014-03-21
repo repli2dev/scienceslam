@@ -2,64 +2,22 @@
 
 use Nette\Application\UI;
 
-
 /**
- * Sign in/out presenters.
+ * Presenter for speakers signing up
  */
-class SignPresenter extends BasePresenter
-{
+class SignPresenter extends BasePresenter {
 
+	/** @var ISignupFormFactory */
+	private $signupFormFactory;
 
-	/**
-	 * Sign-in form factory.
-	 * @return Nette\Application\UI\Form
-	 */
-	protected function createComponentSignInForm()
-	{
-		$form = new UI\Form;
-		$form->addText('username', 'Username:')
-			->setRequired('Please enter your username.');
-
-		$form->addPassword('password', 'Password:')
-			->setRequired('Please enter your password.');
-
-		$form->addCheckbox('remember', 'Keep me signed in');
-
-		$form->addSubmit('send', 'Sign in');
-
-		// call method signInFormSucceeded() on success
-		$form->onSuccess[] = $this->signInFormSucceeded;
-		return $form;
+	public function injectSignupFormFactory(ISignupFormFactory $factory) {
+		$this->signupFormFactory = $factory;
 	}
 
-
-
-	public function signInFormSucceeded($form)
-	{
-		$values = $form->getValues();
-
-		if ($values->remember) {
-			$this->getUser()->setExpiration('14 days', FALSE);
-		} else {
-			$this->getUser()->setExpiration('20 minutes', TRUE);
-		}
-
-		try {
-			$this->getUser()->login($values->username, $values->password);
-			$this->redirect('Homepage:');
-			
-		} catch (Nette\Security\AuthenticationException $e) {
-			$form->addError($e->getMessage());
-		}
+	protected function createComponentSignup($name) {
+		$comp = $this->signupFormFactory->create();
+		$params = $this->context->parameters['form']['signup'];
+		$comp->setMail($params['mail']);
+		return $comp;
 	}
-
-
-
-	public function actionOut()
-	{
-		$this->getUser()->logout();
-		$this->flashMessage('You have been signed out.');
-		$this->redirect('in');
-	}
-
 }

@@ -1,0 +1,12 @@
+{var $pageTitle = "Smazat slam: ". $data->name}
+{var $robots = noindex}
+
+{block #content}
+
+<h1>Smazat slam: {$data->name}</h1>
+
+<p>Opravdu chcete smazat slam: {$data->name}?</p>
+
+{control deleteForm}
+
+{include ../admin-menu.latte}

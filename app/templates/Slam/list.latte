@@ -1,0 +1,40 @@
+{var $pageTitle = "Správa slamů"}
+{var $robots = noindex}
+
+{block #content}
+
+<h1>Správa slamů</h1>
+
+<p><a href="{plink Slam:add}">Přidat nový slam</a></p>
+{if count($data) > 0}
+	<table class="admin-grid">
+		<tr>
+			<th>ID</th>
+			<th>Skrytý</th>
+			<th>Jméno</th>
+			<th>URL</th>
+			<th>Datum a čas konání</th>
+			<th>Registrace</th>
+			<th class="admin-grid-actions">Akce</th>
+		</tr>
+		{foreach $data as $row}
+			<tr>
+				<td>{$row->event_id}</td>
+				<td>{if $row->hidden}ANO{else}NE{/if}</td>
+				<td>{$row->name}</td>
+				<td>{$row->url}<br /><a href="{plink Page:show, $row->url}">Výchozí stránka</a></td>
+				<td>{$row->date|date:"j. n. Y"} {$row->date|date:"H:i"}</td>
+				<td>{$row->registration_opened|date:"j. n. Y H:i"}<br />{$row->registration_closed|date:"j. n. Y H:i"}</td>
+				<td class="admin-grid-actions">
+					<a href="{plink Page:list, $row->event_id}">Spravovat stránky</a><br />
+					<a href="{plink Slam:edit, $row->event_id}">Upravit</a><br />
+					<a href="{plink Slam:delete, $row->event_id}">Smazat</a>
+				</td>
+			</tr>
+		{/foreach}
+	</table>
+{else}
+	<p>Žádné dostupné slamy.</p>
+{/if}
+
+{include ../admin-menu.latte}
