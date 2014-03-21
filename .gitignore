@@ -12,5 +12,7 @@ app/config/config.local.neon
 .ssh
 .viminfo
 .idea
-# gedit autosave files
-*~
+.bashrc
+.mc
+.composer
+.mysql_history
