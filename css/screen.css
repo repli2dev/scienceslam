@@ -369,7 +369,7 @@ table.admin-grid th.admin-grid-actions {
 	text-align: center;
 }
 a.admin-door {
-	background-color: rgb(204,204,204);
+	background: rgb(204, 204, 204) url('../images/design/settings.png') no-repeat center center;
 	width: 50px;
 	height: 50px;
 	position: absolute;

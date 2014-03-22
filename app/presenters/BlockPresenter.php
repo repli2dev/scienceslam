@@ -228,11 +228,11 @@ class BlockPresenter extends BasePresenter {
 
 	private function getImages() {
 		$dirs = $this->context->parameters['uploads']['dirs'];
-		$finder = \Nette\Utils\Finder::findFiles(array('*.jpg', '*.png'))->from($dirs);
+		$finder = \Nette\Utils\Finder::findFiles(array('*.jpg', '*.png'))->from($dirs)->exclude('gallery');
 		$output = array();
 
 		foreach($finder as $file) {
-			$output[$file->getPath().'/'.$file->getBaseName()] = $file->getBaseName() . ' (' .$file->getPath().'/'.$file->getBaseName() . ')';
+			$output[$file->getPath().'/'][$file->getPath().'/' . $file->getBaseName()] = $file->getBaseName();
 		}
 
 		asort($output);
