@@ -66,6 +66,9 @@ class PagePresenter extends BasePresenter {
 		if($page === FALSE) {
 			throw new \Nette\Application\BadRequestException;
 		}
+		if($page->hidden && !($this->user->isInRole('manager') || $this->user->isInRole('admin'))) {
+			throw new \Nette\Application\BadRequestException();
+		}
 		$blocks = $this->blockDAO->findByPageId($page->page_id);
 		$this->template->page = $page;
 		$this->template->event = $event;
@@ -185,6 +188,7 @@ class PagePresenter extends BasePresenter {
 			->setRequired('Vyplňte, prosím, identifikaci slamu pro potřeby URL adresy.')
 			->setOption('description', 'nutné pro URL adresu, unikátní');
 		$form->addCheckbox('is_default', 'Výchozí stránka slamu');
+		$form->addCheckbox('hidden', 'Skryto');
 
 		$form->addGroup('Bloky');
 		$form->addCheckbox('is_block_page', 'Použít');
@@ -194,6 +198,7 @@ class PagePresenter extends BasePresenter {
 		$form->addGroup('Galerie');
 		$form->addText('gallery_path', 'Cesta ke galerii');
 		$form->setCurrentGroup(null);
+
 		return $form;
 	}
 

@@ -27,6 +27,7 @@
 			<th>Název</th>
 			<th>Výchozí</th>
 			<th>Bloky</th>
+			<th>Skryto</th>
 			<th>URL</th>
 			<th>Vloženo</th>
 			<th>Poslední úprava</th>
@@ -38,6 +39,7 @@
 				<td>{$row->name}</td>
 				<td>{if $row->is_default}ANO{/if}</td>
 				<td>{if $row->is_block_page}ANO{/if}</td>
+				<td>{if $row->hidden}ANO{/if}</td>
 				<td>{$row->url}<br />
 					{if $event === FALSE}
 						<a href="{plink Page:show, null, $row->url}">{plink Page:show, null, $row->url}</a>

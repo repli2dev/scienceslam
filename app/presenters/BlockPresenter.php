@@ -92,6 +92,7 @@ class BlockPresenter extends BasePresenter {
 		$output['link'] = $values['link'];
 		$output['weight'] = $values['weight'];
 		$output['size'] = $values['size'];
+		$output['hidden'] = $values['hidden'];
 		$output['page_id'] = $this->getParameter('pageId');
 		// Add checks for dates etc.
 
@@ -141,6 +142,7 @@ class BlockPresenter extends BasePresenter {
 		$output['link'] = $values['link'];
 		$output['weight'] = $values['weight'];
 		$output['size'] = $values['size'];
+		$output['hidden'] = $values['hidden'];
 		// Add checks for dates etc.
 
 		$row = $this->blockDAO->find($this->getParameter('blockId'));
@@ -205,6 +207,7 @@ class BlockPresenter extends BasePresenter {
 		$form->addText('weight', 'Váha')
 			->addRule(\Nette\Forms\Form::INTEGER, 'Váha musí být celé číslo.')
 			->setDefaultValue(0);
+		$form->addCheckbox('hidden', 'Skryto');
 
 		$form->addGroup('Rozložení: Vertikálně centrovaný text');
 		$c = $form->addContainer(\Muni\ScienceSlam\Model\ListBlockType::VERTICAL_TEXT);
