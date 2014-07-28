@@ -238,7 +238,13 @@ class BlockPresenter extends BasePresenter {
 			$output[$file->getPath().'/'][$file->getPath().'/' . $file->getBaseName()] = $file->getBaseName();
 		}
 
-		asort($output);
-		return $output;
+		$sortedOutput = $output;
+		foreach($sortedOutput as $dir => $content) {
+			asort($sortedOutput[$dir]);
+		}
+
+		ksort($sortedOutput);
+
+		return $sortedOutput;
 	}
 }

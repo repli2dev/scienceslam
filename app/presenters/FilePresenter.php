@@ -26,6 +26,7 @@ class FilePresenter extends BasePresenter {
 			$path = __DIR__ . '/../../' .$path;
 			$files = iterator_to_array(\Nette\Utils\Finder::find('*')->exclude('.*')->in($path));
 		}
+		ksort($files);
 		$this->template->files = $files;
 		$this->template->subpath = $subpath;
 	}

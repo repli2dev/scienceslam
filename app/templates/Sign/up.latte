@@ -1,13 +1,15 @@
 {var $pageTitle = "Registrace soutěžících"}
 {block content}
-<img src="{$basePath}/images/2013-0/slam12.jpg" class="image_right clear" title="Fotky půjčeny od Science Slam Vienna" />
-<img src="{$basePath}/images/2013-0/slam10.jpg" class="image_right clear" title="Fotky půjčeny od Science Slam Vienna" />
+
+{if isset($page) && $page !== false}
+	{!$page->content}
+{/if}
 
 <div class="wide-text-block">
-	{if isset($page) && $page !== false}
-		{!$page->content}
-	{/if}
 	{control signup}
 </div>
+
+{include ../admin-menu.latte}
+
 <div class="cleaner">&nbsp;</div>
 {/block}

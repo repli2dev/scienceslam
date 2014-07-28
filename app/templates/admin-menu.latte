@@ -4,6 +4,9 @@
 			<li><a href="{plink Page:edit, $page->page_id}">Upravit stránku</a></li>
 			{if !empty($page->event_id)}<li><a href="{plink Page:list, $page->event_id}">Upravit stránky tohoto slamu</a></li>{/if}
 		{/ifCurrent}
+		{ifCurrent Sign:up}
+			<li><a href="{plink Page:edit, $page->page_id}">Upravit stránku</a></li>
+		{/ifCurrent}
 		<li><a href="{plink Page:list}">Správa nezařazených stránek</a></li>
 		<li><a href="{plink Slam:list}">Správa slamů</a></li>
 		<li><a href="{plink File:}">Správa souborů</a></li>
