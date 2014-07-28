@@ -15,19 +15,6 @@ Options -Indexes
 	RewriteCond %{HTTP_HOST} ^www.scienceslam.muni.cz
 	RewriteRule (.*) http://scienceslam.muni.cz/$1 [R=301,L]
 
-	# Rewrite not cool address to cool ones
-	RewriteCond %{QUERY_STRING} ^presenter=(.*)&action=(.*)$
-	RewriteRule ^$ /%1/%2 [L,R=301]
-
-      	RewriteCond %{QUERY_STRING} ^action=(.*)&presenter=(.*)$
-        RewriteRule ^$ /%2/%1 [L,R=301]
-
-	RewriteCond %{QUERY_STRING} ^presenter=(.*)$
-        RewriteRule ^$ /%1 [L,R=301]
-
-	RewriteCond %{QUERY_STRING} ^action=(.*)$
-        RewriteRule ^$ /homepage/%1 [L,R=301]
-
 	# prevents files starting with dot to be viewed by browser
 	RewriteRule /\.|^\. - [F]
 

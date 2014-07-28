@@ -17,7 +17,7 @@ class RouterFactory
 	public function createRouter()
 	{
 		$router = new RouteList();		
-		$router[] = new Route('index.php', 'Page:Show', Route::ONE_WAY);
+		$router[] = new Route('index.php', 'Page:show', Route::ONE_WAY);
 
 		$router[] = new Route('/admin', 'Admin:');
 
@@ -26,9 +26,9 @@ class RouterFactory
 		$router[] = new Route('/slam/add', 'Slam:add');
 		$router[] = new Route('/slam/list', 'Slam:list');
 		// /slam/one/<url>
-		$router[] = new Route('/slam/<eventUrl>[/<pageUrl>]', 'Page:Show');
+		$router[] = new Route('/slam/<eventUrl>[/<pageUrl>]', 'Page:show');
 		// /page/<url>
-		$router[] = new Route('/show/<pageUrl>', 'Page:Show');
+		$router[] = new Route('/show/<pageUrl>', 'Page:show');
 
 		// Old URLs
 		$router[] = new Route('/homepage/<pageUrl>', 'Page:old', Route::ONE_WAY);
