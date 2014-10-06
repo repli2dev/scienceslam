@@ -31,6 +31,11 @@ class FilePresenter extends BasePresenter {
 		$this->template->subpath = $subpath;
 	}
 
+	public function actionDownLoad($path) {
+		$response = new \Nette\Application\Responses\FileResponse(__DIR__ . '/../../' . $path);
+		$this->sendResponse($response);
+	}
+
 	public function createComponentAddForm($name) {
 		$form = new UI\Form();
 		$form->addGroup('Vytvořit nový adresář');

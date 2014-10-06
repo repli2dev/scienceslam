@@ -43,6 +43,8 @@
 			<td>
 				{if $file->isDir()}
 					<a href="{plink File:,$subpath . '/'. $file->getBasename()}">Vstoupit</a>
+				{else}
+					<a href="{plink File:download,$subpath . '/'. $file->getBasename()}">Stáhnout</a>
 				{/if}
 				<a href="{plink File:delete, $subpath . '/'. $file->getBasename()}" onclick="return confirm('Opravdu chcete smazat tento soubor?');">Smazat</a>
 			</td>
