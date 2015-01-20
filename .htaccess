@@ -19,7 +19,7 @@ Options -Indexes
 	RewriteRule /\.|^\. - [F]
 
 	# redirect of not existing pages
-	RewriteRule ^/show/winners$ / [R=301,L]
+	Redirect 301 /show/winners /
 
 	# front controller
 	RewriteCond %{REQUEST_FILENAME} !-f
