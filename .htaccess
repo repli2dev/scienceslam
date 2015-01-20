@@ -18,6 +18,9 @@ Options -Indexes
 	# prevents files starting with dot to be viewed by browser
 	RewriteRule /\.|^\. - [F]
 
+	# redirect of not existing pages
+	RewriteRule ^/show/winners$ / [R=301,L]
+
 	# front controller
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
