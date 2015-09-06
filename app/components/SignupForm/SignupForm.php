@@ -41,8 +41,8 @@ class SignupForm extends VisualControl {
 			->addRule($form::EMAIL, 'Zadejte, prosím, svoji e-mailovou adresu ve tvaru nekdo@nekde.koncovka.');
 		$form->addText('phone', 'Telefonní číslo:')
 			->setRequired('Zadejte, prosím, své telefonní číslo.');
-		$form->addText('uco', 'UČO:')
-			->setRequired('Zadejte, prosím, své UČO (univerzitní číslo osobnosti).')
+		$form->addText('uco', 'UČO (pokud jste z MU):')
+//			->setRequired('Zadejte, prosím, své UČO (univerzitní číslo osoby), pokud jste z Masarykovy univerzity.')
 			->addRule(\Nette\Forms\Form::INTEGER, 'UČO musí být číslo');
 
 		$form->addGroup('Téma vystoupení');
