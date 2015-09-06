@@ -43,7 +43,7 @@ class SignupForm extends VisualControl {
 			->setRequired('Zadejte, prosím, své telefonní číslo.');
 		$form->addText('uco', 'UČO (pokud jste z MU):')
 //			->setRequired('Zadejte, prosím, své UČO (univerzitní číslo osoby), pokud jste z Masarykovy univerzity.')
-			->addRule(\Nette\Forms\Form::INTEGER, 'UČO musí být číslo');
+//			->addRule(\Nette\Forms\Form::INTEGER, 'UČO musí být číslo');
 
 		$form->addGroup('Téma vystoupení');
 		$form->addTextArea('content','Krátce představte téma nebo myšlenku vašeho Science slamu:', 45,5)
