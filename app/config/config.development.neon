@@ -1,8 +1,7 @@
 parameters:
 
-nette:
-	debugger:
-		bar: [JanDrabek\MailPanel\MailPanel]
+tracy:
+	bar: [JanDrabek\MailPanel\MailPanel]
 
 services:
 	nette.mailer:

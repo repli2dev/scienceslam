@@ -158,7 +158,12 @@ class PagePresenter extends BasePresenter {
 			return;
 		}
 		$this->flashMessage('Stránka byla úspěšně upravena.', 'success');
-		$this->redirect('list', $row->event_id);
+		$event = $this->eventDAO->find($row->event_id);
+		if ($event === FALSE) {
+			$this->redirect('show', null, $row->url);
+		} else {
+			$this->redirect('show', $event->url, $row->url);
+		}
 	}
 
 	protected function createComponentDeleteForm() {

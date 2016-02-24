@@ -44,13 +44,14 @@ nette:
 		save_path: "%tempDir%/sessions"
 		expiration: 14 days
 		autoStart: true
-	mailer:
-		smtp: true
-		host:
-		port: 25
-		username:
-		password:
-		secure: tls
+
+mail:
+	smtp: true
+	host:
+	port: 25
+	username:
+	password:
+	secure: tls
 
 services:
 	userDAO: Muni\ScienceSlam\Model\User

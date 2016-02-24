@@ -4,7 +4,7 @@
 require __DIR__ . '/../libs/autoload.php';
 
 
-$configurator = new Nette\Config\Configurator;
+$configurator = new \Nette\Configurator();
 
 // Enable Nette Debugger for error visualisation & logging
 //$configurator->setDebugMode(TRUE);
@@ -17,17 +17,16 @@ $configurator->setTempDirectory(__DIR__ . '/../temp');
 // Enable RobotLoader - this will load all classes automatically
 $configurator->createRobotLoader()
 	->addDirectory(__DIR__)
-	->addDirectory(__DIR__ . '/../libs')
 	->register();
 
 // Create Dependency Injection container from config.neon file
-$configurator->addConfig(__DIR__ . '/config/config.neon', $configurator::NONE);
+$configurator->addConfig(__DIR__ . '/config/config.neon');
 // Overlay config options in debug (~ development mode)
 if($configurator->isDebugMode()) {
-	$configurator->addConfig(__DIR__ . '/config/config.development.neon', $configurator::NONE);
+	$configurator->addConfig(__DIR__ . '/config/config.development.neon');
 }
 // Tuning config with local only settings like passwords etc.
-$configurator->addConfig(__DIR__ . '/config/config.local.neon', $configurator::NONE);
+$configurator->addConfig(__DIR__ . '/config/config.local.neon');
 $container = $configurator->createContainer();
 
 //$container->router = new Nette\Application\Routers\SimpleRouter('Homepage:default');

@@ -5,6 +5,10 @@
 		<meta http-equiv="content-language" content="cz" />
 		<meta name="description" content="{$pageDescription}" n:ifset="$pageDescription" />
 		<meta name="keywords" content="{$pageKeywords}" n:ifset="$pageKeywords" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="{$basePath}/images/blocks/metaphoto.jpg"/>
+
 		<link href="{$basePath}/css/screen.css" media="screen,projection,tv" rel="stylesheet" type="text/css" />
 		<link rel="icon" href="{$basePath}/favicon.ico" type="image/x-icon" />
 		<title>{$pageTitle}{if !empty($pageTitle) && $pageTitle != 'Science slam'} | Science slam{/if}</title>
