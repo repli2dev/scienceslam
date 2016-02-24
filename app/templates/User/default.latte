@@ -25,7 +25,7 @@
 				<td>{if $row->last_login == "-0001-11-30 00:00:00"}Dosud žádné přihlášení{else}{$row->last_login|date:"j. n. Y H.i"}{/if}</td>
 				<td class="admin-grid-actions">
 					<a href="{plink User:edit, $row->user_id}">Upravit</a><br />
-					<a href="{plink user:delete, $row->user_id}">Smazat</a>
+					<a href="{plink User:delete, $row->user_id}">Smazat</a>
 				</td>
 			</tr>
 		{/foreach}
