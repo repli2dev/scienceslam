@@ -2,3 +2,5 @@
 
 After editing page files, it is necessary to delete cache files (folder temp/cache/latte).
 If the permission is denied, renaming it is sufficient.
+
+Registration/tickets block can be changed by editing app/templates/Page/show.latte.
