@@ -38,11 +38,11 @@
 						<h1>Registrace</h1>
 					</span>
 				</a>
-				<a href="{plink Page:show, null, ticket}">
+				<!-- <a href="{plink Page:show, null, ticket}"> -->
 					<span class="sub-block_half2">Zajímalo by tě, jak to vlastně bude vypadat? Kdo zvítězí?
-						<h1>Prodej lístků</h1>
+						<h1>Vstup zdarma</h1>
 				</span>
-				</a>
+				<!-- </a> -->
 			</div>
 		{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::IMAGE}
 			<span class="block_{$block->size} left {$block->classes}" {if !empty($block->style)}style="background: url('/{!$block->style}');"{/if}>
