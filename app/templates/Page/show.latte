@@ -21,14 +21,14 @@
 		{if $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::VERTICAL_TEXT}
 			<span class="block_{$block->size} left {$block->classes}">
 				<span class="sub-block_{$block->size}_text center">
-					{!$block->param1}
+					{$block->param1|texy|noEscape}
 				</span>
 			</span>
 
 		{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::TEXT}
 			<span class="block_{$block->size} left {$block->classes}">
 				<span class="sub-block_{$block->size}_text">
-					{!$block->param1}
+					{$block->param1|texy|noEscape}
 				</span>
 			</span>
 		{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::REGISTRATION}
@@ -59,7 +59,7 @@
 		<p>Tato stránka je zatím prázdná, zkuste to prosím později.</p>
 	{/if}
 {else}
-	{!$page->content}
+	{$page->content|texy|noEscape}
 {/if}
 <div class="cleaner">&nbsp;</div>
 {if $admin}

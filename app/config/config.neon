@@ -63,3 +63,4 @@ services:
 	routerFactory: RouterFactory
 	router: @routerFactory::createRouter
 	signupFormFactory: ISignupFormFactory
+	texyFactory: Muni\ScienceSlam\Utils\TexyFactory

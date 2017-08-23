@@ -1,5 +1,6 @@
 <?php
 
+use Nette\Bridges\ApplicationLatte\Template;
 use Nette\Templating\ITemplate;
 
 /**
@@ -50,9 +51,10 @@ abstract class VisualControl extends BaseControl {
 	 * @return ITemplate
 	 */
 	protected function getControlTemplate($name, $class = NULL) {
+		/** @var Template $template */
 		$template = parent::createTemplate($class);
 		$template->setFile($this->getPath(). '/'. $name . '.latte');
-		//$template->registerHelperLoader('\Edookit\Utils\TemplateHelpers::loader');
+		$this->getPresenter()->texyFactory->install($template->getLatte());
 		return $template;
 	}
 }

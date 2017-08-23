@@ -1,6 +1,8 @@
 <?php
 
+use Muni\ScienceSlam\Utils\TexyFactory;
 use Nette\Application\UI;
+use Nette\Utils\Html;
 
 class PagePresenter extends BasePresenter {
 
@@ -199,7 +201,8 @@ class PagePresenter extends BasePresenter {
 		$form->addCheckbox('is_block_page', 'Použít');
 		$form->addGroup('Textová stránka');
 		$form->addTextArea('content', '', 53, 15)
-			->setOption('description', 'HTML obsah');
+			->setOption('description', TexyFactory::getSyntaxHelp())
+			->getControlPrototype()->class = 'full-width';
 		$form->addGroup('Galerie');
 		$form->addText('gallery_path', 'Cesta ke galerii');
 		$form->setCurrentGroup(null);

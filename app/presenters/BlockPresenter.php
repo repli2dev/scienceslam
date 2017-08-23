@@ -1,5 +1,6 @@
 <?php
 
+use Muni\ScienceSlam\Utils\TexyFactory;
 use Nette\Application\UI;
 
 class BlockPresenter extends BasePresenter {
@@ -212,11 +213,15 @@ class BlockPresenter extends BasePresenter {
 		$form->addGroup('Rozložení: Vertikálně centrovaný text');
 		$c = $form->addContainer(\Muni\ScienceSlam\Model\ListBlockType::VERTICAL_TEXT);
 
-		$c->addTextArea('content', 'Obsah', 48, 5);
+		$c->addTextArea('content', 'Obsah', 48, 10)
+			->setOption('description', TexyFactory::getSyntaxHelp())
+			->getControlPrototype()->class = 'full-width';
 
 		$form->addGroup('Rozložení: Text');
 		$c = $form->addContainer(\Muni\ScienceSlam\Model\ListBlockType::TEXT);
-		$c->addTextArea('content', 'Obsah', 48, 5);
+		$c->addTextArea('content', 'Obsah', 48, 10)
+			->setOption('description', TexyFactory::getSyntaxHelp())
+			->getControlPrototype()->class = 'full-width';
 
 		$form->addGroup('Rozložení: Obrázek');
 		$c = $form->addContainer(\Muni\ScienceSlam\Model\ListBlockType::IMAGE);

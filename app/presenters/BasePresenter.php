@@ -1,5 +1,8 @@
 <?php
 
+use Muni\ScienceSlam\Utils\TexyFactory;
+use Nette\Bridges\ApplicationLatte\Template;
+
 /**
  * Base presenter for all application presenters.
  */
@@ -7,6 +10,9 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter {
 	private $pageTitle;
 	private $pageDescription;
 	private $pageKeywords;
+
+	/** @var TexyFactory @inject */
+	public $texyFactory;
 
 	public function setPageTitle($input) {
 		$this->pageTitle = $input;
@@ -24,6 +30,14 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter {
 		$this->template->pageDescription = (empty($this->pageDescription)) ? $this->context->parameters['page']['description'] : $this->pageDescription;
 
 		$this->template->admin = $this->user->isInRole('admin') || $this->user->isInRole('manager');
+	}
+
+	protected function createTemplate()
+	{
+		/** @var Template $template */
+		$template = parent::createTemplate();
+		$this->texyFactory->install($template->getLatte());
+		return $template;
 	}
 
 	/**

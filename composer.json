@@ -18,7 +18,9 @@
 	"require": {
 		"php": ">= 5.3.1",
 		"nette/nette": "2.3.x",
-		"jandrabek/nette-mailpanel": ">=3.0.1"
+		"jandrabek/nette-mailpanel": ">=3.0.1",
+		"texy/texy": "^2.9"
+
 	},
     "require-dev": {
         "nette/tester": "@dev"
