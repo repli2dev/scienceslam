@@ -214,13 +214,13 @@ class BlockPresenter extends BasePresenter {
 		$c = $form->addContainer(\Muni\ScienceSlam\Model\ListBlockType::VERTICAL_TEXT);
 
 		$c->addTextArea('content', 'Obsah', 48, 10)
-			->setOption('description', TexyFactory::getSyntaxHelp())
+			->setOption('description', TexyFactory::getSyntaxHelp('vertical'))
 			->getControlPrototype()->class = 'full-width';
 
 		$form->addGroup('Rozložení: Text');
 		$c = $form->addContainer(\Muni\ScienceSlam\Model\ListBlockType::TEXT);
 		$c->addTextArea('content', 'Obsah', 48, 10)
-			->setOption('description', TexyFactory::getSyntaxHelp())
+			->setOption('description', TexyFactory::getSyntaxHelp('horizontal'))
 			->getControlPrototype()->class = 'full-width';
 
 		$form->addGroup('Rozložení: Obrázek');

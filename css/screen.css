@@ -344,11 +344,13 @@ p { margin: 0.5em 0 0.5em 0; }
 ul.gallery { position: relative; left: -10px; text-align: left; padding: 0; margin: 0; }
 ul.gallery>li { display: inline-block; }
 
+ul.spaced>li, ol.spaced>li { margin: 0.5em 0 0.5em 0; }
+
 img { margin: 10px; }
 img.gallery-item { height: 200px; margin: 10px; }
 .center-block { display: block; margin-left: auto; margin-right: auto; }
 
-/* Adminsitration styles */
+/* Administration styles */
 
 table.admin-grid {
 	width: 100%;
@@ -384,17 +386,25 @@ a.admin-door {
 	margin-right: 20px;
 	margin-bottom: 10px;
 }
-.admin-menu li a {
+.admin-menu li a,
+.help-button {
+	cursor: pointer;
 	padding: 10px;
 	display: inline-block;
 	background-color: rgb(224,224,224);
 }
-.admin-menu li a:hover {
+.admin-menu li a:hover,
+.help-button:hover {
 	background-color: rgb(0,39,118);
 	color: white;
 }
 .admin-menu ul {
 	padding-left: 0px;
+}
+
+.help-block {
+	background-color: rgb(224,224,224);
+	padding: 10px;
 }
 
 /* Files management */

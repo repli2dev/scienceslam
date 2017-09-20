@@ -8,6 +8,9 @@ form dd {
 form dl {
 	margin-top: 15px;
 }
+form table {
+	width: 100%;
+}
 input[type='text'],
 input[type='password'],
 textarea,

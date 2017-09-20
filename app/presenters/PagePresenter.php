@@ -201,7 +201,7 @@ class PagePresenter extends BasePresenter {
 		$form->addCheckbox('is_block_page', 'Použít');
 		$form->addGroup('Textová stránka');
 		$form->addTextArea('content', '', 53, 15)
-			->setOption('description', TexyFactory::getSyntaxHelp())
+			->setOption('description', TexyFactory::getSyntaxHelp('page'))
 			->getControlPrototype()->class = 'full-width';
 		$form->addGroup('Galerie');
 		$form->addText('gallery_path', 'Cesta ke galerii');
