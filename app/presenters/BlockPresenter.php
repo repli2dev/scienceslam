@@ -1,7 +1,9 @@
 <?php
 
+use Muni\ScienceSlam\Model\ListBlockType;
 use Muni\ScienceSlam\Utils\TexyFactory;
 use Nette\Application\UI;
+use Nette\Utils\Html;
 
 class BlockPresenter extends BasePresenter {
 
@@ -45,16 +47,16 @@ class BlockPresenter extends BasePresenter {
 		$form = $this->getComponent('editForm');
 		$use = iterator_to_array($data);
 		$use['layout'] = $use['block_type_id'];
-		if($use['layout'] == \Muni\ScienceSlam\Model\ListBlockType::TEXT) {
-			$use[\Muni\ScienceSlam\Model\ListBlockType::TEXT]['content'] = $use['param1'];
+		if($use['layout'] == ListBlockType::TEXT) {
+			$use[ListBlockType::TEXT]['content'] = $use['param1'];
 		}
-		if($use['layout'] == \Muni\ScienceSlam\Model\ListBlockType::VERTICAL_TEXT) {
-			$use[\Muni\ScienceSlam\Model\ListBlockType::VERTICAL_TEXT]['content'] = $use['param1'];
+		if($use['layout'] == ListBlockType::VERTICAL_TEXT) {
+			$use[ListBlockType::VERTICAL_TEXT]['content'] = $use['param1'];
 		}
-		if($use['layout'] == \Muni\ScienceSlam\Model\ListBlockType::IMAGE) {
-			$use[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['label'] = $use['param1'];
-			$use[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['label2'] = $use['param2'];
-			$use[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['style'] = $use['style'];
+		if($use['layout'] == ListBlockType::IMAGE) {
+			$use[ListBlockType::IMAGE]['label'] = $use['param1'];
+			$use[ListBlockType::IMAGE]['label2'] = $use['param2'];
+			$use[ListBlockType::IMAGE]['style'] = $use['style'];
 		}
 		$form->setDefaults($use);
 	}
@@ -78,16 +80,16 @@ class BlockPresenter extends BasePresenter {
 
 		$output = array();
 		$output['block_type_id'] = $layout = $values['layout'];
-		if($layout == \Muni\ScienceSlam\Model\ListBlockType::TEXT) {
-			$output['param1'] = $values[\Muni\ScienceSlam\Model\ListBlockType::TEXT]['content'];
+		if($layout == ListBlockType::TEXT) {
+			$output['param1'] = $values[ListBlockType::TEXT]['content'];
 		}
-		if($layout == \Muni\ScienceSlam\Model\ListBlockType::VERTICAL_TEXT) {
-			$output['param1'] = $values[\Muni\ScienceSlam\Model\ListBlockType::VERTICAL_TEXT]['content'];
+		if($layout == ListBlockType::VERTICAL_TEXT) {
+			$output['param1'] = $values[ListBlockType::VERTICAL_TEXT]['content'];
 		}
-		if($layout == \Muni\ScienceSlam\Model\ListBlockType::IMAGE) {
-			$output['param1'] = $values[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['label'];
-			$output['param2'] = $values[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['label2'];
-			$output['style'] = $values[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['style'];
+		if($layout == ListBlockType::IMAGE) {
+			$output['param1'] = $values[ListBlockType::IMAGE]['label'];
+			$output['param2'] = $values[ListBlockType::IMAGE]['label2'];
+			$output['style'] = $values[ListBlockType::IMAGE]['style'];
 		}
 		$output['classes'] = $values['classes'];
 		$output['link'] = $values['link'];
@@ -128,16 +130,16 @@ class BlockPresenter extends BasePresenter {
 
 		$output = array();
 		$output['block_type_id'] = $layout = $values['layout'];
-		if($layout == \Muni\ScienceSlam\Model\ListBlockType::TEXT) {
-			$output['param1'] = $values[\Muni\ScienceSlam\Model\ListBlockType::TEXT]['content'];
+		if($layout == ListBlockType::TEXT) {
+			$output['param1'] = $values[ListBlockType::TEXT]['content'];
 		}
-		if($layout == \Muni\ScienceSlam\Model\ListBlockType::VERTICAL_TEXT) {
-			$output['param1'] = $values[\Muni\ScienceSlam\Model\ListBlockType::VERTICAL_TEXT]['content'];
+		if($layout == ListBlockType::VERTICAL_TEXT) {
+			$output['param1'] = $values[ListBlockType::VERTICAL_TEXT]['content'];
 		}
-		if($layout == \Muni\ScienceSlam\Model\ListBlockType::IMAGE) {
-			$output['param1'] = $values[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['label'];
-			$output['param2'] = $values[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['label2'];
-			$output['style'] = $values[\Muni\ScienceSlam\Model\ListBlockType::IMAGE]['style'];
+		if($layout == ListBlockType::IMAGE) {
+			$output['param1'] = $values[ListBlockType::IMAGE]['label'];
+			$output['param2'] = $values[ListBlockType::IMAGE]['label2'];
+			$output['style'] = $values[ListBlockType::IMAGE]['style'];
 		}
 		$output['classes'] = $values['classes'];
 		$output['link'] = $values['link'];
@@ -194,7 +196,7 @@ class BlockPresenter extends BasePresenter {
 		$form = new UI\Form;
 		$form->getElementPrototype()->class('wide');
 		$form->addGroup('Typ');
-		$form->addSelect('layout', 'Rozložení', \Muni\ScienceSlam\Model\ListBlockType::getAll())
+		$form->addSelect('layout', 'Rozložení', ListBlockType::getAll())
 			->setPrompt('--- Vyberte ---')
 			->setRequired('Vyberte, prosím, rozložení bloku.');
 		$form->addSelect('size', 'Velikost', array('1x1' => '1x1', '2x1' => '2x1'))
@@ -210,21 +212,21 @@ class BlockPresenter extends BasePresenter {
 			->setDefaultValue(0);
 		$form->addCheckbox('hidden', 'Skryto');
 
-		$form->addGroup('Rozložení: Vertikálně centrovaný text');
-		$c = $form->addContainer(\Muni\ScienceSlam\Model\ListBlockType::VERTICAL_TEXT);
+		$form->addGroup(Html::el('span')->setText('Rozložení: Vertikálně centrovaný text')->addAttributes(['class' => 'layout-' . ListBlockType::VERTICAL_TEXT]));
+		$c = $form->addContainer(ListBlockType::VERTICAL_TEXT);
 
 		$c->addTextArea('content', 'Obsah', 48, 10)
 			->setOption('description', TexyFactory::getSyntaxHelp('vertical'))
 			->getControlPrototype()->class = 'full-width';
 
-		$form->addGroup('Rozložení: Text');
-		$c = $form->addContainer(\Muni\ScienceSlam\Model\ListBlockType::TEXT);
+        $form->addGroup(Html::el('span')->setText('Rozložení: Text')->addAttributes(['class' => 'layout-' . ListBlockType::TEXT]));
+		$c = $form->addContainer(ListBlockType::TEXT);
 		$c->addTextArea('content', 'Obsah', 48, 10)
 			->setOption('description', TexyFactory::getSyntaxHelp('horizontal'))
 			->getControlPrototype()->class = 'full-width';
 
-		$form->addGroup('Rozložení: Obrázek');
-		$c = $form->addContainer(\Muni\ScienceSlam\Model\ListBlockType::IMAGE);
+        $form->addGroup(Html::el('span')->setText('Rozložení: Obrázek')->addAttributes(['class' => 'layout-' . ListBlockType::IMAGE]));
+		$c = $form->addContainer(ListBlockType::IMAGE);
 		$c->addText('label', 'Nadpisek');
 		$c->addText('label2', 'Krátký popis');
 		$c->addSelect('style', 'Obrázek na pozadí', $this->getImages(), 10)
