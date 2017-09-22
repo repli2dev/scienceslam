@@ -2,7 +2,11 @@
 {var $robots = noindex}
 
 {block #content}
+    {ifset $previewToken}
+        <h2>Náhled stránky</h2>
+        <iframe src="{plink Page:preview, $previewToken}" class="page-preview-pane"></iframe>
+    {/ifset}
 
-<h1>Úprava bloku</h1>
-
-{control editForm}
+    <h1>Úprava bloku</h1>
+    {control editForm}
+{/block}

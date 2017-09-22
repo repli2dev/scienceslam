@@ -31,4 +31,7 @@ class WatchingActiveRow extends ActiveRow {
 		}
 		return new self($row->toArray(), $row->getTable());
 	}
+	public function getCurrentToArray() {
+		return array_merge($this->toArray(), $this->getModified());
+	}
 }

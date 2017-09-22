@@ -15,6 +15,8 @@ class BlockPresenter extends BasePresenter {
 	private $pageDAO;
 	/** @var \Muni\ScienceSlam\Model\Event */
 	private $eventDAO;
+	/** @var \Muni\ScienceSlam\Utils\PreviewStorage */
+	private $previewStorage;
 
 	public function injectBlockDAO(\Muni\ScienceSlam\Model\Block $blockDAO) {
 		$this->blockDAO = $blockDAO;
@@ -24,6 +26,9 @@ class BlockPresenter extends BasePresenter {
 	}
 	public function injectEventDAO(\Muni\ScienceSlam\Model\Event $eventDAO) {
 		$this->eventDAO = $eventDAO;
+	}
+	public function injectPreviewStorage(\Muni\ScienceSlam\Utils\PreviewStorage $previewStorage) {
+		$this->previewStorage = $previewStorage;
 	}
 
 	public function startup() {
@@ -70,7 +75,8 @@ class BlockPresenter extends BasePresenter {
 
 	protected function createComponentAddForm() {
 		$form = $this->prepareForm();
-		$form->addSubmit('send', 'Přidat blok');
+		$form->addSubmit('preview', 'Náhled')->getControlPrototype()->class = 'button button-gray';
+		$form->addSubmit('send', 'Přidat');
 		$form->onSuccess[] = $this->addFormSucceeded;
 		return $form;
 	}
@@ -101,6 +107,17 @@ class BlockPresenter extends BasePresenter {
 
 		$row = $this->blockDAO->create();
 		$row->addAll($output);
+
+		// Stop when preview
+		if ($form['preview']->isSubmittedBy()) {
+			$temp = (object) $row->getCurrentToArray();
+			$temp->block_id = null;
+			$this->template->previewToken = $this->previewStorage->save(null, $temp);
+			return;
+		}
+
+		// Continue when saving
+
 		try {
 			$this->blockDAO->save($row);
 		} catch(PDOException $ex) {
@@ -120,7 +137,8 @@ class BlockPresenter extends BasePresenter {
 
 	protected function createComponentEditForm() {
 		$form = $this->prepareForm();
-		$form->addSubmit('send', 'Upravit Blok');
+		$form->addSubmit('preview', 'Náhled')->getControlPrototype()->class = 'button button-gray';
+		$form->addSubmit('send', 'Uložit');
 		$form->onSuccess[] = $this->editFormSucceeded;
 		return $form;
 	}
@@ -151,6 +169,15 @@ class BlockPresenter extends BasePresenter {
 		$row = $this->blockDAO->find($this->getParameter('blockId'));
 		$row = \JanDrabek\Database\WatchingActiveRow::fromActiveRow($row);
 		$row->addAll($output);
+
+		// Stop when preview
+		if ($form['preview']->isSubmittedBy()) {
+			$temp = (object) $row->getCurrentToArray();
+			$this->template->previewToken = $this->previewStorage->save(null, $temp);
+			return;
+		}
+
+		// Continue when saving
 		try {
 			$this->blockDAO->save($row);
 		} catch(PDOException $ex) {
@@ -219,13 +246,13 @@ class BlockPresenter extends BasePresenter {
 			->setOption('description', TexyFactory::getSyntaxHelp('vertical'))
 			->getControlPrototype()->class = 'full-width';
 
-        $form->addGroup(Html::el('span')->setText('Rozložení: Text')->addAttributes(['class' => 'layout-' . ListBlockType::TEXT]));
+		$form->addGroup(Html::el('span')->setText('Rozložení: Text')->addAttributes(['class' => 'layout-' . ListBlockType::TEXT]));
 		$c = $form->addContainer(ListBlockType::TEXT);
 		$c->addTextArea('content', 'Obsah', 48, 10)
 			->setOption('description', TexyFactory::getSyntaxHelp('horizontal'))
 			->getControlPrototype()->class = 'full-width';
 
-        $form->addGroup(Html::el('span')->setText('Rozložení: Obrázek')->addAttributes(['class' => 'layout-' . ListBlockType::IMAGE]));
+		$form->addGroup(Html::el('span')->setText('Rozložení: Obrázek')->addAttributes(['class' => 'layout-' . ListBlockType::IMAGE]));
 		$c = $form->addContainer(ListBlockType::IMAGE);
 		$c->addText('label', 'Nadpisek');
 		$c->addText('label2', 'Krátký popis');

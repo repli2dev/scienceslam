@@ -3,6 +3,11 @@
 
 {block #content}
 
-<h1>Přidat blok</h1>
+    {ifset $previewToken}
+        <h2>Náhled stránky</h2>
+        <iframe src="{plink Page:preview, $previewToken}" class="page-preview-pane"></iframe>
+    {/ifset}
 
-{control addForm}
+    <h1>Přidat blok</h1>
+    {control addForm}
+{/block}

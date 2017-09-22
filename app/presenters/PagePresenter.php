@@ -17,6 +17,9 @@ class PagePresenter extends BasePresenter {
 	/** @var \Muni\ScienceSlam\Model\Block */
 	private $blockDAO;
 
+	/** @var \Muni\ScienceSlam\Utils\PreviewStorage */
+	private $previewStorage;
+
 	public function injectEventDAO(\Muni\ScienceSlam\Model\Event $eventDAO) {
 		$this->eventDAO = $eventDAO;
 	}
@@ -25,6 +28,9 @@ class PagePresenter extends BasePresenter {
 	}
 	public function injectBlockDAO(\Muni\ScienceSlam\Model\Block $blockDAO) {
 		$this->blockDAO = $blockDAO;
+	}
+	public function injectPreviewStorage(\Muni\ScienceSlam\Utils\PreviewStorage $previewStorage) {
+		$this->previewStorage = $previewStorage;
 	}
 
 	public function startup() {
@@ -78,6 +84,37 @@ class PagePresenter extends BasePresenter {
 		$this->template->admin = $this->user->isInRole('manager') || $this->user->isInRole('admin');
 	}
 
+	public function actionPreview($token)
+	{
+		if ($this->previewStorage->has($token)) {
+			list($page, $block) = $this->previewStorage->get($token);
+			$blocks = [];
+			$event = new stdClass();
+			if ($block) {
+				$page = $this->pageDAO->find($block->page_id);
+				$blocks = $this->blockDAO->findByPageId($page->page_id);
+				if (isset($block->block_id) && $block->block_id) {
+					$blocks[$block->block_id] = $block;
+				} else {
+					$blocks[] = $block;
+				}
+				// Sort to take into updated weight into account
+				usort($blocks, function ($a, $b) {
+					return $a->weight - $b->weight;
+				});
+			}
+			if (isset($page->event_id) && $page->event_id) {
+				$event = $this->eventDAO->find($page->event_id);
+			}
+			$this->template->page = $page;
+			$this->template->blocks = $blocks;
+			$this->template->event = $event;
+			$this->template->admin = false;
+			$this->template->isPreview = true;
+			$this->setView('show');
+		}
+	}
+
 	public function actionAdd($eventId) {
 		$data = $this->eventDAO->find($eventId);
 		if($data !== FALSE) {
@@ -115,7 +152,8 @@ class PagePresenter extends BasePresenter {
 
 	protected function createComponentAddForm() {
 		$form = $this->prepareForm();
-		$form->addSubmit('send', 'Přidat stránku');
+		$form->addSubmit('preview', 'Náhled')->getControlPrototype()->class = 'button button-gray';
+		$form->addSubmit('send', 'Přidat');
 		$form->onSuccess[] = $this->addFormSucceeded;
 		return $form;
 	}
@@ -129,6 +167,14 @@ class PagePresenter extends BasePresenter {
 
 		$row = $this->pageDAO->create();
 		$row->addAll($values);
+
+		if ($form['preview']->isSubmittedBy()) {
+			$temp = (object) $row->getCurrentToArray();
+			$temp->page_id = null;
+			$this->template->previewToken = $this->previewStorage->save($temp);
+			return;
+		}
+
 		try {
 			$this->pageDAO->save($row);
 		} catch(PDOException $ex) {
@@ -141,7 +187,8 @@ class PagePresenter extends BasePresenter {
 
 	protected function createComponentEditForm() {
 		$form = $this->prepareForm();
-		$form->addSubmit('send', 'Upravit stránku');
+		$form->addSubmit('preview', 'Náhled')->getControlPrototype()->class = 'button button-gray';
+		$form->addSubmit('send', 'Uložit');
 		$form->onSuccess[] = $this->editFormSucceeded;
 		return $form;
 	}
@@ -153,6 +200,13 @@ class PagePresenter extends BasePresenter {
 		$row = $this->pageDAO->find($this->getParameter('id'));
 		$row = \JanDrabek\Database\WatchingActiveRow::fromActiveRow($row);
 		$row->addAll($values);
+
+		if ($form['preview']->isSubmittedBy()) {
+			$temp = (object) $row->getCurrentToArray();
+			$this->template->previewToken = $this->previewStorage->save($temp);
+			return;
+		}
+
 		try {
 			$this->pageDAO->save($row);
 		} catch(PDOException $ex) {
@@ -213,5 +267,5 @@ class PagePresenter extends BasePresenter {
 	private function populateByLayout($layoutId) {
 
 	}
-
 }
+

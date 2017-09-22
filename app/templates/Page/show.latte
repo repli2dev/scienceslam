@@ -10,6 +10,10 @@
 
 {block #content}
 
+{if isset($isPreview) && $isPreview}
+	<script src="{$basePath}/js/disableLinks.js"></script>
+{/if}
+
 {if $page->is_block_page}
 	{var $printedSomething = false}
 	{foreach $blocks as $block}
@@ -67,30 +71,32 @@
 		<h2>Správa bloků</h2><br />
 		<p><a href="{plink Block:add, $page->page_id}">Přidat blok</a></p>
 		{if count($blocks) > 0}
-        	<table class="admin-grid">
-        		<tr>
-        			<th>ID</th>
-        			<th>Rozložení</th>
-        			<th>Váha</th>
-        			<th>Skryto</th>
-        			<th class="admin-grid-actions">Akce</th>
-        		</tr>
-        		{var $types = Muni\ScienceSlam\Model\ListBlockType::getAll()}
-        		{foreach $blocks as $row}
-        			<tr>
-        				<td>{$row->block_id}</td>
-        				<td>{$types[$row->block_type_id]}</td>
-        				<td>{$row->weight}</td>
-        				<td>{if $row->hidden}ANO{/if}</td>
-        				<td class="admin-grid-actions">
-        					<a href="{plink Block:edit, $row->block_id}">Upravit</a><br />
-        					<a href="{plink Block:delete, $row->block_id}">Smazat</a>
-        				</td>
-        			</tr>
-        		{/foreach}
-        	</table>
-        {/if}
+			<table class="admin-grid">
+				<tr>
+					<th>ID</th>
+					<th>Rozložení</th>
+					<th>Váha</th>
+					<th>Skryto</th>
+					<th class="admin-grid-actions">Akce</th>
+				</tr>
+				{var $types = Muni\ScienceSlam\Model\ListBlockType::getAll()}
+				{foreach $blocks as $row}
+					<tr>
+						<td>{$row->block_id}</td>
+						<td>{$types[$row->block_type_id]}</td>
+						<td>{$row->weight}</td>
+						<td>{if $row->hidden}ANO{/if}</td>
+						<td class="admin-grid-actions">
+							<a href="{plink Block:edit, $row->block_id}">Upravit</a><br />
+							<a href="{plink Block:delete, $row->block_id}">Smazat</a>
+						</td>
+					</tr>
+				{/foreach}
+			</table>
+		{/if}
 	{/if}
 {/if}
 
-{include ../admin-menu.latte}
+{if !isset($isPreview) || !$isPreview}
+	{include ../admin-menu.latte}
+{/if}

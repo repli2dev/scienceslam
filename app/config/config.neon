@@ -64,3 +64,4 @@ services:
 	router: @routerFactory::createRouter
 	signupFormFactory: ISignupFormFactory
 	texyFactory: Muni\ScienceSlam\Utils\TexyFactory
+	previewStorage: Muni\ScienceSlam\Utils\PreviewStorage
