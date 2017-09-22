@@ -11,6 +11,10 @@ form dl {
 form table {
 	width: 100%;
 }
+
+form table th {
+	text-align: right;
+}
 input[type='text'],
 input[type='password'],
 textarea,
