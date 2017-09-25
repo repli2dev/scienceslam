@@ -18,7 +18,36 @@
 			<script src="{$basePath}/js/main.js"></script>
 			<script src="{$basePath}/js/w3.js"></script>
 		{/block}
-<style n:inner-block="style">
+
+		{ifset $googleAnalytics}
+			<!-- Google Analytics -->
+			<script>
+				window.ga=window.ga||function(){ (ga.q=ga.q||[]).push(arguments) };ga.l=+new Date;
+				ga('create', {$googleAnalytics}, 'auto');
+				ga('send', 'pageview');
+			</script>
+			<script async src='https://www.google-analytics.com/analytics.js'></script>
+			<!-- End Google Analytics -->
+		{/ifset}
+		{ifset $facebookAnalytics}
+			<!-- Facebook Pixel Code -->
+			<script>
+				!function(f,b,e,v,n,t,s)
+				{ if(f.fbq)return;n=f.fbq=function(){ n.callMethod?
+					n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+					if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+					n.queue=[];t=b.createElement(e);t.async=!0;
+					t.src=v;s=b.getElementsByTagName(e)[0];
+					s.parentNode.insertBefore(t,s)}(window, document,'script',
+					'https://connect.facebook.net/en_US/fbevents.js');
+				fbq('init', {$facebookAnalytics});
+				fbq('track', 'PageView');
+			</script>
+			<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id={$facebookAnalytics}&ev=PageView&noscript=1"/></noscript>
+			<!-- End Facebook Pixel Code -->
+		{/ifset}
+
+		<style n:inner-block="style">
 </style>
 	</head>
 	<body n:inner-block="body">

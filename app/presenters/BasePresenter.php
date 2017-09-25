@@ -11,6 +11,11 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter {
 	private $pageDescription;
 	private $pageKeywords;
 
+	/** @var string */
+	public $googleAnalytics;
+	/** @var string */
+	public $facebookAnalytics;
+
 	/** @var TexyFactory @inject */
 	public $texyFactory;
 
@@ -30,6 +35,8 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter {
 		$this->template->pageDescription = (empty($this->pageDescription)) ? $this->context->parameters['page']['description'] : $this->pageDescription;
 
 		$this->template->admin = $this->user->isInRole('admin') || $this->user->isInRole('manager');
+		$this->template->googleAnalytics = $this->googleAnalytics;
+		$this->template->facebookAnalytics = $this->facebookAnalytics;
 	}
 
 	protected function createTemplate()

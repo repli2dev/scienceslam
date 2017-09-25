@@ -18,6 +18,10 @@ parameters:
 			mail: []
 	uploads:
 		dirs: [images]
+	facebook:
+		analytics:
+	google:
+		analytics:
 
 	database:
 		driver: mysql
@@ -26,6 +30,11 @@ parameters:
 		username: root
 		password:
 
+decorator:
+	BasePresenter:
+		setup:
+			- $facebookAnalytics(%facebook.analytics%)
+			- $googleAnalytics(%google.analytics%)
 
 php:
 	date.timezone: Europe/Prague
