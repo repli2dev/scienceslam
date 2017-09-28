@@ -92,15 +92,15 @@ body {
 }
 
 .header-lamp-image {
-	width: 400px;
-	height: 416px;
+	width: 121px;
+	height: 250px;
 	position: relative;
-	left: 120px;
+	left: 230px;
 	top: -50px;
 }
 
 .header-claim {
-	margin: 150px 10px 30px 10px;
+	margin: 110px 160px 30px 10px;
 	height: 40px;
 	font-size: 14pt;
 	text-align: right;
