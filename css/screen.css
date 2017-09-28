@@ -2,7 +2,7 @@
 used colors:
     blue: rgb(0,39,118)
     black: rgb(42,42,42)
-    yellow: rgb(255,204,0)
+    yellow: rgb(255,220,19)
 */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,latin-ext);
@@ -319,7 +319,7 @@ p { margin: 0.5em 0 0.5em 0; }
 	margin-bottom: 10px;
 }
 
-.button:hover { color: rgb(255,204,0); }
+.button:hover { color: rgb(255,220,19); }
 
 ul.gallery { position: relative; left: -10px; text-align: left; padding: 0; margin: 0; }
 ul.gallery>li { display: inline-block; }
