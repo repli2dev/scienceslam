@@ -50,7 +50,7 @@ body {
 
 .main {
 	position: relative;
-	margin-bottom: 250px;
+	margin-bottom: 150px;
 }
 
 .footer {
@@ -59,7 +59,7 @@ body {
 	border-width: 0 0 20px 0;
 	background: url("../images/design/gradient-bottom.png");
 	position: absolute;
-	height: 230px;
+	height: 130px;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -108,19 +108,10 @@ body {
 
 .footer-text {
 	width: 300px;
-	margin: 20px 10px 20px 10px;
+	margin: 20px 15px 20px 10px;
 	text-align: right;
 	position: relative;
-	top: 105px;
-}
-
-.footer-lamp {
-	margin-left: -30px;
-	height: 0;
-	width: 0;
-	overflow: visible;
-	position: relative;
-	z-index: 1;
+	bottom: 0px;
 }
 
 .footer-logo {
@@ -128,29 +119,23 @@ body {
 	width: 400px;
 	margin-left: 10px;
 	position: relative;
-	left: 65px;
-	top: 15px;
+	left: 0px;
+	bottom: 100px;
 	z-index: 2;
 }
 
 .footer-logo-text {
 	font-size: 14pt;
 	position: relative;
-	top: 20px;
-	left: 10px;
+	bottom: 0px;
+	left: 0px;
 }
 
 .footer-munilogo-image {
-	margin: 10px;
-	height: 70px;
-	width: 70px;
-}
-
-.footer-lamp-image {
-	height: 204px;
-	width: 291px;
-	position: relative;
-	bottom: -40px;
+	margin: 10px 10px 10px 0px;
+	height: 49px;
+	width: 200px;
+	bottom: 50px;
 }
 
 .footer-social {
@@ -166,8 +151,6 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
-	.footer-lamp { margin-left: 10px; }
-	.footer-logo { left: 105px; }
 	.contents { width: 960px; }
 	body { text-align: justify; }
 }
