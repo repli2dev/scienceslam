@@ -19,6 +19,13 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter {
 	/** @var TexyFactory @inject */
 	public $texyFactory;
 
+	/** @var ISnippetControlFactory */
+	protected $snippetControlFactory;
+
+	public function injectSnippetControlFactory(ISnippetControlFactory $snippetControlFactory) {
+		$this->snippetControlFactory = $snippetControlFactory;
+	}
+
 	public function setPageTitle($input) {
 		$this->pageTitle = $input;
 	}
@@ -69,6 +76,11 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter {
 		if($this->resource === NULL || !$user->isAllowed($this->resource, $operation)){
 			$this->redirect('Admin:login');
 		}
+	}
+
+	protected function createComponentSnippet()
+	{
+		return $this->snippetControlFactory->create();
 	}
 
 }

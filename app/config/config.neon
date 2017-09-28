@@ -66,11 +66,13 @@ services:
 	userDAO: Muni\ScienceSlam\Model\User
 	eventDAO: Muni\ScienceSlam\Model\Event
 	pageDAO: Muni\ScienceSlam\Model\Page
+	snippetDAO: Muni\ScienceSlam\Model\Snippet
 	blockDAO: Muni\ScienceSlam\Model\Block
 	authenticator: \Muni\ScienceSlam\Model\Authenticator(@userDAO, %security.salt%)
 	authorizator: \Muni\ScienceSlam\Model\Authorizator
 	routerFactory: RouterFactory
 	router: @routerFactory::createRouter
 	signupFormFactory: ISignupFormFactory
+	snippetControlFactory: ISnippetControlFactory
 	texyFactory: Muni\ScienceSlam\Utils\TexyFactory
 	previewStorage: Muni\ScienceSlam\Utils\PreviewStorage

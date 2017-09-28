@@ -62,20 +62,14 @@
 					</div>
 
 					<div class="header-claim right">
-						<span class="bold">Science slam</span><br />
-						výzkum v jiném světle
+						{control snippet:render, 'header1'}
 					</div>
 					<a href="{plink Page:show}">
 						<span class="header-logo left">&nbsp;</span>
 					</a>
 
 					<div class="header-menu left">
-						<ul class="menu-ul">
-							<li><a href="{plink Page:show, null, about}">O co jde</a></li>
-							<li><a href="{plink Page:show, null, schedule}">Průběh</a></li>
-							<li><a href="{plink Page:show, null, rules}">Pravidla</a></li>
-							<li><a href="{plink Page:show, null, people}">Kdo je za tím</a></li>
-						</ul>
+						{control snippet:render,'main-menu'}
 					</div>
 					<div class="cleaner">&nbsp;</div>
 				</div>
@@ -91,17 +85,7 @@
 			<div class="footer">
 				<div class="contents">
 					<div class="footer-text right">
-						<a href="http://www.youtube.com/user/ScienceSlamMUNI" target="_blank" title="Sledujte nás na YouTube">
-							<img class="footer-social" src="{$basePath}/images/design/youtube.png" alt="YouTube" />
-						</a>					
-						<a href="http://www.facebook.com/ScienceSlamMUNI" target="_blank" title="Sledujte nás na Facebooku">
-							<img class="footer-social" src="{$basePath}/images/design/facebook.png" alt="Facebook" />
-						</a>
-						<a href="mailto:scienceslam@muni.cz" title="Napište nám">
-							<img class="footer-social" src="{$basePath}/images/design/email.png" alt="scienceslam@muni.cz" />
-						</a>
-						<div class="cleaner">&nbsp;</div>
-						&copy; 2013 <a href="http://www.muni.cz">Masarykova univerzita</a>
+						{control snippet:render,'footer2'}
 					</div>
 
 					<div class="footer-lamp left">
@@ -113,7 +97,7 @@
 							<img src="{$basePath}/images/design/mu_logo.png" class="footer-munilogo-image left" alt="Masarykova univerzita"/>
 						</a>
 						<div class="footer-logo-text left">
-							<span class="bold">Science slam</span> pořádá<br /><a href="http://www.muni.cz/">Masarykova univerzita</a>
+							{control snippet:render,'footer1'}
 						</div>
 						<div class="cleaner">&nbsp;</div>
 					</div>

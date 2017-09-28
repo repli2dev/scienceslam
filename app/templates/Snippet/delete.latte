@@ -1,0 +1,14 @@
+{var $pageTitle = "Smazat snippet"}
+{var $robots = noindex}
+
+{block #content}
+	<h1>Smazat snippet</h1>
+	{if $data->is_protected}
+		<div class="flash error">Tento snippet je momentálně chráněn proti smazání. </div>
+	{else}
+		<p>Opravdu chcete smazat snippet: {$data->key}?</p>
+		{control deleteForm}
+	{/if}
+
+	{include ../admin-menu.latte}
+{/block}

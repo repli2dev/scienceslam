@@ -427,3 +427,6 @@ div.preview-window { display: none; position: fixed; top: 0; left: 0; bottom: 0;
 div.preview-window button { position: fixed;  right: 20px; margin-top: 0px; }
 iframe.preview-pane { height: 100%; width: 100%; box-sizing: border-box; background: rgb(224,224,224); resize: both; overflow: auto; border: 0; }
 iframe.page-preview-pane { min-height: 400px; width: 100%; resize: vertical; overflow: auto; border: 3px solid rgb(222,222,222); }
+
+/* Modificators for Texy */
+.no-margin { margin: 0; }

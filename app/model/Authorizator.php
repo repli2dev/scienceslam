@@ -14,6 +14,7 @@ class Authorizator extends Object implements IAuthorizator {
 		// Add resources
 		$this->acl->addResource("user-shared");
 		$this->acl->addResource("user");
+		$this->acl->addResource("snippet");
 		$this->acl->addResource("page");
 		$this->acl->addResource("file");
 		$this->acl->addResource("block");
@@ -26,6 +27,7 @@ class Authorizator extends Object implements IAuthorizator {
 
 		// Settings of allowed/denied resources
 		$this->acl->allow('admin','page', Permission::ALL);
+		$this->acl->allow('admin','snippet', Permission::ALL);
 		$this->acl->allow('admin','file', Permission::ALL);
 		$this->acl->allow('admin','block', Permission::ALL);
 		$this->acl->allow('admin','user', Permission::ALL);
@@ -33,6 +35,7 @@ class Authorizator extends Object implements IAuthorizator {
 		$this->acl->allow('admin','slam', Permission::ALL);
 
 		$this->acl->allow('manager','page', Permission::ALL);
+		$this->acl->allow('manager','snippet', Permission::ALL);
 		$this->acl->allow('manager','block', Permission::ALL);
 		$this->acl->allow('manager','file', Permission::ALL);
 		$this->acl->allow('manager','user-shared', Permission::ALL);

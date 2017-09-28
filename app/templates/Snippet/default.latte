@@ -1,0 +1,39 @@
+{var $pageTitle = 'Snippety'}
+{var $robots = noindex}
+
+{block #content}
+
+	<h1>Správa snippetů</h1>
+
+	<p><a href="{plink Snippet:add}">Přidat nový snippet</a></p>
+
+	{if count($data) > 0}
+		<table class="admin-grid">
+			<tr>
+				<th>ID</th>
+				<th>Klíč</th>
+				<th>Chráněno</th>
+				<th>Vloženo</th>
+				<th>Poslední úprava</th>
+				<th class="admin-grid-actions">Akce</th>
+			</tr>
+			{foreach $data as $row}
+				<tr>
+					<td>{$row->snippet_id}</td>
+					<td>{$row->key}</td>
+					<td>{if $row->is_protected}ANO{/if}</td>
+					<td>{$row->inserted|date:"j. n. Y H:i"}</td>
+					<td>{$row->updated|date:"j. n. Y H:i"}</td>
+					<td class="admin-grid-actions">
+						<a href="{plink Snippet:edit, $row->snippet_id}">Upravit</a><br />
+						<a href="{plink Snippet:delete, $row->snippet_id}">Smazat</a>
+					</td>
+				</tr>
+			{/foreach}
+		</table>
+	{else}
+		<p>Žádné dostupné snippety.</p>
+	{/if}
+
+	{include ../admin-menu.latte}
+{/block}
