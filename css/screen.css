@@ -42,8 +42,8 @@ body {
 .header {
 	position: relative;
 	border-style: solid;
-	border-color: rgb(204,204,204);
-	border-width: 5px 0 0 0;
+	border-color: rgb(255,220,19);
+	border-width: 10px 0 0 0;
 	background: url("../images/design/gradient-top.png");
 	height: 230px;
 }
@@ -55,7 +55,7 @@ body {
 
 .footer {
 	border-style: solid;
-	border-color: rgb(204,204,204);
+	border-color: rgb(255,220,19);
 	border-width: 0 0 20px 0;
 	background: url("../images/design/gradient-bottom.png");
 	position: absolute;
@@ -168,11 +168,11 @@ body {
 
 .menu-ul a {
 	border-style: solid;
-	border-color: rgb(204,204,204);
+	border-color: rgb(0,39,118);
 	border-width: 0 0 0 5px;
 	padding: 0 0 0 10px;
 	margin: 1px 0 1px 0;
-	color: rgb(204,204,204);
+	color: rgb(0,39,118);
 	height: 36px;
 	line-height: 36px;
 	font-size: 14pt;
@@ -181,8 +181,7 @@ body {
 }
 
 .menu-ul a:hover {
-	border-color: rgb(0,39,118);
-	color: rgb(0,39,118);
+	border-color: rgb(255,220,19);
 	text-decoration: none;
 }
 
