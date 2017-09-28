@@ -51,6 +51,16 @@ class BlockPresenter extends BasePresenter {
 		}
 		$form = $this->getComponent('editForm');
 		$use = iterator_to_array($data);
+		// Check if style has non-existing image
+		$allowedFiles = $this->getImages();
+		$values = $form->getValues();
+		$styleFromSaved = $use['style'];
+		$styleFromForm = $values[ListBlockType::IMAGE]['style'];
+		$allowedFiles = array_reduce($allowedFiles, 'array_merge', []);
+		if (!array_key_exists($styleFromForm, $allowedFiles) && !array_key_exists($styleFromSaved, $allowedFiles)) {
+			$form->addError("Dosud uložený obrázek [{$use['style']}] (již) neexistuje. Vyberte prosím nový.");
+			$use['style'] = null;
+		}
 		$use['layout'] = $use['block_type_id'];
 		if($use['layout'] == ListBlockType::TEXT) {
 			$use[ListBlockType::TEXT]['content'] = $use['param1'];
@@ -258,11 +268,11 @@ class BlockPresenter extends BasePresenter {
 		$c->addText('label2', 'Krátký popis');
 		$style = $c->addSelect('style', 'Obrázek na pozadí', $this->getImages(), 10)
 			->setPrompt('--- Vyberte ---');
-        $previewLink = Html::el('a')->href('#')->class('open-select-preview')->setText('Náhled');
-        $previewLink->addAttributes(['data-select-id' => $style->getHtmlId()]);
+		$previewLink = Html::el('a')->href('#')->class('open-select-preview')->setText('Náhled');
+		$previewLink->addAttributes(['data-select-id' => $style->getHtmlId()]);
 
 		$style
-            ->setOption('description', $previewLink);
+			->setOption('description', $previewLink);
 
 		$form->setCurrentGroup(null);
 		return $form;
