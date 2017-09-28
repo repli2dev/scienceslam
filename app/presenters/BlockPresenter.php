@@ -256,8 +256,13 @@ class BlockPresenter extends BasePresenter {
 		$c = $form->addContainer(ListBlockType::IMAGE);
 		$c->addText('label', 'Nadpisek');
 		$c->addText('label2', 'Krátký popis');
-		$c->addSelect('style', 'Obrázek na pozadí', $this->getImages(), 10)
+		$style = $c->addSelect('style', 'Obrázek na pozadí', $this->getImages(), 10)
 			->setPrompt('--- Vyberte ---');
+        $previewLink = Html::el('a')->href('#')->class('open-select-preview')->setText('Náhled');
+        $previewLink->addAttributes(['data-select-id' => $style->getHtmlId()]);
+
+		$style
+            ->setOption('description', $previewLink);
 
 		$form->setCurrentGroup(null);
 		return $form;

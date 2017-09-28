@@ -72,10 +72,6 @@
 				</td>
 			</tr>
 		</table>
-		<div class="preview-window" id="preview-window">
-			<button type="button" class="button close-preview">Zavřít</button>
-			<iframe class="preview-pane" name="preview-pane"></iframe>
-		</div>
 		{if !empty($subpath)}
 			{input submitted, class => 'button', onclick => "return confirm('Opravdu chcete smazat všechny tyto soubory či adresáře?')"}
 		{/if}
@@ -89,23 +85,6 @@
 	{else}
 		{control fixPermissionsForm}
 	{/if}
-
-	<script>
-		$('.open-preview').click(function () {
-			document.getElementById('preview-window').style.display = 'block';
-			var body = document.querySelector('body');
-			body.classList.add('no-scroll');
-		});
-		$('.close-preview').click(function () {
-			this.parentNode.style.display = 'none';
-			var temp = document.getElementsByName('preview-pane');
-			if (temp.length === 1) {
-				temp[0].src = 'about:blank';
-			}
-			var body = document.querySelector('body');
-			body.classList.remove('no-scroll');
-		});
-	</script>
 
 	{include ../admin-menu.latte}
 

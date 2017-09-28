@@ -105,5 +105,11 @@
 				</div>
 			</div>
 		</div>
+		{if $user->isInRole('manager') || $user->isInRole('admin')}
+			<div class="preview-window" id="preview-window">
+				<button type="button" class="button close-preview">Zavřít</button>
+				<iframe class="preview-pane" name="preview-pane"></iframe>
+			</div>
+		{/if}
 	</body>
 </html>

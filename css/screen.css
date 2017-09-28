@@ -19,7 +19,7 @@ body {
 	background-image: url("../images/design/background.png");
 	background-repeat: repeat;
 }
-body.no-scroll { position:fixed; overflow:hidden; }
+body.no-scroll { height: 100%; overflow:hidden; }
 
 .cleaner {
 	clear: both;
