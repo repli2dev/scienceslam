@@ -10,6 +10,7 @@ libs/*
 app/config/config.local.neon
 
 .bash_history
+.bash_profile
 .ssh/
 .viminfo
 .idea
@@ -20,5 +21,5 @@ app/config/config.local.neon
 .local/
 .config/
 .gitconfig
-.lesshst/
+.lesshst
 .cache/
