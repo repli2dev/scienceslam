@@ -13,7 +13,7 @@ Options -Indexes
 	RewriteCond %{HTTP_HOST} ^scienceslam.cz [NC,OR]
 	RewriteCond %{HTTP_HOST} ^www.scienceslam.cz [NC,OR]
 	RewriteCond %{HTTP_HOST} ^www.scienceslam.muni.cz
-	RewriteRule (.*) http://scienceslam.muni.cz/$1 [R=301,L]
+	RewriteRule (.*) https://scienceslam.muni.cz/$1 [R=301,L]
 
 	# prevents files starting with dot to be viewed by browser
 	RewriteRule /\.|^\. - [F]
