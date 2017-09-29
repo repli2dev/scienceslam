@@ -2,7 +2,7 @@
 used colors:
     blue: rgb(0,39,118)
     black: rgb(42,42,42)
-    yellow: rgb(255,204,0)
+    yellow: rgb(255,220,19)
 */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,latin-ext);
@@ -43,24 +43,24 @@ body.no-scroll { height: 100%; overflow:hidden; }
 .header {
 	position: relative;
 	border-style: solid;
-	border-color: rgb(204,204,204);
-	border-width: 5px 0 0 0;
+	border-color: rgb(255,220,19);
+	border-width: 10px 0 0 0;
 	background: url("../images/design/gradient-top.png");
 	height: 230px;
 }
 
 .main {
 	position: relative;
-	margin-bottom: 250px;
+	margin-bottom: 150px;
 }
 
 .footer {
 	border-style: solid;
-	border-color: rgb(204,204,204);
+	border-color: rgb(255,220,19);
 	border-width: 0 0 20px 0;
 	background: url("../images/design/gradient-bottom.png");
 	position: absolute;
-	height: 230px;
+	height: 130px;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -93,15 +93,15 @@ body.no-scroll { height: 100%; overflow:hidden; }
 }
 
 .header-lamp-image {
-	width: 400px;
-	height: 416px;
+	width: 121px;
+	height: 250px;
 	position: relative;
-	left: 120px;
+	left: 270px;
 	top: -50px;
 }
 
 .header-claim {
-	margin: 150px 10px 30px 10px;
+	margin: 110px 120px 30px 10px;
 	height: 40px;
 	font-size: 14pt;
 	text-align: right;
@@ -109,19 +109,10 @@ body.no-scroll { height: 100%; overflow:hidden; }
 
 .footer-text {
 	width: 300px;
-	margin: 20px 10px 20px 10px;
+	margin: 20px 15px 20px 10px;
 	text-align: right;
 	position: relative;
-	top: 105px;
-}
-
-.footer-lamp {
-	margin-left: -30px;
-	height: 0;
-	width: 0;
-	overflow: visible;
-	position: relative;
-	z-index: 1;
+	bottom: 0px;
 }
 
 .footer-logo {
@@ -129,29 +120,23 @@ body.no-scroll { height: 100%; overflow:hidden; }
 	width: 400px;
 	margin-left: 10px;
 	position: relative;
-	left: 65px;
-	top: 15px;
+	left: 0px;
+	bottom: 100px;
 	z-index: 2;
 }
 
 .footer-logo-text {
 	font-size: 14pt;
 	position: relative;
-	top: 20px;
-	left: 10px;
+	bottom: 0px;
+	left: 0px;
 }
 
 .footer-munilogo-image {
-	margin: 10px;
-	height: 70px;
-	width: 70px;
-}
-
-.footer-lamp-image {
-	height: 204px;
-	width: 291px;
-	position: relative;
-	bottom: -40px;
+	margin: 10px 10px 10px 0px;
+	height: 49px;
+	width: 200px;
+	bottom: 50px;
 }
 
 .footer-social {
@@ -167,8 +152,6 @@ body.no-scroll { height: 100%; overflow:hidden; }
 }
 
 @media only screen and (min-width: 1000px) {
-	.footer-lamp { margin-left: 10px; }
-	.footer-logo { left: 105px; }
 	.contents { width: 960px; }
 	body { text-align: justify; }
 }
@@ -186,11 +169,11 @@ body.no-scroll { height: 100%; overflow:hidden; }
 
 .menu-ul a {
 	border-style: solid;
-	border-color: rgb(204,204,204);
+	border-color: rgb(0,39,118);
 	border-width: 0 0 0 5px;
 	padding: 0 0 0 10px;
 	margin: 1px 0 1px 0;
-	color: rgb(204,204,204);
+	color: rgb(0,39,118);
 	height: 36px;
 	line-height: 36px;
 	font-size: 14pt;
@@ -199,8 +182,7 @@ body.no-scroll { height: 100%; overflow:hidden; }
 }
 
 .menu-ul a:hover {
-	border-color: rgb(0,39,118);
-	color: rgb(0,39,118);
+	border-color: rgb(255,220,19);
 	text-decoration: none;
 }
 
@@ -340,7 +322,7 @@ p { margin: 0.5em 0 0.5em 0; }
 	float: left;
 	margin-right: 10px;
 }
-.button:hover { color: rgb(255,204,0); }
+.button:hover { color: rgb(255,220,19); }
 
 .button-gray {
 	background-color: rgb(224,224,224);

@@ -16,8 +16,7 @@ INSERT INTO `snippet` (`key`, content, is_protected, inserted) VALUES
 - "Kdo je za tím":/show/people',
 1, NOW()),
 ('footer1', '.[no-margin]
-**Science slam** pořádá
- "Masarykova univerzita":http://www.muni.cz/',
+**Science slam** pořádá',
 1, NOW()),
 ('footer2', '/---html
 <a href="http://www.youtube.com/user/ScienceSlamMUNI" target="_blank" title="Sledujte nás na YouTube">
@@ -32,10 +31,11 @@ INSERT INTO `snippet` (`key`, content, is_protected, inserted) VALUES
 
 <div class="cleaner">&nbsp;</div>
 
-&copy; 2013 <a href="http://www.muni.cz">Masarykova univerzita</a>
+&copy; 2017 <a href="http://www.muni.cz">Masarykova univerzita</a>
 \\---',
 1, NOW()),
 ('header1', '.[no-margin]
-**Science slam**
- výzkum v jiném světle',
+**„Blik!“**
+ Velká věda začíná&nbsp;
+ malými citoslovci.',
 1, NOW());
