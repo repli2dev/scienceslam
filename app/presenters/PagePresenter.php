@@ -279,12 +279,12 @@ class PagePresenter extends BasePresenter {
 		$form->addText('gallery_path', 'Cesta ke galerii')
 			->setOption('description', $description);
 		$form->addCheckbox('gallery_meta', 'Zobrazit v meta-galerii');
-        $description = Html::el()
-            ->add(Html::el()->setText('Volitelné, například: '))
-            ->add(Html::el('span class=line-pre')->setText('/images/2013-0/slam1.jpg'))
-            ->add((Html::el()->setText('výchozí je první obrázek.')));
+		$description = Html::el()
+			->add(Html::el()->setText('Volitelné, například: '))
+			->add(Html::el('span class=line-pre')->setText('/images/2013-0/slam1.jpg'))
+			->add((Html::el()->setText('výchozí je první obrázek.')));
 		$form->addText('gallery_meta_title', 'Titulní obrázek')
-            ->setOption('description', $description);
+			->setOption('description', $description);
 		$form->addText('gallery_meta_weight', 'Váha v meta-galerii')
 			->addRule(\Nette\Forms\Form::INTEGER, 'Váha musí být celé číslo.')
 			->setDefaultValue(0);
@@ -293,6 +293,36 @@ class PagePresenter extends BasePresenter {
 		$form->setCurrentGroup(null);
 
 		return $form;
+	}
+
+	public function handleToggle($blockId)
+	{
+		$this->blockDAO->toggle($blockId);
+		if ($this->isAjax()) {
+			$this->redrawControl('blocks');
+		} else {
+			$this->redirect('this');
+		}
+	}
+
+	public function handleUp($blockId)
+	{
+		$this->blockDAO->moveUp($blockId);
+		if ($this->isAjax()) {
+			$this->redrawControl('blocks');
+		} else {
+			$this->redirect('this');
+		}
+	}
+
+	public function handleDown($blockId)
+	{
+		$this->blockDAO->moveDown($blockId);
+		if ($this->isAjax()) {
+			$this->redrawControl('blocks');
+		} else {
+			$this->redirect('this');
+		}
 	}
 
 	protected function createComponentGallery()

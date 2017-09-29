@@ -8,6 +8,20 @@
 	{/if}
 {/block}
 
+{define block-options}
+	<span class="block_options" n:if="$admin">
+		<a title="Upravit" href="{plink Block:edit, $block->block_id}">✎</a>
+		<a title="Smazat" href="{plink Block:delete, $block->block_id}">&#9249;</a>
+		{if $block->hidden}
+			<a class="ajax block_hidden" title="Zobrazit" href="{link toggle!, $block->block_id}">&#9745;</a>
+		{else}
+			<a class="ajax block_visible" title="Schovat" href="{link toggle!, $block->block_id}">&#9744;</a>
+		{/if}
+		<a class="ajax" title="Posunout nahoru na váhu {$block->weight-1}" href="{link up!, $block->block_id}">&#9650;</a>
+		<a class="ajax" title="Posunout dolů  na váhu {$block->weight+1}" href="{link down!, $block->block_id}">&#9660;</a>
+	</span>
+{/define}
+
 {block #content}
 
 {if isset($isPreview) && $isPreview}
@@ -15,53 +29,59 @@
 {/if}
 
 {if $page->is_block_page}
-	{var $printedSomething = false}
-	{foreach $blocks as $block}
-		{continueIf $block->hidden && !($user->isInRole('manager') || $user->isInRole('admin'))}
-		{var $printedSomething = true}
-		{if !empty($block->link)}
-			<a href="{$block->link}">
-		{/if}
-		{if $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::VERTICAL_TEXT}
-			<span class="block_{$block->size} left {$block->classes}">
-				<span class="sub-block_{$block->size}_text center">
-					{$block->param1|texy|noEscape}
-				</span>
-			</span>
-
-		{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::TEXT}
-			<span class="block_{$block->size} left {$block->classes}">
-				<span class="sub-block_{$block->size}_text">
-					{$block->param1|texy|noEscape}
-				</span>
-			</span>
-		{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::REGISTRATION}
-			<div class="block_1x1_halves right {$block->classes}">
-				<a href="{plink Sign:up}">
-					<span class="sub-block_half1">Chtěl bys prezentovat svůj vlastní výzkum a vyhrát?
-						<h1>Registrace</h1>
+	{snippet blocks}
+		{var $printedSomething = false}
+		{foreach $blocks as $block}
+			{continueIf $block->hidden && !($user->isInRole('manager') || $user->isInRole('admin'))}
+			{var $printedSomething = true}
+			{if $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::VERTICAL_TEXT}
+				<div class="block_{$block->size} left {$block->classes}">
+					{include block-options, block => $block}
+					{if !empty($block->link)}<a class="block_link" href="{$block->link}">{/if}
+					<span class="sub-block_{$block->size}_text center">
+						{$block->param1|texy|noEscape}
 					</span>
-				</a>
-				<!-- <a href="{plink Page:show, null, ticket}"> -->
-					<span class="sub-block_half2">Zajímá tě, jaké to bude? Přijď!
-						<h1>Vstupné dobrovolné</h1>
-				</span>
-				<!-- </a> -->
-			</div>
-		{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::IMAGE}
-			<span class="block_{$block->size} left {$block->classes}" {if !empty($block->style)}style="background: url('/{!$block->style}');"{/if}>
-				<span class="sub-block_picture">
-					<h3>{$block->param1}</h3>{$block->param2}
-				</span>
-			</span>
+					{if !empty($block->link)}</a>{/if}
+				</div>
+
+			{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::TEXT}
+				<div class="block_{$block->size} left {$block->classes}">
+					{include block-options, block => $block}
+					{if !empty($block->link)}<a class="block_link" href="{$block->link}">{/if}
+					<span class="sub-block_{$block->size}_text">
+						{$block->param1|texy|noEscape}
+					</span>
+					{if !empty($block->link)}</a>{/if}
+				</div>
+			{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::REGISTRATION}
+				<div class="block_1x1_halves right {$block->classes}">
+					{include block-options, block => $block}
+					<a href="{plink Sign:up}">
+						<span class="sub-block_half1">Chtěl bys prezentovat svůj vlastní výzkum a vyhrát?
+							<h1>Registrace</h1>
+						</span>
+					</a>
+					<!-- <a href="{plink Page:show, null, ticket}"> -->
+						<span class="sub-block_half2">Zajímá tě, jaké to bude? Přijď!
+							<h1>Vstupné dobrovolné</h1>
+					</span>
+					<!-- </a> -->
+				</div>
+			{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::IMAGE}
+				<div class="block_{$block->size} left {$block->classes}" {if !empty($block->style)}style="background: url('/{!$block->style}');"{/if}>
+					{include block-options, block => $block}
+					{if !empty($block->link)}<a class="block_link" href="{$block->link}">{/if}
+					<span class="sub-block_picture">
+						<h3>{$block->param1}</h3>{$block->param2}
+					</span>
+					{if !empty($block->link)}</a>{/if}
+				</div>
+			{/if}
+		{/foreach}
+		{if !$printedSomething}
+			<p>Tato stránka je zatím prázdná, zkuste to prosím později.</p>
 		{/if}
-		{if !empty($block->link)}
-			</a>
-		{/if}
-	{/foreach}
-	{if !$printedSomething}
-		<p>Tato stránka je zatím prázdná, zkuste to prosím později.</p>
-	{/if}
+	{/snippet}
 {else}
 	{$page->content|texy|noEscape}
 {/if}
@@ -75,46 +95,25 @@
 		<p>Nebyly nalezeny žádné galerie</p>
 	{/if}
 	{foreach $galleries as $gallery}
-		<a href="{plink Page:show, $gallery->event ? $gallery->event->url : null, $gallery->page->url}">
-			<span class="block_1x1 left" {if !empty($gallery->title)}style="background: url('{plink File:thumbnail, $gallery->title}');"{/if}>
+		<div class="block_1x1 left" {if !empty($gallery->title)}style="background: url('{plink File:thumbnail, $gallery->title}');"{/if}>
+			<a class="block_link" href="{plink Page:show, $gallery->event ? $gallery->event->url : null, $gallery->page->url}">
 				<span class="sub-block_picture">
 					<h3>{$gallery->page->name}</h3>
 				</span>
-			</span>
-		</a>
+			</a>
+		</div>
 	{/foreach}
 {/if}
-<div class="cleaner">&nbsp;</div>
-{if $admin}
-	{if $page->is_block_page}
-		<h2>Správa bloků</h2><br />
-		<p><a href="{plink Block:add, $page->page_id}">Přidat blok</a></p>
-		{if count($blocks) > 0}
-			<table class="admin-grid">
-				<tr>
-					<th>ID</th>
-					<th>Rozložení</th>
-					<th>Váha</th>
-					<th>Skryto</th>
-					<th class="admin-grid-actions">Akce</th>
-				</tr>
-				{var $types = Muni\ScienceSlam\Model\ListBlockType::getAll()}
-				{foreach $blocks as $row}
-					<tr>
-						<td>{$row->block_id}</td>
-						<td>{$types[$row->block_type_id]}</td>
-						<td>{$row->weight}</td>
-						<td>{if $row->hidden}ANO{/if}</td>
-						<td class="admin-grid-actions">
-							<a href="{plink Block:edit, $row->block_id}">Upravit</a><br />
-							<a href="{plink Block:delete, $row->block_id}">Smazat</a>
-						</td>
-					</tr>
-				{/foreach}
-			</table>
-		{/if}
-	{/if}
+{if $admin && $page->is_block_page}
+	<div class="block_1x1 block_1x1_add_block left">
+		<a class="block_link" href="{plink Block:add, $page->page_id}">
+			<span class="sub-block_1x1_add_block">
+				+
+			</span>
+		</a>
+	</div>
 {/if}
+<div class="cleaner">&nbsp;</div>
 
 {if !isset($isPreview) || !$isPreview}
 	{include ../admin-menu.latte}

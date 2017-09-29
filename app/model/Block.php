@@ -28,4 +28,18 @@ class Block extends DAO {
 	public function findByPageId($pageId) {
 		return $this->findAll()->where('page_id = ?', $pageId)->order('weight ASC')->fetchAll();
 	}
+
+	public function toggle($blockId)
+	{
+		$this->getConnection()->query('UPDATE block SET hidden = NOT hidden WHERE block_id = ?', $blockId);
+	}
+
+	public function moveUp($blockId)
+	{
+		$this->getConnection()->query('UPDATE block SET weight = weight - 1 WHERE block_id = ?', $blockId);
+	}
+	public function moveDown($blockId)
+	{
+		$this->getConnection()->query('UPDATE block SET weight = weight + 1 WHERE block_id = ?', $blockId);
+	}
 }

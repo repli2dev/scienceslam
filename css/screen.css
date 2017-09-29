@@ -186,7 +186,12 @@ body.no-scroll { height: 100%; overflow:hidden; }
 	text-decoration: none;
 }
 
+.block_link {
+	position: absolute;
+}
+
 .block_2x1 {
+	position: relative;
 	display: block;
 	width: 620px;
 	height: 300px;
@@ -196,6 +201,7 @@ body.no-scroll { height: 100%; overflow:hidden; }
 }
 
 .block_1x1 {
+	position: relative;
 	display: block;
 	width: 300px;
 	height: 300px;
@@ -205,6 +211,7 @@ body.no-scroll { height: 100%; overflow:hidden; }
 }
 
 .block_1x1_halves {
+	position: relative;
 	display: block;
 	width: 300px;
 	height: 300px;
@@ -301,6 +308,51 @@ p { margin: 0.5em 0 0.5em 0; }
 	height: 260px;
 	width: 260px;
 	padding: 20px;
+}
+
+.block_1x1_add_block {
+	opacity: 0.5;
+}
+.block_1x1_add_block:hover {
+	opacity: 1;
+}
+.sub-block_1x1_add_block {
+	display: block;
+	height: 260px;
+	width: 260px;
+	padding: 20px;
+	font-size: 500%;
+	color: black;
+	text-align: center;
+	line-height: 260px;
+}
+.block_hidden {
+	background: red;
+}
+.block_visible {
+	background: green;
+}
+.block_options {
+	position: absolute;
+	background-color: #CCC;
+	opacity: 0.2;
+	width: 170px;
+	left: 65px;
+	height: 30px;
+	z-index: 1000;
+}
+.block_options a {
+	width: 30px;
+	text-align: center;
+	line-height: 30px;
+	height: 30px;
+	display: inline-block;
+}
+.block_options a:hover {
+	background-color: rgb(255,220,19);
+}
+.block_options:hover {
+	opacity: 1;
 }
 
 .margin-top { margin-top: 30px; }
