@@ -1,7 +1,7 @@
 {
 	"name": "jandrabek/science-slam",
 	"description": "Website of Science Slam organized by Masaryk university.",
-	"homepage": "http://www.scienceslam.cz",
+	"homepage": "https://www.scienceslam.cz",
 	"license": ["proprietary"],
 	"authors": [
 		{
