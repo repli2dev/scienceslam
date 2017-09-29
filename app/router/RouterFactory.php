@@ -16,7 +16,7 @@ class RouterFactory
 	 */
 	public function createRouter()
 	{
-		$router = new RouteList();		
+		$router = new RouteList();
 		$router[] = new Route('index.php', 'Page:show', Route::ONE_WAY);
 
 		$router[] = new Route('/admin', 'Admin:');
