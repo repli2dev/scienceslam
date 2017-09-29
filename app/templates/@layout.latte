@@ -17,6 +17,9 @@
 			<script src="{$basePath}/js/netteForms.js"></script>
 			<script src="{$basePath}/js/main.js"></script>
 			<script src="{$basePath}/js/w3.js"></script>
+
+			<link rel="stylesheet" href="{$basePath}/css/magnificPopup.css">
+			<script src="{$basePath}/js/magnificPopup.js"></script>
 		{/block}
 
 		{ifset $googleAnalytics}
@@ -85,7 +88,7 @@
 			<div class="footer">
 				<div class="contents">
 					<div class="footer-text right">
-                        {control snippet:render,'footer2'}
+						{control snippet:render,'footer2'}
 					</div>
 
 
@@ -93,20 +96,14 @@
 						<div class="footer-logo-text left">
 							{control snippet:render, 'footer1'}
 						</div>
-                        <a href="http://www.muni.cz/">
-                            <img src="{$basePath}/images/design/mu_logo.png" class="footer-munilogo-image left" alt="Masarykova univerzita"/>
-                        </a>
+						<a href="http://www.muni.cz/">
+							<img src="{$basePath}/images/design/mu_logo.png" class="footer-munilogo-image left" alt="Masarykova univerzita"/>
+						</a>
 						<div class="cleaner">&nbsp;</div>
 					</div>
 					<div class="cleaner">&nbsp;</div>
 				</div>
 			</div>
 		</div>
-		{if $user->isInRole('manager') || $user->isInRole('admin')}
-			<div class="preview-window" id="preview-window">
-				<button type="button" class="button close-preview">Zavřít</button>
-				<iframe class="preview-pane" name="preview-pane"></iframe>
-			</div>
-		{/if}
 	</body>
 </html>

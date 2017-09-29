@@ -2,6 +2,7 @@
 {var $title = "Správa souborů"}
 {block #content}
 	<h1>Správa souborů</h1>
+	<p n:if="$subpath">Aktuální cesta: <span class="line-pre">{$subpath}</span></p>
 		
 	{include ../flashes.latte}
 
@@ -66,7 +67,7 @@
 						<a href="{plink File:,$subpath . '/'. $file->getBasename()}">Vstoupit</a>
 					{else}
 						<a href="{plink File:download,$subpath . '/'. $file->getBasename()}">Stáhnout</a>
-						<a target="preview-pane" class="open-preview" href="{plink File:download,$subpath . '/'. $file->getBasename(), true}">Náhled</a>
+						<a target="preview-pane" class="generic-preview" href="{plink File:download,$subpath . '/'. $file->getBasename(), true}">Náhled</a>
 					{/if}
 					<a href="{plink File:delete, $subpath . '/'. $file->getBasename()}" onclick="return confirm('Opravdu chcete smazat tento soubor?');">Smazat</a>
 				</td>

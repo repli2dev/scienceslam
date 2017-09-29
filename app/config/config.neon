@@ -22,6 +22,14 @@ parameters:
 		analytics:
 	google:
 		analytics:
+	gallery:
+		cacheDir: "%tempDir%/gallery/" # Ending with slash
+		thumbnail: # size of generation should be the maximal displayed (blocks of meta-gallery here)
+			width: 450px
+			height: 300px
+		display: # size of ordinary gallery item
+			width: 300px
+			height: 200px
 
 	database:
 		driver: mysql
@@ -35,6 +43,10 @@ decorator:
 		setup:
 			- $facebookAnalytics(%facebook.analytics%)
 			- $googleAnalytics(%google.analytics%)
+	FilePresenter:
+		setup:
+			- setThumbnailDimensions(%gallery.thumbnail.width%, %gallery.thumbnail.height%)
+			- setGalleryCacheDir(%gallery.cacheDir%)
 
 php:
 	date.timezone: Europe/Prague
@@ -74,5 +86,6 @@ services:
 	router: @routerFactory::createRouter
 	signupFormFactory: ISignupFormFactory
 	snippetControlFactory: ISnippetControlFactory
+	galleryControlFactory: GalleryControlFactory(%gallery.display.width%, %gallery.display.height%)
 	texyFactory: Muni\ScienceSlam\Utils\TexyFactory
 	previewStorage: Muni\ScienceSlam\Utils\PreviewStorage

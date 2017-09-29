@@ -44,6 +44,11 @@ class Page extends DAO {
 		return $this->findAll()->where('event_id IS NULL AND is_default = 1')->fetch();
 	}
 
+	public function findGalleries()
+	{
+		return $this->findAll()->where('gallery_meta')->order('gallery_meta_weight ASC');
+	}
+
 	public function findByUrlAndEventId($url, $eventId) {
 		if(empty($eventId)) {
 			return $this->findAll()->where('event_id IS NULL AND url = ?', $url)->fetch();

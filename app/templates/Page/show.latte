@@ -65,6 +65,25 @@
 {else}
 	{$page->content|texy|noEscape}
 {/if}
+{if $page->gallery_path}
+	<div class="cleaner"></div>
+	{control gallery:render, $page->gallery_path}
+	<div class="cleaner"></div>
+{/if}
+{if $page->is_meta_gallery}
+	{if count($galleries) == 0}
+		<p>Nebyly nalezeny žádné galerie</p>
+	{/if}
+	{foreach $galleries as $gallery}
+		<a href="{plink Page:show, $gallery->event ? $gallery->event->url : null, $gallery->page->url}">
+			<span class="block_1x1 left" {if !empty($gallery->title)}style="background: url('{plink File:thumbnail, $gallery->title}');"{/if}>
+				<span class="sub-block_picture">
+					<h3>{$gallery->page->name}</h3>
+				</span>
+			</span>
+		</a>
+	{/foreach}
+{/if}
 <div class="cleaner">&nbsp;</div>
 {if $admin}
 	{if $page->is_block_page}

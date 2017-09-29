@@ -12,23 +12,6 @@ $(function(){
     });
     $('select[name=layout]').change();
 
-    var openPreviewCallback = function () {
-        document.getElementById('preview-window').style.display = 'block';
-        var body = document.querySelector('body');
-        body.classList.add('no-scroll');
-    };
-    var closePreviewCallback = function () {
-        this.parentNode.style.display = 'none';
-        var temp = document.getElementsByName('preview-pane');
-        if (temp.length === 1) {
-            temp[0].src = 'about:blank';
-        }
-        var body = document.querySelector('body');
-        body.classList.remove('no-scroll');
-    };
-    $(document).on('click', '.open-preview', openPreviewCallback);
-    $(document).on('click', '.close-preview', closePreviewCallback);
-
     $(document).on('click', '.open-select-preview', function () {
         var selectIdSelector = $(this).attr('data-select-id');
         if (!selectIdSelector) {
@@ -38,9 +21,43 @@ $(function(){
         if (path) {
             var currentUrl = window.location;
             var baseUrl = currentUrl .protocol + "//" + currentUrl.host + "/";
-            $('#preview-window iframe').attr('src', baseUrl + path);
-            openPreviewCallback();
+            $.magnificPopup.open({
+                items: {
+                    src: baseUrl + path,
+                    type: 'iframe'
+                }
+            });
         }
         return false;
+    });
+    $.extend(true, $.magnificPopup.defaults, {
+        tClose: 'Zavřít',
+        tLoading: 'Načítání...',
+        gallery: {
+            tPrev: 'Předchozí',
+            tNext: 'Následující',
+            tCounter: '%curr%/%total%'
+        },
+        image: {
+            tError: '<a href="%url%">Obrázek</a> se nepodařilo načíst.'
+        },
+        ajax: {
+            tError: '<a href="%url%">Obsah</a> se nepodařilo načíst.'
+        }
+    });
+    $('.new-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {enabled: true}
+    });
+    $('.generic-preview').magnificPopup({
+        type: 'iframe',
+        iframe: {
+            markup: '<div class="mfp-iframe-scaler">'+
+            '<div class="mfp-close"></div>'+
+            '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+            '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
+
+        }
     });
 });

@@ -20,6 +20,9 @@ class PagePresenter extends BasePresenter {
 	/** @var \Muni\ScienceSlam\Utils\PreviewStorage */
 	private $previewStorage;
 
+	/** @var GalleryControlFactory */
+	private $galleryControlFactory;
+
 	public function injectEventDAO(\Muni\ScienceSlam\Model\Event $eventDAO) {
 		$this->eventDAO = $eventDAO;
 	}
@@ -31,6 +34,9 @@ class PagePresenter extends BasePresenter {
 	}
 	public function injectPreviewStorage(\Muni\ScienceSlam\Utils\PreviewStorage $previewStorage) {
 		$this->previewStorage = $previewStorage;
+	}
+	public function injectGalleryControlFactory(IGalleryControlFactory $galleryControlFactory) {
+		$this->galleryControlFactory = $galleryControlFactory;
 	}
 
 	public function startup() {
@@ -77,6 +83,10 @@ class PagePresenter extends BasePresenter {
 		if($page->hidden && !($this->user->isInRole('manager') || $this->user->isInRole('admin'))) {
 			throw new \Nette\Application\BadRequestException();
 		}
+		if ($page->is_meta_gallery) {
+			$galleries = $this->prepareMetaGallery();
+			$this->template->galleries = $galleries;
+		}
 		$blocks = $this->blockDAO->findByPageId($page->page_id);
 		$this->template->page = $page;
 		$this->template->event = $event;
@@ -105,6 +115,10 @@ class PagePresenter extends BasePresenter {
 			}
 			if (isset($page->event_id) && $page->event_id) {
 				$event = $this->eventDAO->find($page->event_id);
+			}
+			if (isset($page->is_meta_gallery) && $page->is_meta_gallery) {
+				$galleries = $this->prepareMetaGallery();
+				$this->template->galleries = $galleries;
 			}
 			$this->template->page = $page;
 			$this->template->blocks = $blocks;
@@ -178,6 +192,7 @@ class PagePresenter extends BasePresenter {
 		try {
 			$this->pageDAO->save($row);
 		} catch(PDOException $ex) {
+			throw $ex;
 			$form->addError('URL identifikace již existuje, zadejte, prosím, jinou.');
 			return;
 		}
@@ -258,14 +273,44 @@ class PagePresenter extends BasePresenter {
 			->setOption('description', TexyFactory::getSyntaxHelp('page'))
 			->getControlPrototype()->class = 'full-width';
 		$form->addGroup('Galerie');
-		$form->addText('gallery_path', 'Cesta ke galerii');
+		$description = Html::el()
+			->add(Html::el()->setText('Například: '))
+			->add(Html::el('span class=line-pre')->setText('/images/2013-0'));
+		$form->addText('gallery_path', 'Cesta ke galerii')
+			->setOption('description', $description);
+		$form->addCheckbox('gallery_meta', 'Zobrazit v meta-galerii');
+        $description = Html::el()
+            ->add(Html::el()->setText('Volitelné, například: '))
+            ->add(Html::el('span class=line-pre')->setText('/images/2013-0/slam1.jpg'))
+            ->add((Html::el()->setText('výchozí je první obrázek.')));
+		$form->addText('gallery_meta_title', 'Titulní obrázek')
+            ->setOption('description', $description);
+		$form->addText('gallery_meta_weight', 'Váha v meta-galerii')
+			->addRule(\Nette\Forms\Form::INTEGER, 'Váha musí být celé číslo.')
+			->setDefaultValue(0);
+		$form->addGroup('Meta galerie');
+		$form->addCheckbox('is_meta_gallery', 'Použít metagalerii');
 		$form->setCurrentGroup(null);
 
 		return $form;
 	}
 
-	private function populateByLayout($layoutId) {
+	protected function createComponentGallery()
+	{
+		return $this->galleryControlFactory->create();
+	}
 
+	protected function prepareMetaGallery()
+	{
+		$pages = $this->pageDAO->findGalleries();
+		$output = [];
+		foreach ($pages as $page) {
+			$output[$page->page_id] = $temp = new stdClass();
+			$temp->page = $page;
+			$temp->event = $page->ref('event');
+			$temp->title =  GalleryControl::getGalleryTitleImage($page->gallery_path, $page->gallery_meta_title);
+		}
+		return $output;
 	}
 }
 

@@ -1,8 +1,8 @@
 /* Science Slam stylesheet
 used colors:
-    blue: rgb(0,39,118)
-    black: rgb(42,42,42)
-    yellow: rgb(255,220,19)
+	blue: rgb(0,39,118)
+	black: rgb(42,42,42)
+	yellow: rgb(255,220,19)
 */
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,latin-ext);
@@ -335,6 +335,18 @@ p { margin: 0.5em 0 0.5em 0; }
 ul.gallery { position: relative; left: -10px; text-align: left; padding: 0; margin: 0; }
 ul.gallery>li { display: inline-block; }
 
+.new-gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	/* Grid is not supported in IE, therefore we use flexbox */
+	display: -ms-flexbox;
+	-ms-flex-wrap: wrap;
+	-ms-flex-align: start;
+}
+.new-gallery>div { display: block; background-color: rgb(224,224,224); text-align: center; margin: 0 4px 4px 0; }
+.new-gallery>div>a { display: block; }
+.new-gallery>div>a>img { margin: 8px 4px; max-width: calc(100% - 8px); max-height: calc(100% - 16px); object-fit: cover; }
+
 ul.spaced>li, ol.spaced>li { margin: 0.5em 0 0.5em 0; }
 
 img { margin: 10px; }
@@ -404,6 +416,8 @@ table.files th { background: rgb(222,222,222); padding: 3px; }
 table.files td { border-top: 1px solid rgb(222,222,222); padding: 3px; }
 table.files td a { margin-right: 20px; }
 
+.line-pre { font-family: monospace; white-space: pre; }
+
 /* Preview files */
 div.preview-window { display: none; position: fixed; top: 0; left: 0; bottom: 0; right: 0; background: rgba(0,0,0,0.85); padding: 20px; z-index: 1000; }
 div.preview-window button { position: fixed;  right: 20px; margin-top: 0px; }
@@ -412,3 +426,6 @@ iframe.page-preview-pane { min-height: 400px; width: 100%; resize: vertical; ove
 
 /* Modificators for Texy */
 .no-margin { margin: 0; }
+
+/* MagnificPopup overrides */
+.mfp-iframe-scaler iframe { background: white !important; }
