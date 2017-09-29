@@ -10,10 +10,15 @@ libs/*
 app/config/config.local.neon
 
 .bash_history
-.ssh
+.ssh/
 .viminfo
 .idea
 .bashrc
-.mc
-.composer
+.mc/
+.composer/
 .mysql_history
+.local/
+.config/
+.gitconfig
+.lesshst/
+.cache/
