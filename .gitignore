@@ -3,6 +3,9 @@ temp/*
 !temp/sessions/.keep
 libs/*
 
+images/*
+!images/design/
+
 .DS_Store
 !.gitignore
 !.htaccess
