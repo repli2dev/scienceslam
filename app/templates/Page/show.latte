@@ -24,10 +24,6 @@
 
 {block #content}
 
-{if isset($isPreview) && $isPreview}
-	<script src="{$basePath}/js/disableLinks.js"></script>
-{/if}
-
 {if $page->is_block_page}
 	{snippet blocks}
 		{var $printedSomething = false}

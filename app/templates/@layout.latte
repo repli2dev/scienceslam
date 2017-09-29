@@ -21,6 +21,10 @@
 
 			<link rel="stylesheet" href="{$basePath}/css/magnificPopup.css">
 			<script src="{$basePath}/js/magnificPopup.js"></script>
+
+			{ifCurrent Page:preview}
+				<script src="{$basePath}/js/disableLinks.js"></script>
+			{/ifCurrent}
 		{/block}
 
 		{ifset $googleAnalytics}
