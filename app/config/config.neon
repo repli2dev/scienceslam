@@ -19,9 +19,9 @@ parameters:
 	uploads:
 		dirs: [images]
 	facebook:
-		analytics:
+		analytics: 305528353254655
 	google:
-		analytics:
+		analytics: UA-107285203-1
 	gallery:
 		cacheDir: "%tempDir%/gallery/" # Ending with slash
 		thumbnail: # size of generation should be the maximal displayed (blocks of meta-gallery here)
