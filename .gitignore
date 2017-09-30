@@ -1,3 +1,4 @@
+# Logs and temporaries
 log/*
 temp/*
 !temp/sessions/.keep
@@ -10,8 +11,14 @@ images/*
 !.gitignore
 !.htaccess
 !web.config
+
+# Local configuration (includes credentials!)
 app/config/config.local.neon
 
+# Google Search console verification file
+google*.html
+
+# Standard unix home files and directories
 .bash_history
 .bash_profile
 .ssh/
