@@ -3,6 +3,8 @@
 This is basic overview of system requirements, installation etc.
 For more detailed developer documentation see [DEVELOPING.md](DEVELOPING.md) file.
 
+For information about deployment see [DEPLOYMENT.md](DEPLOYMENT.md) file.
+
 ## Scope
 
 This project consist of one custom-made website with administration usable

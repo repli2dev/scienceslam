@@ -9,6 +9,8 @@ However this cannot substitute Nette documentation (which is substantially large
 
 Templates are located in `app/templates`.
 
+Logo, header, footer can be found in `app/templates/@layout.latte`, styling in `css` folder.
+
 On production instances the templates (`.latte` files) are compiled only once on first access
 then they are `temp/cache/latte`. **Therefore when changed cache needs to be deleted.**
 
