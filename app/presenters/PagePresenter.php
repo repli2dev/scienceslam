@@ -302,11 +302,8 @@ class PagePresenter extends BasePresenter {
 	{
 		$this->blockDAO->toggle($blockId);
 		if ($this->isAjax()) {
-			if (isset($this->template->blocks[$blockId])) {
-				$this->template->blocks[$blockId] = \JanDrabek\Database\WatchingActiveRow::fromActiveRow($this->template->blocks[$blockId]);
-				$this->template->blocks[$blockId]->hidden = false;
-				die('red');
-			}
+			$block = $this->blockDAO->find($blockId);
+			$this->template->blocks = $this->blockDAO->findByPageId($block->page_id);
 			$this->redrawControl('blocks');
 		} else {
 			$this->redirect('this');
@@ -317,6 +314,8 @@ class PagePresenter extends BasePresenter {
 	{
 		$this->blockDAO->moveUp($blockId);
 		if ($this->isAjax()) {
+			$block = $this->blockDAO->find($blockId);
+			$this->template->blocks = $this->blockDAO->findByPageId($block->page_id);
 			$this->redrawControl('blocks');
 		} else {
 			$this->redirect('this');
@@ -327,6 +326,8 @@ class PagePresenter extends BasePresenter {
 	{
 		$this->blockDAO->moveDown($blockId);
 		if ($this->isAjax()) {
+			$block = $this->blockDAO->find($blockId);
+			$this->template->blocks = $this->blockDAO->findByPageId($block->page_id);
 			$this->redrawControl('blocks');
 		} else {
 			$this->redirect('this');
