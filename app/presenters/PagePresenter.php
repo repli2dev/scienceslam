@@ -99,6 +99,9 @@ class PagePresenter extends BasePresenter {
 		if ($this->previewStorage->has($token)) {
 			list($page, $block) = $this->previewStorage->get($token);
 			$blocks = [];
+			if (isset($page->page_id) && $page->page_id) {
+				$blocks = $this->blockDAO->findByPageId($page->page_id);
+			}
 			$event = new stdClass();
 			if ($block) {
 				$page = $this->pageDAO->find($block->page_id);
@@ -299,6 +302,11 @@ class PagePresenter extends BasePresenter {
 	{
 		$this->blockDAO->toggle($blockId);
 		if ($this->isAjax()) {
+			if (isset($this->template->blocks[$blockId])) {
+				$this->template->blocks[$blockId] = \JanDrabek\Database\WatchingActiveRow::fromActiveRow($this->template->blocks[$blockId]);
+				$this->template->blocks[$blockId]->hidden = false;
+				die('red');
+			}
 			$this->redrawControl('blocks');
 		} else {
 			$this->redirect('this');
