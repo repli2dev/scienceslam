@@ -32,7 +32,7 @@ Key is accessible in `app/config/config.local.neon` in key `maintenance.key`
 
 ### Opening/closing registration and tickets
 
-Opening/closing slam registration is done in administration on the slam (event).
+Opening/closing slam registration is done in administration on the slam (event). In this case no cache deletion is needed.
 
 Ticket block can be updated in `app/templates/Page/show.latte`. After changing do not forget to delete cache.
 
