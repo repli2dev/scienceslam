@@ -57,11 +57,11 @@ class BlockPresenter extends BasePresenter {
 		$styleFromSaved = $use['style'];
 		$styleFromForm = $values[ListBlockType::IMAGE]['style'];
 		$allowedFiles = array_reduce($allowedFiles, 'array_merge', []);
-		if (!array_key_exists($styleFromForm, $allowedFiles) && !array_key_exists($styleFromSaved, $allowedFiles)) {
+		$use['layout'] = $use['block_type_id'];
+		if (((int) ($values['layout'] ?: $use['layout'])) === ListBlockType::IMAGE && !array_key_exists($styleFromForm, $allowedFiles) && !array_key_exists($styleFromSaved, $allowedFiles)) {
 			$form->addError("Dosud uložený obrázek [{$use['style']}] (již) neexistuje. Vyberte prosím nový.");
 			$use['style'] = null;
 		}
-		$use['layout'] = $use['block_type_id'];
 		if($use['layout'] == ListBlockType::TEXT) {
 			$use[ListBlockType::TEXT]['content'] = $use['param1'];
 		}
