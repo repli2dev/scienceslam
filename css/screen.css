@@ -398,9 +398,28 @@ ul.gallery>li { display: inline-block; }
 	-ms-flex-wrap: wrap;
 	-ms-flex-align: start;
 }
-.new-gallery>div { display: block; background-color: rgb(224,224,224); text-align: center; margin: 0 4px 4px 0; }
-.new-gallery>div>a { display: block; }
-.new-gallery>div>a>img { margin: 8px 4px; max-width: calc(100% - 8px); max-height: calc(100% - 16px); object-fit: cover; }
+
+.new-gallery>div {
+	display: block;
+	background-color: rgb(224,224,224);
+	text-align: center;
+	margin: 0 4px 4px 0;
+}
+
+.new-gallery>div:hover {
+	background-color: rgb(255,220,19);
+}
+
+.new-gallery>div>a {
+	display: block;
+}
+
+.new-gallery>div>a>img {
+	margin: 8px 4px;
+	max-width: calc(100% - 8px);
+	max-height: calc(100% - 16px);
+	object-fit: cover;
+}
 
 ul.spaced>li, ol.spaced>li { margin: 0.5em 0 0.5em 0; }
 
