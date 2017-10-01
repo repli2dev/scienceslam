@@ -334,18 +334,22 @@ p { margin: 0.5em 0 0.5em 0; }
 .block_options {
 	position: absolute;
 	background-color: #CCC;
-	opacity: 0.2;
-	width: 170px;
-	left: 65px;
+	opacity: 1;
+	width: 180px;
+	left: 60px;
 	height: 30px;
 	z-index: 1000;
 }
 .block_options a {
 	width: 30px;
+	float: left;
 	text-align: center;
 	line-height: 30px;
 	height: 30px;
 	display: inline-block;
+}
+.block_options a.weight {
+	font-size: 75%;
 }
 .block_options a:hover {
 	background-color: rgb(255,220,19);

@@ -11,13 +11,14 @@
 {define block-options}
 	<span class="block_options" n:if="$admin">
 		<a title="Upravit" href="{plink Block:edit, $block->block_id}">✎</a>
-		<a title="Smazat" href="{plink Block:delete, $block->block_id}">&#9249;</a>
+		<a title="Smazat" href="{plink Block:delete, $block->block_id}">✕</a>
 		{if $block->hidden}
-			<a class="ajax block_hidden" title="Zobrazit" href="{link toggle!, $block->block_id}">&#9745;</a>
+			<a class="ajax block_hidden" title="Zobrazit" href="{link toggle!, $block->block_id}">&#x1f441;</a>
 		{else}
-			<a class="ajax block_visible" title="Schovat" href="{link toggle!, $block->block_id}">&#9744;</a>
+			<a class="ajax block_visible" title="Schovat" href="{link toggle!, $block->block_id}">&#128679;</a>
 		{/if}
 		<a class="ajax" title="Posunout nahoru na váhu {$block->weight-1}" href="{link up!, $block->block_id}">&#9650;</a>
+		<a class="weight">{$block->weight}</a>
 		<a class="ajax" title="Posunout dolů  na váhu {$block->weight+1}" href="{link down!, $block->block_id}">&#9660;</a>
 	</span>
 {/define}

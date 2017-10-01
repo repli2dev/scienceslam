@@ -285,7 +285,7 @@ class PagePresenter extends BasePresenter {
 		$description = Html::el()
 			->add(Html::el()->setText('Volitelné, například: '))
 			->add(Html::el('span class=line-pre')->setText('/images/2013-0/slam1.jpg'))
-			->add((Html::el()->setText('výchozí je první obrázek.')));
+			->add((Html::el()->setText(' výchozí je první obrázek.')));
 		$form->addText('gallery_meta_title', 'Titulní obrázek')
 			->setOption('description', $description);
 		$form->addText('gallery_meta_weight', 'Váha v meta-galerii')
