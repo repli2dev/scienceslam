@@ -144,11 +144,10 @@ body.no-scroll { height: 100%; overflow:hidden; }
 	float: right;
 	height: 50px;
 	width: 50px;
-	opacity: 0.6;
 }
 
 .footer-social:hover {
-	opacity: 1.0;
+	opacity: 0.8;
 }
 
 @media only screen and (min-width: 1000px) {
