@@ -288,6 +288,8 @@ class PagePresenter extends BasePresenter {
 			->add((Html::el()->setText(' výchozí je první obrázek.')));
 		$form->addText('gallery_meta_title', 'Titulní obrázek')
 			->setOption('description', $description);
+		$form->addText('gallery_meta_subtitle', 'Podtitulek')
+			->setOption('description', 'v meta-galerii pod názvem stránky');
 		$form->addText('gallery_meta_weight', 'Váha v meta-galerii')
 			->addRule(\Nette\Forms\Form::INTEGER, 'Váha musí být celé číslo.')
 			->setDefaultValue(0);

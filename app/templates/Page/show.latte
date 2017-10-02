@@ -13,13 +13,13 @@
 		<a title="Upravit" href="{plink Block:edit, $block->block_id}">✎</a>
 		<a title="Smazat" href="{plink Block:delete, $block->block_id}">✕</a>
 		{if $block->hidden}
-			<a class="ajax block_hidden" title="Zobrazit" href="{link toggle!, $block->block_id}">&#x1f441;</a>
+			<a class="ajax block_hidden" title="Zobrazit" href="{link toggle!, $block->block_id}">&#128679;</a>
 		{else}
-			<a class="ajax block_visible" title="Schovat" href="{link toggle!, $block->block_id}">&#128679;</a>
+			<a class="ajax block_visible" title="Schovat" href="{link toggle!, $block->block_id}">&#x1f441;</a>
 		{/if}
-		<a class="ajax" title="Posunout nahoru na váhu {$block->weight-1}" href="{link up!, $block->block_id}">&#9650;</a>
+		<a class="ajax" title="Posunout nahoru na váhu {$block->weight-1}" href="{link up!, $block->block_id}">&#9660;</a>
 		<a class="weight">{$block->weight}</a>
-		<a class="ajax" title="Posunout dolů  na váhu {$block->weight+1}" href="{link down!, $block->block_id}">&#9660;</a>
+		<a class="ajax" title="Posunout dolů  na váhu {$block->weight+1}" href="{link down!, $block->block_id}">&#9650;</a>
 	</span>
 {/define}
 
@@ -96,6 +96,9 @@
 			<a class="block_link" href="{plink Page:show, $gallery->event ? $gallery->event->url : null, $gallery->page->url}">
 				<span class="sub-block_picture">
 					<h3>{$gallery->page->name}</h3>
+					{if $gallery->page->gallery_meta_subtitle}
+						{$gallery->page->gallery_meta_subtitle}
+					{/if}
 				</span>
 			</a>
 		</div>
