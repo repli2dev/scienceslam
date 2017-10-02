@@ -6,7 +6,10 @@ use Muni\ScienceSlam\Model\Snippet;
 use Nette\Utils\Html;
 use Texy\BlockParser;
 use Texy\Bridges\Latte\TexyMacro;
+use Texy\HandlerInvocation;
 use Texy\HtmlElement;
+use Texy\Link;
+use Texy\Modifier;
 use Texy\Texy;
 
 class TexyFactory
@@ -83,6 +86,7 @@ Zakomentováno, nebude ve výstupu.
 	{
 		if (!$this->texy) {
 			$this->texy = new Texy();
+			static::customizeLinks($this->texy);
 			// Add support for including snippets
 			$this->texy->registerBlockPattern(
 				function (BlockParser $parser, array $matches, $name)
@@ -110,6 +114,7 @@ Zakomentováno, nebude ve výstupu.
 	{
 		if (!$this->texyWithoutSnippets) {
 			$this->texyWithoutSnippets = new Texy();
+			static::customizeLinks($this->texyWithoutSnippets);
 			// Eat all .snippets to be eaten
 			$this->texyWithoutSnippets->registerBlockPattern(
 				function (BlockParser $parser, array $matches, $name)
@@ -121,6 +126,37 @@ Zakomentováno, nebude ve výstupu.
 			);
 		}
 		return $this->texyWithoutSnippets;
+	}
+
+	private static function customizeLinks(Texy $texy)
+	{
+		$texy->addHandler('linkReference', function (HandlerInvocation $invocation, $link, $content) {
+			if ($link instanceof Link) {
+				$link->modifier->classes['link'] = true;
+			}
+
+			return $invocation->proceed();
+		});
+		$texy->addHandler('linkEmail', function (HandlerInvocation $invocation, Link $link)
+		{
+			if ($link instanceof Link) {
+				$link->modifier->classes['link'] = true;
+			}
+			return $invocation->proceed();
+		});
+		$texy->addHandler('linkURL', function (HandlerInvocation $invocation, Link $link) {
+			if ($link instanceof Link) {
+				$link->modifier->classes['link'] = true;
+			}
+			return $invocation->proceed();
+		});
+		$texy->addHandler('phrase', function (HandlerInvocation $invocation, $phrase, $content, Modifier $modifier, Link $link = NULL)
+		{
+			if ($link instanceof Link) {
+				$link->modifier->classes['link'] = true;
+			}
+			return $invocation->proceed();
+		});
 	}
 
 	public function install(Engine $engine)
