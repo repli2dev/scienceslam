@@ -1,10 +1,13 @@
 <?php
 
+use Muni\ScienceSlam\Utils\TexyFactory;
 use Nette\Application\UI;
 
 class AdminPresenter extends BasePresenter {
 
 	protected $resource = 'user-shared';
+
+	const DASHBOARD_FILE = __DIR__ . '/../../data/dashboard.texy';
 
 	/** @var \Muni\ScienceSlam\Model\User */
 	private $userDAO;
@@ -13,8 +16,16 @@ class AdminPresenter extends BasePresenter {
 		$this->userDAO = $userDAO;
 	}
 
-	public function actionDefault() {
+	public function actionDefault($edit = false) {
 		$this->perm();
+		$this->template->edit = (bool) $edit;
+		if (file_exists(static::DASHBOARD_FILE) && is_file(static::DASHBOARD_FILE) && is_readable(static::DASHBOARD_FILE)) {
+			$this->template->dashboard = file_get_contents(static::DASHBOARD_FILE);
+			if ($edit) {
+				$form = $this->getComponent('editForm');
+				$form->setDefaults(['modified' => filemtime(static::DASHBOARD_FILE), 'content' => $this->template->dashboard]);
+			}
+		}
 	}
 
 	public function actionLogin() {
@@ -96,5 +107,37 @@ class AdminPresenter extends BasePresenter {
 				$form->addError('Heslo je špatné.');
 			}
 		}
+	}
+
+	public function createComponentEditForm()
+	{
+		$form = new UI\Form();
+		$form->getElementPrototype()->class('wide');
+		$form->addTextArea('content', '', 53, 15)
+			->setOption('description', TexyFactory::getSyntaxHelp('dashboard'))
+			->getControlPrototype()->class = 'full-width';
+		$form->addHidden('modified');
+		$form->addSubmit('cancel', 'Zrušit')
+			->setValidationScope(false)
+			->getControlPrototype()->class = 'button button-gray';
+		$form->addSubmit('send', 'Uložit stránku');
+		$form->onSuccess[] = $this->editFormSucceeded;
+		return $form;
+	}
+
+	public function editFormSucceeded($form)
+	{
+		if ($form['cancel']->isSubmittedBy()) {
+			$this->redirect('this', ['edit' => false]);
+		}
+		$values = $form->getValues();
+		$fileModification = file_exists(static::DASHBOARD_FILE) && is_file(static::DASHBOARD_FILE) && is_readable(static::DASHBOARD_FILE) ? filemtime(static::DASHBOARD_FILE) : null;
+		if ($fileModification !== null && $values->modified < $fileModification) {
+			$form->addError('Nástěnka byla během vaší editace upravena, zazálohujte si své změny a začněte znovu.');
+			return;
+		}
+		file_put_contents(static::DASHBOARD_FILE, $values->content);
+		$this->flashMessage('Nástěnka byla úspěšně upravena.');
+		$this->redirect('this', ['edit' => false]);
 	}
 }

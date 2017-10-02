@@ -7,4 +7,19 @@
 
 <p>Jste přihlášeni jako {$user->getIdentity()->name} ({$user->getIdentity()->nickname}).</p>
 
+<h2>Nástěnka</h2>
+
+{if $edit}
+	{control editForm}
+{else}
+	{ifset $dashboard}
+		{$dashboard|texy|noEscape}
+	{else}
+		<p><i>Nástěnka zatím neexistuje.</i></p>
+	{/ifset}
+	<p><a href="{plink Admin:, true}" class="button button-gray">Upravit</a></p>
+{/if}
+
+<div class="cleaner"></div>
+
 {include ../admin-menu.latte}
