@@ -336,6 +336,28 @@ class PagePresenter extends BasePresenter {
 		}
 	}
 
+	public function handleGalleryUp($pageId)
+	{
+		$this->pageDAO->moveGalleryUp($pageId);
+		if ($this->isAjax()) {
+			$this->template->galleries = $this->prepareMetaGallery();
+			$this->redrawControl('meta-gallery-blocks');
+		} else {
+			$this->redirect('this');
+		}
+	}
+
+	public function handleGalleryDown($pageId)
+	{
+		$this->pageDAO->moveGalleryDown($pageId);
+		if ($this->isAjax()) {
+			$this->template->galleries = $this->prepareMetaGallery();
+			$this->redrawControl('meta-gallery-blocks');
+		} else {
+			$this->redirect('this');
+		}
+	}
+
 	protected function createComponentGallery()
 	{
 		return $this->galleryControlFactory->create();

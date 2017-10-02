@@ -56,4 +56,13 @@ class Page extends DAO {
 			return $this->findAll()->where('event_id = ? AND url = ?', $eventId, $url)->fetch();
 		}
 	}
+
+	public function moveGalleryUp($pageId)
+	{
+		$this->getConnection()->query('UPDATE page SET gallery_meta_weight = gallery_meta_weight - 1 WHERE page_id = ?', $pageId);
+	}
+	public function moveGalleryDown($pageId)
+	{
+		$this->getConnection()->query('UPDATE page SET gallery_meta_weight = gallery_meta_weight + 1 WHERE page_id = ?', $pageId);
+	}
 }

@@ -22,6 +22,15 @@
 		<a class="ajax" title="Posunout dolů  na váhu {$block->weight+1}" href="{link down!, $block->block_id}">&#9650;</a>
 	</span>
 {/define}
+{define meta-gallery-block-options}
+	<span class="block_options" n:if="$admin">
+		<a title="Upravit" href="{plink Page:edit, $page->page_id}">✎</a>
+		<a title="Smazat" href="{plink Page:delete, $page->page_id}">✕</a>
+		<a class="ajax" title="Posunout nahoru na váhu {$page->gallery_meta_weight-1}" href="{link galleryUp!, $page->page_id}">&#9660;</a>
+		<a class="weight">{$page->gallery_meta_weight}</a>
+		<a class="ajax" title="Posunout dolů  na váhu {$page->gallery_meta_weight+1}" href="{link galleryDown!, $page->page_id}">&#9650;</a>
+	</span>
+{/define}
 
 {block #content}
 
@@ -88,21 +97,24 @@
 	<div class="cleaner"></div>
 {/if}
 {if $page->is_meta_gallery}
-	{if count($galleries) == 0}
-		<p>Nebyly nalezeny žádné galerie</p>
-	{/if}
-	{foreach $galleries as $gallery}
-		<div class="block_1x1 left" {if !empty($gallery->title)}style="background: url('{plink File:thumbnail, $gallery->title}');"{/if}>
-			<a class="block_link" href="{plink Page:show, $gallery->event ? $gallery->event->url : null, $gallery->page->url}">
-				<span class="sub-block_picture">
-					<h3>{$gallery->page->name}</h3>
-					{if $gallery->page->gallery_meta_subtitle}
-						{$gallery->page->gallery_meta_subtitle}
-					{/if}
-				</span>
-			</a>
-		</div>
-	{/foreach}
+	{snippet meta-gallery-blocks}
+		{if count($galleries) == 0}
+			<p>Nebyly nalezeny žádné galerie.</p>
+		{/if}
+		{foreach $galleries as $gallery}
+			<div class="block_1x1 left" {if !empty($gallery->title)}style="background: url('{plink File:thumbnail, $gallery->title}');"{/if}>
+				{include meta-gallery-block-options, page => $gallery->page}
+				<a class="block_link" href="{plink Page:show, $gallery->event ? $gallery->event->url : null, $gallery->page->url}">
+					<span class="sub-block_picture">
+						<h3>{$gallery->page->name}</h3>
+						{if $gallery->page->gallery_meta_subtitle}
+							{$gallery->page->gallery_meta_subtitle}
+						{/if}
+					</span>
+				</a>
+			</div>
+		{/foreach}
+	{/snippet}
 {/if}
 {if $admin && $page->is_block_page}
 	<div class="block_1x1 block_1x1_add_block left">
