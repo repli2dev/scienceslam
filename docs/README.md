@@ -31,7 +31,7 @@ the is is quite simple.
 - Checkout the project do desired directory
 - Create `/project/config/config.local.neon` where you put database configuration
   and `maintenance.key` which maybe needed for deleting cache on production (when created by `www-data` user).
-- Set `0777` permissions to `log` and `temp` recursively.
+- Set appropriate permissions to `log`, `temp` and `data` recursively (ensure that `www-data` can access it by `chmod 0777` or extended ACL).
 - Ensure that `app/config/*`, `temp`, `log` are not available from browser as sensitive data could leak here.
 - Run `php composer.phar install` to install necessary dependencies.
 - Install database (`app/updatedb.php` or manually by executing `resources/migrations` in hinted order).
