@@ -38,6 +38,9 @@ class GalleryControl extends VisualControl
 	{
 		$filesystemPath = __DIR__ . '/../../../';
 		$path = $filesystemPath . str_replace('../', '', $path);
+		if (!file_exists($path) || !is_dir($path) || !is_readable($path)) {
+			return [];
+		}
 		$images = Finder::findFiles('*')->filter(function (RecursiveDirectoryIterator $iterator) {
 			/** @var SplFileInfo $file */
 			$file = $iterator->current();
