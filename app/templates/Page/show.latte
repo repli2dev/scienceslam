@@ -74,7 +74,7 @@
 					<!-- </a> -->
 				</div>
 			{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::IMAGE}
-				<div class="block_{$block->size} left {$block->classes}" {if !empty($block->style)}style="background: url('/{!$block->style}');"{/if}>
+				<div class="block_{$block->size} left {$block->classes}" {if !empty($block->style)}style="background: url('/{!$block->style}'); background-size: cover;"{/if}>
 					{include block-options, block => $block}
 					{if !empty($block->link)}<a class="block_link" href="{$block->link}">{/if}
 					<span class="sub-block_picture">
@@ -102,7 +102,7 @@
 			<p>Nebyly nalezeny žádné galerie.</p>
 		{/if}
 		{foreach $galleries as $gallery}
-			<div class="block_1x1 left" {if !empty($gallery->title)}style="background: url('{plink File:thumbnail, $gallery->title}');"{/if}>
+			<div class="block_1x1 left" {if !empty($gallery->title)}style="background: url('{plink File:thumbnail, $gallery->title}'); background-size: cover; background-position: center;"{/if}>
 				{include meta-gallery-block-options, page => $gallery->page}
 				<a class="block_link" href="{plink Page:show, $gallery->event ? $gallery->event->url : null, $gallery->page->url}">
 					<span class="sub-block_picture">
