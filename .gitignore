@@ -18,6 +18,9 @@ app/config/config.local.neon
 # Google Search console verification file
 google*.html
 
+# Dashboard notes
+data/dashboard.texy
+
 # Standard unix home files and directories
 .bash_history
 .bash_profile
