@@ -1,0 +1,544 @@
+html, input, textarea {
+  font-family: 'CeraRoundPro', Arial, sans-serif;
+}
+
+body {
+  margin: 0px;
+  font-family: 'CeraRoundPro', Arial, sans-serif;
+  color: #002776;
+  background-color: #FFF;
+  /*position: relative;
+  overflow-x: hidden;*/
+}
+
+/* GENERAL */
+
+p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+a {
+  text-decoration: underline;
+  color: #002776;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.clearer {
+  clear: both;
+}
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.m-right-0 {
+  margin-right: 0px !important;
+}
+
+.button {
+  color: #FFF;
+  background: #002776;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  padding: 0px 38px 0px 38px;
+  text-decoration: none;
+  display: inline-block;
+  border: 0px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.button:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+
+/* LAYOUT */
+
+#main-container {
+  width: 100%;
+  min-width: 1200px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.yellow-container {
+  width: 100%;
+  min-width: 1200px;
+  background: #ffdc13;
+}
+
+.content-container {
+  width: 1080px;
+  margin: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  /*padding: 80px 30px 130px 30px; /* check against PSD */
+  position: relative;
+}
+
+.content-container h2 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0px;
+  margin-bottom: 40px; /* check against PSD */
+  letter-spacing: 2px;
+}
+
+.content-container h2.large-header {
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 4px;
+}
+
+.content-container p {
+  font-size: 16px;
+}
+
+.content-container p strong {
+  font-size: 20px;
+}
+
+.column {
+  width: 250px;
+  margin-right: 30px;
+  margin-top: 0px;
+}
+
+.two-columns-container {
+  width: 530px;
+}
+
+.two-columns {
+  columns: 2;
+  column-width: 250px;
+  column-gap: 30px;
+}
+
+.two-columns p {
+  margin-top: 0px;
+}
+
+.content-claim {
+  position: relative;
+  width: 190px;
+  height: 260px;
+  border: 5px solid #002776;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  padding: 25px;
+  letter-spacing: 4px;
+  /*text-shadow: -1px -1px 0 #002776, 1px -1px 0 #002776, -1px 1px 0 #002776, 1px 1px 0 #002776;*/
+  text-stroke: 2px #002776;
+  -webkit-text-stroke: 2px #002776;
+}
+
+.yellow-box {
+  width: 160px;
+  height: 35px;
+  background: #ffdc13;
+  position: absolute;
+  z-index: -1;
+}
+
+#bulb-container {
+  width: 330px;
+  height: 910px;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin-left: 540px;
+  background: url(../images/zarovka-drat.png) center center repeat-y;
+}
+
+#bulb {
+  width: 330px;
+  height: 460px;
+  position: absolute;
+  bottom: -460px;
+  left: 0px;
+  background: url(../images/zarovka.png) center center no-repeat;
+}
+
+/* POPUP */
+
+#popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 100px;
+  left: 50%;
+  width: 300px;
+  margin-left: -165px;
+  padding: 15px;
+  padding-top: 60px;
+  background: #FFF url(../images/menu-logo.png) 52px top no-repeat;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#cross {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: Pointer;
+}
+
+/* HEADER */
+
+#header {
+  width: 100%;
+  min-width: 1200px;
+  height: 595px;
+  background: #ffdc13 url(../images/header.png) center center no-repeat;
+}
+
+#header .header-container {
+  width: 1140px;
+  max-width: 100%;
+  height: 595px;
+  margin: auto;
+  position: relative;
+}
+
+#header ul {
+  background: rgba(255, 255, 255, 0.8) url(../images/menu-logo.png) left top no-repeat;
+  height: 60px;
+  line-height: 60px;
+  padding: 0px 0px 0px 295px;
+  list-style: none;
+  overflow: hidden;
+}
+
+#header ul li {
+  padding: 0px 12px 0px 12px;
+  margin: 0px;
+  display: inline-block;
+}
+
+#header ul li a {
+  height: 60px;
+  line-height: 60px;
+  padding: 0px;
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+#header #claim {
+  width: 510px;
+  height: 50px;
+  margin: 0px;
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: 1.2px;
+  border: 5px solid #002776;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -260px;
+}
+
+/* SCIENCE SLAM TOUR */
+
+#tour .content-container {
+  padding-top: 95px;
+  padding-bottom: 85px;
+}
+
+#tour .yellow-box {
+  top: -20px;
+  right: -35px;
+}
+
+#tour .button {
+  margin-top: 50px;
+}
+
+#map {
+  width: 800px;
+  height: 450px;
+  background: url(../images/mapa.png) center center no-repeat;
+  position: relative;
+  top: -5px;
+  left: -30px;
+  z-index: 1;
+}
+
+.map-marker {
+  position: absolute;
+  width: 36px;
+  height: 53px;
+  background: url(../images/map_marker.png) center center no-repeat;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.map-marker div {
+  position: absolute;
+  height: 18px;
+  line-height: 18px;
+  text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+}
+
+.marker-pos-left {
+  top: 8px;
+  right: 40px;
+  text-align: right;
+}
+
+.marker-pos-right {
+  top: 8px;
+  left: 40px;
+}
+
+.marker-pos-top {
+  bottom: 55px;
+  left: 18px;
+}
+
+.marker-pos-bottom {
+  top: 55px;
+  left: 18px;
+}
+
+/* AKTUALITY */
+
+#news .content-container {
+  min-height: 600px;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.news-cover {
+  width: 555px;
+  position: absolute;
+  top: -30px;
+  bottom: -30px;
+  left: 0px;
+  background: #002776;
+  overflow: hidden;
+}
+
+.news-cover p {
+  color: #FFF;
+  margin: 20px 30px 20px 30px;
+}
+
+.news-cover .button {
+  margin-left: 30px;
+  margin-top: 20px;
+  border: 2px solid #FFF;
+}
+
+#news .white-border-container {
+  margin-bottom: 50px;
+}
+
+#news .two-columns-container .button {
+  margin-left: 280px;
+  margin-top: 40px;
+}
+
+.white-border {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 2.5px solid #FFF;
+  border-radius: 2px;
+}
+
+/* CO JE SCIENCE SLAM */
+
+#science-video .content-container {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.video-container {
+  width: 800px;
+}
+
+#video {
+  width: 800px;
+  height: 450px;
+  margin-bottom: 40px;
+}
+
+#video object {
+  width: 800px;
+  height: 450px;
+}
+
+#science-video .button {
+  margin-top: 55px;
+}
+
+/* CHCI SCIENCE SLAM VE ŠKOLE */
+
+#chci-science-slam .content-container {
+  padding-top: 105px;
+  padding-bottom: 110px;
+}
+
+#chci-science-slam h2 {
+  margin-bottom: 45px;
+}
+
+form input.textbox {
+  height: 60px;
+  line-height: 60px;
+  padding: 0px 30px 0px 30px;
+  width: 465px;
+  border: 0px;
+  margin-right: 30px;
+  vertical-align: top;
+  font-size: 16px;
+}
+::-webkit-input-placeholder { color: #9e9e9e; }
+:-moz-placeholder { color: #9e9e9e; opacity: 1; }
+::-moz-placeholder { color: #9e9e9e; opacity: 1; }
+:-ms-input-placeholder { color: #9e9e9e; }
+::-ms-input-placeholder { color: #9e9e9e; }
+
+.checkbox-container {
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
+}
+
+.checkbox {
+  background: #FFF;
+  height: 60px;
+  width: 60px;
+  background: #FFF;
+  margin-right: 30px;
+  float: left;
+  cursor: Pointer;
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checked {
+  background: #FFF url(../images/checkmark.png) center center no-repeat;
+}
+
+.checkbox-container label {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+form textarea {
+  width: 1020px;
+  height: 50px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 20px 30px 20px 30px;
+  border: 0px;
+  color: #9e9e9e;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+form .button {
+  margin-top: 20px;
+}
+
+/* PODROBNÉ INFORMACE */
+
+#jak-to-probehne .content-container {
+  padding-top: 85px;
+  padding-bottom: 135px;
+}
+
+#jak-to-probehne .button {
+  margin-top: 35px;
+}
+
+#jak-to-probehne .yellow-box {
+  top: 220px;
+  right: -85px;
+}
+
+/* VÍCE O SCIENCE SLAMU */
+
+#more-info .content-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#more-info h2 {
+  margin-bottom: 30px;
+}
+
+#more-info p strong {
+  font-size: 16px;
+  letter-spacing: 1.5px;
+}
+
+#more-info .button {
+  margin-top: 30px;
+}
+
+/* FOOTER */
+
+#footer .content-container {
+  padding-top: 35px;
+  padding-bottom: 130px;
+}
+
+#footer p {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  float: left;
+  margin-right: 150px;
+}
+
+.footer-button {
+  float: right;
+  margin-left: 10px;
+}
+
+.footer-button img {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.footer-button img:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+
+@media only screen and (max-width: 1250px) {
+	#bulb-container, #bulb, .content-claim { display: none; }
+  .content-container { width: 810px; }
+  form input.textbox { width: 350px; }
+  form textarea { width: 750px; }
+  #science-video .column { width: 100%; }
+  #science-video .button { margin-top: 20px; margin-bottom: 30px; }
+  #science-video .f-right { float: left; }
+  #map { display: none; }
+  #main-container, #header, .yellow-container { min-width: 900px; }
+  #news .content-container { padding-top: 0px; }
+  .news-cover { position: relative; bottom: auto; left: auto; margin: auto; padding-bottom: 30px; }
+  #news .f-right { float: none; }
+  #news .two-columns-container { margin: auto; }
+  .white-border { margin-bottom: 20px; }
+  #header ul { background: rgba(255, 255, 255, 0.8); text-align: center; padding: 0px 20px 0px 20px; }
+}

@@ -1,0 +1,17 @@
+Veci nutne pro nasazení:
+------------------------
+OBECNE:
+  - admin/config.php - nastavit pripojeni k databazi
+  - scienceslam.sql - inicializovat databazi zalohou DB
+  - zmenit v administraci webu prihlasovaci udaje admin uctu
+
+KONTAKTNI FORMULAR & RECAPTCHA:
+  - contact_form.php#6 - nastavit hodnotu $recaptcha_pk: RECAPTCHA private key
+  - contact_form.php#33 - nastavit hodnotu $to: prijemce e-mailu z odeslanych formularu
+  - index.php#206 - nastavit hodnotu data-sitekey divu s tridou g-recaptcha: RECAPTCHA public key
+  
+DODATECNE:
+  - index.php#28 - definovat si keywords, description, apod. v hlavicce stranky
+
+AUTOR:
+  - Jiri Klimes, klimes@jiri-klimes.cz, rijen 2017
