@@ -25,7 +25,11 @@ function stripParagraphTags($text)
 
 <head>
   <meta charset="utf-8">
-  <title>Science slam</title>
+  <title>Science slam Tour</title>
+  <meta name="description" content="Science slam je projekt Masarykovy univerzity, jehož cílem je osvětlit probíhající výzkum lidem.">
+  <meta name="keywords" content="Science slam, věda, výzkum, osvětlujeme vědu, jak se dělá věda, co se zkoumá">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://scienceslam.muni.cz/images/blocks/metaphoto.jpg">
   <link href="css/MyFontsWebfontsKit.css" rel="stylesheet">
   <link href="css/style.css?v=2" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
