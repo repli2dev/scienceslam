@@ -203,7 +203,7 @@ function stripParagraphTags($text)
           <label for="newsletter">Chci dostávat NEWSLETTER</label>
         </div>
         <textarea name="text"><?php echo str_replace("<br />", "&#13;&#10;", $textsReplaced[19]); ?></textarea>
-        <div class="g-recaptcha" data-sitekey="6LcUGDUUAAAAAJRkH7VQIzmKnXKpGV6TC1VOkAOT" data-callback="enableBtn"></div>
+	<div class="g-recaptcha" data-sitekey="6Le9ijYUAAAAABY-OMZWk6bwR86hivSSuy_1F235" data-callback="enableBtn"></div>
         <input type="submit" class="button" value="Objednat Science slam" />
       </form>
     </div>
