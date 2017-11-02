@@ -19,7 +19,7 @@ include("login.php");
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/easyTooltip.js"></script>
   <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.1/classic/ckeditor.js"></script>
-  <link rel="shortcut icon" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
 </head>
 <body>
 <div id="header">

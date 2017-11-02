@@ -84,7 +84,7 @@ function stripParagraphTags($text)
   });
   </script>
   <script src="https://www.google.com/recaptcha/api.js"></script>
-  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
 </head>
 
 <body>
