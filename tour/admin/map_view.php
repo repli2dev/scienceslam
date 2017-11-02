@@ -15,10 +15,10 @@ function getLabelPositionDropdown($id, $selected)
 }
 ?>
 
-<form action="/tour/admin/map_form.php" method="post">
+<form action="map_form.php" method="post">
 <table class="edit">
 <tr>
-	<th colspan="4"><img src="/tour/admin/images/edit.png" alt="Úprava" /> Úprava lokací mapy</th>
+	<th colspan="4"><img src="images/edit.png" alt="Úprava" /> Úprava lokací mapy</th>
 </tr>
 <tr>
 	<th>Název</th>
@@ -39,7 +39,7 @@ foreach($map as $row)
 }
 ?>
 <tr>
-	<th colspan="4"><img src="/tour/admin/images/plus.png" alt="Přidat" /> Přidat lokaci mapy</th>
+	<th colspan="4"><img src="images/plus.png" alt="Přidat" /> Přidat lokaci mapy</th>
 </tr>
 <tr>
   <td><input class='text' name='map_name[0]' value='' /></td>

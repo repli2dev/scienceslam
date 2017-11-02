@@ -23,11 +23,11 @@ foreach($contacts as $row)
 		<td style=\"width: 60px; text-align: center;\">";
       if ($row["newsletter"])
       {
-        echo "<img src=\"/tour/admin/images/ok.png\" alt=\"Ano\" />";
+        echo "<img src=\"images/ok.png\" alt=\"Ano\" />";
       }
       else
       {
-        echo "<img src=\"/tour/admin/images/error.png\" alt=\"Ne\" />";
+        echo "<img src=\"images/error.png\" alt=\"Ne\" />";
       }
     echo"</td>
 	</tr>";

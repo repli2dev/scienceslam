@@ -1,9 +1,9 @@
 <?php
 session_start();
-include("admin/config.php");
+include("config.php");
 $dbInstance = new PDO(DBDSN, DBUSER, DBPASS);
 
-include("admin/login.php");
+include("login.php");
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -15,27 +15,27 @@ include("admin/login.php");
   <meta name="keywords" content="scienceslam" />
   <meta name="copyright" content="Science slam" />
   <meta name="robots" content="index,follow" />
-  <link rel="stylesheet" href="/admin/css/admin.css" type="text/css" media="all" />
-  <script type="text/javascript" src="/admin/js/jquery.js"></script>
-  <script type="text/javascript" src="/admin/js/easyTooltip.js"></script>
+  <link rel="stylesheet" href="css/admin.css" type="text/css" media="all" />
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/easyTooltip.js"></script>
   <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.1/classic/ckeditor.js"></script>
-  <link rel="shortcut icon" href="/images/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.png" />
 </head>
 <body>
 <div id="header">
   <div id="header_left"></div>
-    <a href="/admin.php" id="logo"></a>
+    <a href="/tour/admin" id="logo"></a>
   <div id="header_right"></div>
   <div id="menu">
 <?php
 if ($loggedIn >= 0)
 {
 	echo "<ul>
-    <li class='parent'><a href='/tour/admin.php'>Kontaktní formulář</a></li>
-    <li class='parent'><a href='/tour/admin.php?section=texty'>Texty</a></li>
-    <li class='parent'><a href='/tour/admin.php?section=mapa'>Mapa</a></li>
-    <li class='parent'><a href='/tour/admin.php?section=uzivatele'>Uživatelé</a></li>
-    <li class='parent'><a href='/tour/admin.php?logout=1'>Logout</a></li>
+    <li class='parent'><a href='/tour/admin/index.php'>Kontaktní formulář</a></li>
+    <li class='parent'><a href='/tour/admin/index.php?section=texty'>Texty</a></li>
+    <li class='parent'><a href='/tour/admin/index.php?section=mapa'>Mapa</a></li>
+    <li class='parent'><a href='/tour/admin/index.php?section=uzivatele'>Uživatelé</a></li>
+    <li class='parent'><a href='/tour/admin/index.php?logout=1'>Logout</a></li>
   </ul>";
 }
 ?>
@@ -50,22 +50,22 @@ if ($loggedIn >= 0)
 <?php
 if ($loggedIn < 0)
 {
-	include("admin/login_view.php");
+	include("login_view.php");
 }
 else
 {
   switch (strtolower($_GET["section"])) {
     case "texty":
-      include("admin/texty_view.php");
+      include("texty_view.php");
       break;
     case "mapa":
-      include("admin/map_view.php");
+      include("map_view.php");
       break;
     case "uzivatele":
-      include("admin/users_view.php");
+      include("users_view.php");
       break;
     default:
-      include("admin/contacts_view.php");
+      include("contacts_view.php");
   }
 }
 ?>

@@ -20,5 +20,5 @@ if(strlen($_POST["login"]) > 0)
     $_SESSION["loginFailed"] = 1;
   }
 }
-header("location: /tour/admin.php");
+header("location: /tour/admin/index.php");
 ?>

@@ -14,7 +14,7 @@ $users = $usersQuery->fetchAll();
 ?>
 
 <div class="center">
-	<a href='/tour/admin.php?section=uzivatele&amp;addUser=1'><img src='/tour/admin/images/new.png' alt='Přidat uživatele' /> Přidat uživatele</a>
+	<a href='/tour/admin/index.php?section=uzivatele&amp;addUser=1'><img src='images/new.png' alt='Přidat uživatele' /> Přidat uživatele</a>
 </div>
 <table class="list">
 <tr>
@@ -28,7 +28,7 @@ foreach($users as $row)
 {
 	echo '
 	<tr>
-		<td style="width: 30px; text-align: center;"><a href="/tour/admin.php?section=uzivatele&amp;editUser=' . $row["id"] .'"><img src="/tour/admin/images/edit.png" alt="Upravit" /></a></td>
+		<td style="width: 30px; text-align: center;"><a href="/tour/admin/index.php?section=uzivatele&amp;editUser=' . $row["id"] .'"><img src="images/edit.png" alt="Upravit" /></a></td>
 		<td><strong>' . $row["username"] . '</strong></td>
 		<td>' . $row["description"] . '</td>
 	</tr>';

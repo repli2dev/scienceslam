@@ -49,5 +49,5 @@ if ($loggedIn >= 0)
     }
   }
 }
-header("location: /tour/admin.php?section=uzivatele&editUser=" . $_POST["edit_id"]);
+header("location: /tour/admin/index.php?section=uzivatele&editUser=" . $_POST["edit_id"]);
 ?>

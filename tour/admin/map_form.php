@@ -31,5 +31,5 @@ if ($loggedIn >= 0)
     $insertQuery->execute();
   }
 }
-header("location: /tour/admin.php?section=mapa");
+header("location: /tour/admin/index.php?section=mapa");
 ?>

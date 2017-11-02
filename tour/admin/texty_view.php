@@ -43,7 +43,7 @@ foreach($texts as $row)
     {
       echo "
 	      <abbr title='" . $row["tooltip"] ."'>
-	        " . $row["name"] . "&nbsp;<img src='/tour/admin/images/question_mark.gif' />
+	        " . $row["name"] . "&nbsp;<img src='images/question_mark.gif' />
 	      </abbr>";
     }
     else
