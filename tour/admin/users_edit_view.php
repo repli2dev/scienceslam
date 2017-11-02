@@ -7,16 +7,16 @@ $editUser = $editUserQuery->fetch();
 if ($editUser)
 {
 	echo '
-	<form action="/admin/users_edit_form.php" method="post">
+	<form action="/tour/admin/users_edit_form.php" method="post">
 	<table class="edit">
 	<tr>
-		<th colspan="2"><img src="/admin/images/edit.png" alt="Úprava" /> Úprava uživatele ' . $editUser["username"]. '</th>
+		<th colspan="2"><img src="/tour/admin/images/edit.png" alt="Úprava" /> Úprava uživatele ' . $editUser["username"]. '</th>
 	</tr>';
 	if ($_SESSION["user_created"] == 1)
 	{
 		echo'
 		<tr>
-			<th colspan="2"><img src="/admin/images/ok.png" alt="OK" /> Uživatel byl úspěšně vytvořen.</th>
+			<th colspan="2"><img src="/tour/admin/images/ok.png" alt="OK" /> Uživatel byl úspěšně vytvořen.</th>
 		</tr>';
 		unset($_SESSION["user_created"]);
 	}
@@ -24,7 +24,7 @@ if ($editUser)
 	{
 		echo'
 		<tr>
-			<th colspan="2"><img src="/admin/images/ok.png" alt="OK" /> Změny byly úspěšně uloženy.</th>
+			<th colspan="2"><img src="/tour/admin/images/ok.png" alt="OK" /> Změny byly úspěšně uloženy.</th>
 		</tr>';
   		unset($_SESSION["user_edited"]);
 	}
@@ -32,7 +32,7 @@ if ($editUser)
 	{
 		echo'
 		<tr>
-			<th colspan="2"><img src="/admin/images/ok.png" alt="OK" /> Heslo bylo změněno.</th>
+			<th colspan="2"><img src="/tour/admin/images/ok.png" alt="OK" /> Heslo bylo změněno.</th>
 		</tr>';
   		unset($_SESSION["pass_changed"]);
 	}
@@ -40,7 +40,7 @@ if ($editUser)
 	{
 		echo'
 		<tr>
-			<th colspan="2"><img src="/admin/images/error.png" alt="KO" /> Heslo nebylo změněno, nesouhlasí kontrola hesla.</th>
+			<th colspan="2"><img src="/tour/admin/images/error.png" alt="KO" /> Heslo nebylo změněno, nesouhlasí kontrola hesla.</th>
 		</tr>';
   		unset($_SESSION["error_pass_doesnt_match"]);
 	}
@@ -48,7 +48,7 @@ if ($editUser)
 	{
 		echo'
 		<tr>
-			<th colspan="2"><img src="/admin/images/error.png" alt="KO" /> Uživatelské jméno je již obsazeno.</th>
+			<th colspan="2"><img src="/tour/admin/images/error.png" alt="KO" /> Uživatelské jméno je již obsazeno.</th>
 		</tr>';
 		unset($_SESSION["error_unique_login"]);
 	}

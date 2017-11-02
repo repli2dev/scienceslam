@@ -23,5 +23,5 @@ if ($loggedIn >= 0)
     }
   }
 }
-header("location: /admin.php?section=texty");
+header("location: /tour/admin.php?section=texty");
 ?>

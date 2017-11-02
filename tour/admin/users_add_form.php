@@ -49,10 +49,10 @@ if ($loggedIn >= 0)
 }
 if ($newUserId >= 0)
 {
-  header("location: /admin.php?section=uzivatele&editUser=" . $newUserId);
+  header("location: /tour/admin.php?section=uzivatele&editUser=" . $newUserId);
 }
 else
 {
-  header("location: /admin.php?section=uzivatele&addUser=1");
+  header("location: /tour/admin.php?section=uzivatele&addUser=1");
 }
 ?>

@@ -1,15 +1,15 @@
 <?php
 echo '
-<form action="/admin/users_add_form.php" method="post">
+<form action="/tour/admin/users_add_form.php" method="post">
 <table class="edit">
 <tr>
-	<th colspan="2"><img src="/admin/images/new.png" alt="Přidání" /> Vytvoření uživatele</th>
+	<th colspan="2"><img src="/tour/admin/images/new.png" alt="Přidání" /> Vytvoření uživatele</th>
 </tr>';
 if ($_SESSION["error_create_empty"] == 1)
 {
 	echo'
 	<tr>
-		<th colspan="2"><img src="/admin/images/error.png" alt="KO" /> Některý z povinných údajů nebyl vyplněn.</th>
+		<th colspan="2"><img src="/tour/admin/images/error.png" alt="KO" /> Některý z povinných údajů nebyl vyplněn.</th>
 	</tr>';
 	unset($_SESSION["error_create_empty"]);
 }
@@ -17,7 +17,7 @@ if ($_SESSION["error_create_pass_doesnt_match"] == 1)
 {
 	echo'
 	<tr>
-		<th colspan="2"><img src="/admin/images/error.png" alt="KO" /> Hesla nesouhlasí, uživatel nebyl vytvořen.</th>
+		<th colspan="2"><img src="/tour/admin/images/error.png" alt="KO" /> Hesla nesouhlasí, uživatel nebyl vytvořen.</th>
 	</tr>';
 	unset($_SESSION["error_create_pass_doesnt_match"]);
 }
@@ -25,7 +25,7 @@ if ($_SESSION["error_create_unique_login"] == 1)
 {
 	echo'
 	<tr>
-		<th colspan="2"><img src="/admin/images/error.png" alt="KO" /> Uživatelské jméno je již obsazeno.</th>
+		<th colspan="2"><img src="/tour/admin/images/error.png" alt="KO" /> Uživatelské jméno je již obsazeno.</th>
 	</tr>';
 	unset($_SESSION["error_create_unique_login"]);
 }

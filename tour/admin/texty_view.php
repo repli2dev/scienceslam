@@ -7,10 +7,10 @@ $texts = $textsQuery->fetchAll();
 
 ?>
 
-<form action="/admin/texty_form.php" method="post">
+<form action="/tour/admin/texty_form.php" method="post">
 <table class="edit">
 <tr>
-	<th colspan="2"><img src="/admin/images/edit.png" alt="Úprava" /> Úprava textů</th>
+	<th colspan="2"><img src="/tour/admin/images/edit.png" alt="Úprava" /> Úprava textů</th>
 </tr>
 
 <?php
@@ -26,7 +26,7 @@ foreach($texts as $row)
       {
         echo "
 		      <abbr title='" . $row["section_tooltip"] ."'>
-		        " . $row["section_name"] . "&nbsp;<img src='/admin/images/question_mark.gif' />
+		        " . $row["section_name"] . "&nbsp;<img src='/tour/admin/images/question_mark.gif' />
 		      </abbr>";
       }
       else
@@ -43,7 +43,7 @@ foreach($texts as $row)
     {
       echo "
 	      <abbr title='" . $row["tooltip"] ."'>
-	        " . $row["name"] . "&nbsp;<img src='/admin/images/question_mark.gif' />
+	        " . $row["name"] . "&nbsp;<img src='/tour/admin/images/question_mark.gif' />
 	      </abbr>";
     }
     else

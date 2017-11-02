@@ -31,11 +31,11 @@ include("admin/login.php");
 if ($loggedIn >= 0)
 {
 	echo "<ul>
-    <li class='parent'><a href='/admin.php'>Kontaktní formulář</a></li>
-    <li class='parent'><a href='/admin.php?section=texty'>Texty</a></li>
-    <li class='parent'><a href='/admin.php?section=mapa'>Mapa</a></li>
-    <li class='parent'><a href='/admin.php?section=uzivatele'>Uživatelé</a></li>
-    <li class='parent'><a href='/admin.php?logout=1'>Logout</a></li>
+    <li class='parent'><a href='/tour/admin.php'>Kontaktní formulář</a></li>
+    <li class='parent'><a href='/tour/admin.php?section=texty'>Texty</a></li>
+    <li class='parent'><a href='/tour/admin.php?section=mapa'>Mapa</a></li>
+    <li class='parent'><a href='/tour/admin.php?section=uzivatele'>Uživatelé</a></li>
+    <li class='parent'><a href='/tour/admin.php?logout=1'>Logout</a></li>
   </ul>";
 }
 ?>

@@ -1,4 +1,4 @@
-<form action='/admin/login_form.php' method='post'>
+<form action='/tour/admin/login_form.php' method='post'>
   <table id='login'>
 
     <tr>
@@ -9,14 +9,14 @@
       {
         echo "
         <tr>
-          <th colspan='2'><img src='/admin/images/error.png' alt='Error' /> Nesprávné přihlašovací údaje.</th>
+          <th colspan='2'><img src='/tour/admin/images/error.png' alt='Error' /> Nesprávné přihlašovací údaje.</th>
         </tr>";
       }
       if ($loggedOut > 0)
       {
         echo "
         <tr>
-          <th colspan='2'><img src='/admin/images/ok.png' alt='OK' /> Byl jste úspěšně odhlášen.</th>
+          <th colspan='2'><img src='/tour/admin/images/ok.png' alt='OK' /> Byl jste úspěšně odhlášen.</th>
         </tr>";
       }
     ?>
