@@ -182,7 +182,7 @@ function stripParagraphTags($text)
     </div>
     <div class="video-container f-left">
       <div id="video">
-        <object data="http://www.youtube.com/embed/<?php echo $textsStripped[14]; ?>"></object>
+        <object data="https://www.youtube.com/embed/<?php echo $textsStripped[14]; ?>"></object>
       </div>
       <div class="two-columns-container f-right">
         <div class="two-columns">

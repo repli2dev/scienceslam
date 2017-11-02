@@ -27,7 +27,7 @@
 
 
 /* @import must be at top of file, otherwise CSS will not work */
-@import url("http://hello.myfonts.net/count/347a64");
+@import url("https://hello.myfonts.net/count/347a64");
 
   
 @font-face {font-family: 'CeraRoundPro';font-weight: 700;src: url('webfonts/347A64_0_0.eot');src: url('webfonts/347A64_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/347A64_0_0.woff2') format('woff2'),url('webfonts/347A64_0_0.woff') format('woff'),url('webfonts/347A64_0_0.ttf') format('truetype');}

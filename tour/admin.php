@@ -75,7 +75,7 @@ else
 </div>
 <div id="bottom">
   <div id="bottom_left"></div>
-  <div id="copyright">© 2017 <a href="http://www.muni.cz">Science slam</a></div>
+  <div id="copyright">© 2017 <a href="https://www.muni.cz">Science slam</a></div>
   <div id="bottom_right"></div>
 </div>
 </body>
