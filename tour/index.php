@@ -101,10 +101,10 @@ function stripParagraphTags($text)
 <section id="header">
   <div class="header-container">&nbsp;
     <ul>
-      <li><a href="/#news"><?php echo $textsStripped[7]; ?></a></li>
-      <li><a href="/#science-video"><?php echo $textsStripped[12]; ?></a></li>
-      <li><a href="/#chci-science-slam"><?php echo $textsStripped[18]; ?></a></li>
-      <li><a href="/#jak-to-probehne"><?php echo $textsStripped[20]; ?></a></li>
+      <li><a href="#news"><?php echo $textsStripped[7]; ?></a></li>
+      <li><a href="#science-video"><?php echo $textsStripped[12]; ?></a></li>
+      <li><a href="#chci-science-slam"><?php echo $textsStripped[18]; ?></a></li>
+      <li><a href="#jak-to-probehne"><?php echo $textsStripped[20]; ?></a></li>
     </ul>
     <p id="claim"><?php echo $textsStripped[1]; ?></p>
   </div>
