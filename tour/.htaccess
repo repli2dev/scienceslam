@@ -1,0 +1,16 @@
+# Protect files not necessary for deploy
+
+<Files README>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files scienceslam.sql>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files admin/config.php>
+Order Allow,Deny
+Deny from all
+</Files>
