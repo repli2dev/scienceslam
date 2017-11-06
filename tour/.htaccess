@@ -8,7 +8,7 @@ Require all denied
 Require all denied
 </Files>
 
-<Files admin/config.php>
+<Files config.php>
 Require all denied
 </Files>
 
