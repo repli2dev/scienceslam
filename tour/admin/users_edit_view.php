@@ -12,7 +12,7 @@ if ($editUser)
 	<tr>
 		<th colspan="2"><img src="images/edit.png" alt="Úprava" /> Úprava uživatele ' . $editUser["username"]. '</th>
 	</tr>';
-	if ($_SESSION["user_created"] == 1)
+	if (isset($_SESSION["user_created"]) && $_SESSION["user_created"] == 1)
 	{
 		echo'
 		<tr>
@@ -20,7 +20,7 @@ if ($editUser)
 		</tr>';
 		unset($_SESSION["user_created"]);
 	}
-	if ($_SESSION["user_edited"] == 1)
+	if (isset($_SESSION["user_edited"]) && $_SESSION["user_edited"] == 1)
 	{
 		echo'
 		<tr>
@@ -28,7 +28,7 @@ if ($editUser)
 		</tr>';
   		unset($_SESSION["user_edited"]);
 	}
-	if ($_SESSION["pass_changed"] == 1)
+	if (isset($_SESSION["pass_changed"]) && $_SESSION["pass_changed"] == 1)
 	{
 		echo'
 		<tr>
@@ -36,7 +36,7 @@ if ($editUser)
 		</tr>';
   		unset($_SESSION["pass_changed"]);
 	}
-	if ($_SESSION["error_pass_doesnt_match"] == 1)
+	if (isset($_SESSION["error_pass_doesnt_match"]) && $_SESSION["error_pass_doesnt_match"] == 1)
 	{
 		echo'
 		<tr>
@@ -44,7 +44,7 @@ if ($editUser)
 		</tr>';
   		unset($_SESSION["error_pass_doesnt_match"]);
 	}
-	if ($_SESSION["error_unique_login"] == 1)
+	if (isset($_SESSION["error_unique_login"]) && $_SESSION["error_unique_login"] == 1)
 	{
 		echo'
 		<tr>

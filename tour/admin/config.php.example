@@ -6,4 +6,6 @@ define("DBPASS", "sciencedbpassword1520268913254"); //DB password
 
 define("RECAPTCHA_PK", "placeholder key"); // ReCAPTCHA private key
 define("SLAM_MAIL", "email@example.com"); // Notification address for form submissions
-?>
+
+// Timezone
+date_default_timezone_set('Europe/Prague');

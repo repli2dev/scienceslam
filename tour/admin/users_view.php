@@ -1,9 +1,9 @@
 <?php
-if (strlen($_GET["editUser"]) > 0)
+if (isset($_GET["editUser"]) && strlen($_GET["editUser"]) > 0)
 {
   include("users_edit_view.php");
 }
-elseif (strlen($_GET["addUser"]) > 0)
+elseif (isset($_GET["addUser"]) && strlen($_GET["addUser"]) > 0)
 {
   include("users_add_view.php");
 }

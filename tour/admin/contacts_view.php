@@ -18,8 +18,8 @@ foreach($contacts as $row)
 	echo "
 	<tr>
 		<td>" . date("j.n.Y H:i:s", strtotime($row["datetime"])) . "</td>
-		<td>" . $row["email"] . "</td>
-		<td>" . $row["text"] . "</td>
+		<td><a href='mailto:" . htmlspecialchars($row["email"]) . "'>" . htmlspecialchars($row["email"]) . "</a></td>
+		<td>" . htmlspecialchars($row["text"]) . "</td>
 		<td style=\"width: 60px; text-align: center;\">";
       if ($row["newsletter"])
       {

@@ -24,7 +24,7 @@ include("login.php");
 <body>
 <div id="header">
   <div id="header_left"></div>
-    <a href="/tour/admin" id="logo"></a>
+    <a href="/tour/admin/" id="logo"></a>
   <div id="header_right"></div>
   <div id="menu">
 <?php
@@ -54,7 +54,7 @@ if ($loggedIn < 0)
 }
 else
 {
-  switch (strtolower($_GET["section"])) {
+  switch (strtolower(isset($_GET["section"]) ? $_GET["section"] : null)) {
     case "texty":
       include("texty_view.php");
       break;

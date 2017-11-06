@@ -5,7 +5,7 @@ echo '
 <tr>
 	<th colspan="2"><img src="images/new.png" alt="Přidání" /> Vytvoření uživatele</th>
 </tr>';
-if ($_SESSION["error_create_empty"] == 1)
+if (isset($_SESSION["error_create_empty"]) && $_SESSION["error_create_empty"] == 1)
 {
 	echo'
 	<tr>
@@ -13,7 +13,7 @@ if ($_SESSION["error_create_empty"] == 1)
 	</tr>';
 	unset($_SESSION["error_create_empty"]);
 }
-if ($_SESSION["error_create_pass_doesnt_match"] == 1)
+if (isset($_SESSION["error_create_pass_doesnt_match"]) && $_SESSION["error_create_pass_doesnt_match"] == 1)
 {
 	echo'
 	<tr>
@@ -21,7 +21,7 @@ if ($_SESSION["error_create_pass_doesnt_match"] == 1)
 	</tr>';
 	unset($_SESSION["error_create_pass_doesnt_match"]);
 }
-if ($_SESSION["error_create_unique_login"] == 1)
+if (isset($_SESSION["error_create_unique_login"]) && $_SESSION["error_create_unique_login"] == 1)
 {
 	echo'
 	<tr>
