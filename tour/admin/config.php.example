@@ -4,6 +4,6 @@ define("DBDSN", "mysql:host=localhost;dbname=scienceslam;charset=utf8"); //PDO c
 define("DBUSER", "scienceslam"); //DB username
 define("DBPASS", "sciencedbpassword1520268913254"); //DB password
 
-define("RECAPTCHA_PK", "placeholder key") // ReCAPTCHA private key
-define("SLAM_MAIL", "email@example.com") // Notification address for form submissions
+define("RECAPTCHA_PK", "placeholder key"); // ReCAPTCHA private key
+define("SLAM_MAIL", "email@example.com"); // Notification address for form submissions
 ?>
