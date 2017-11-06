@@ -39,10 +39,10 @@ if($server_output_json["success"] == true)
   
   mail($to, $subject, $message, $headers);
   
-  header("location: #formular-odeslan");
+  header("location: /tour/index.php#formular-odeslan");
 }
 else
 {
-  header("location: #formular-chyba");
+  header("location: /tour/index.php#formular-chyba");
 }
 ?>
