@@ -15,6 +15,8 @@
 {/if}
 <h2>Správa stránek</h2>
 
+{include ../flashes.latte}
+
 {if $event === FALSE}
 	<p><a href="{plink Page:add, null}">Přidat novou stránku</a></p>
 {else}
@@ -28,6 +30,7 @@
 			<th>Výchozí</th>
 			<th>Bloky</th>
 			<th>Skryto</th>
+			<th>Galerie</th>
 			<th>URL</th>
 			<th>Vloženo</th>
 			<th>Poslední úprava</th>
@@ -40,6 +43,7 @@
 				<td>{if $row->is_default}ANO{/if}</td>
 				<td>{if $row->is_block_page}ANO{/if}</td>
 				<td>{if $row->hidden}ANO{/if}</td>
+				<td>{if $row->gallery_path}ANO<br><a href="{plink Page:regenerate, $row->page_id}">Přegenerovat</a>{/if}{if $row->is_meta_gallery}META{/if}</td>
 				<td>{$row->url}<br />
 					{if $event === FALSE}
 						<a href="{plink Page:show, null, $row->url}">{plink Page:show, null, $row->url}</a>

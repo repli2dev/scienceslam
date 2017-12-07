@@ -1,6 +1,7 @@
 <?php
 
 use Muni\ScienceSlam\Utils\TexyFactory;
+use Muni\ScienceSlam\Utils\Thumbnalizer;
 use Nette\Application\UI;
 use Nette\Utils\Html;
 
@@ -23,6 +24,9 @@ class PagePresenter extends BasePresenter {
 	/** @var GalleryControlFactory */
 	private $galleryControlFactory;
 
+	/** @var Thumbnalizer */
+	private $thumbnalizer;
+
 	public function injectEventDAO(\Muni\ScienceSlam\Model\Event $eventDAO) {
 		$this->eventDAO = $eventDAO;
 	}
@@ -37,6 +41,9 @@ class PagePresenter extends BasePresenter {
 	}
 	public function injectGalleryControlFactory(IGalleryControlFactory $galleryControlFactory) {
 		$this->galleryControlFactory = $galleryControlFactory;
+	}
+	public function injectThumbnalizer(Thumbnalizer $thumbnalizer) {
+		$this->thumbnalizer = $thumbnalizer;
 	}
 
 	public function startup() {
@@ -61,6 +68,20 @@ class PagePresenter extends BasePresenter {
 			}
 		} else {
 			$this->redirect('Page:show', null, $pageUrl);
+		}
+	}
+
+	public function actionRegenerate($pageId, $fileReturnPath = null) {
+		$page = $this->pageDAO->find($pageId);
+		if (!$page) {
+			throw new \Nette\Application\BadRequestException;
+		}
+		$count = $this->refreshGallery($page->gallery_path, $page->gallery_meta_title);
+		$this->flashMessage('Byl přegenerován následující počet obrázků galerie: ' . $count);
+		if ($fileReturnPath) {
+			$this->redirect('File:default', $fileReturnPath);
+		} else {
+			$this->redirect('list', $page->event_id);
 		}
 	}
 
@@ -194,6 +215,11 @@ class PagePresenter extends BasePresenter {
 
 		try {
 			$this->pageDAO->save($row);
+
+			$count = $this->refreshGallery($row->gallery_path, $row->gallery_meta_title);
+			if ($count) {
+				$this->flashMessage('Byl přegenerován následující počet obrázků galerie: ' . $count);
+			}
 		} catch(PDOException $ex) {
 			throw $ex;
 			$form->addError('URL identifikace již existuje, zadejte, prosím, jinou.');
@@ -230,6 +256,11 @@ class PagePresenter extends BasePresenter {
 		} catch(PDOException $ex) {
 			$form->addError('URL identifikace již existuje, zadejte, prosím, jinou.');
 			return;
+		}
+
+		$count = $this->refreshGallery($row->gallery_path, $row->gallery_meta_title);
+		if ($count) {
+			$this->flashMessage('Byl přegenerován následující počet obrázků galerie: ' . $count);
 		}
 		$this->flashMessage('Stránka byla úspěšně upravena.', 'success');
 		$event = $this->eventDAO->find($row->event_id);
@@ -371,9 +402,21 @@ class PagePresenter extends BasePresenter {
 			$output[$page->page_id] = $temp = new stdClass();
 			$temp->page = $page;
 			$temp->event = $page->ref('event');
-			$temp->title =  GalleryControl::getGalleryTitleImage($page->gallery_path, $page->gallery_meta_title);
+			$temp->title =  GalleryControl::getGalleryTitleImage($page->gallery_path, $this->context->getParameters()['gallery']['cacheDirPublic'], $page->gallery_meta_title);
 		}
 		return $output;
+	}
+
+	private function refreshGallery($galleryPath, $galleryMetaTitle = null)
+	{
+		$count = 0;
+		if ($galleryPath) {
+			$count += $this->thumbnalizer->thumbnalizeDirectory($this->appDir . '/../' . $galleryPath);
+			if ($galleryMetaTitle) {
+				$count += $this->thumbnalizer->thumbnalizeImage($this->appDir . '/../' . $galleryMetaTitle);
+			}
+		}
+		return $count;
 	}
 }
 

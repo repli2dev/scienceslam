@@ -3,6 +3,9 @@
 {block #content}
 	<h1>Správa souborů</h1>
 	<p n:if="$subpath">Aktuální cesta: <span class="line-pre">{$subpath}</span></p>
+	{if in_array($subpath, $galleriesDirs, true)}
+		<p>Aktuální cesta je galerií, po provedení změn je nutné <a class="link" href="{plink Page:regenerate, $galleriesDirsReversed[$subpath], $subpath}">přegenerovat</a> zmenšeniny obrázků.</p>
+	{/if}
 		
 	{include ../flashes.latte}
 
@@ -59,6 +62,9 @@
 					{$file->getBasename()}
 					{if $file->isDir()}
 						</strong>
+					{/if}
+					{if in_array($subpath . '/'. $file->getBasename(), $galleriesDirs, true)}
+						(galerie)
 					{/if}
 				</td>
 				<td>{$file->getSize()|bytes:1}</td>

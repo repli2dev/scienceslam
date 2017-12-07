@@ -22,6 +22,9 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter {
 	/** @var ISnippetControlFactory */
 	protected $snippetControlFactory;
 
+	/** @var string */
+	protected $appDir;
+
 	public function injectSnippetControlFactory(ISnippetControlFactory $snippetControlFactory) {
 		$this->snippetControlFactory = $snippetControlFactory;
 	}
@@ -35,6 +38,12 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter {
 	public function setPageKeywords($input) {
 		$this->pageKeywords = $input;
 	}
+	public function startup()
+	{
+		parent::startup();
+		$this->appDir = $this->context->getParameters()['appDir'];
+	}
+
 	protected function beforeRender() {
 		parent::beforeRender();
 		$this->template->pageTitle = (empty($this->pageTitle)) ? $this->context->parameters['page']['title'] : $this->pageTitle;

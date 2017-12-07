@@ -14,22 +14,11 @@ class FilePresenter extends BasePresenter {
 
 	protected $resource = "file";
 
-	/** @var string */
-	private $galleryCacheDir;
+	/** @var \Muni\ScienceSlam\Model\Page */
+	private $pageDAO;
 
-	/** @var int */
-	private $width;
-
-	/** @var int */
-	private $height;
-
-	public function setThumbnailDimensions($width, $height){
-		$this->width = $width;
-		$this->height = $height;
-	}
-
-	public function setGalleryCacheDir($path) {
-		$this->galleryCacheDir = $path;
+	public function injectPageDAO(\Muni\ScienceSlam\Model\Page $pageDAO) {
+		$this->pageDAO = $pageDAO;
 	}
 
 	public function startup() {
@@ -42,6 +31,9 @@ class FilePresenter extends BasePresenter {
 	}
 	
 	public function actionDefault($subpath = null) {
+		$this->template->galleriesDirs = $this->pageDAO->findGalleriesPath();
+		$this->template->galleriesDirsReversed = $this->pageDAO->findGalleriesPathReversed();
+
 		$params = $this->context->getParameters();
 		$subpath = str_replace('..', '', $subpath);
 		if(empty($subpath)) {
@@ -70,29 +62,6 @@ class FilePresenter extends BasePresenter {
 		}
 		$response = new FileResponse($file, null, isset($contentType) ? $contentType : null, isset($forceDownload) ? $forceDownload : null);
 		$this->sendResponse($response);
-	}
-
-	public function actionThumbnail($path)
-	{
-		$file = __DIR__ . '/../../' . str_replace('../', '', $path);
-		$cacheFile = $this->galleryCacheDir . str_replace('../', '', $path);
-		$contentType = @mime_content_type($file); // mute as file can be also non-existing
-		if (is_file($file) && in_array($contentType, ['image/jpeg', 'image/png', 'image/gif'], true)) {
-			if (!is_file($cacheFile) || filemtime($file) >= filemtime($cacheFile)) { // when original newer than cached
-				try {
-					FileSystem::createDir(dirname($cacheFile));
-				} catch (IOException $exception) {
-					\Tracy\Debugger::log($exception, \Tracy\ILogger::EXCEPTION);
-					throw new \Nette\Application\BadRequestException('Cannot create thumbnail (cannot create dir).', 404);
-				}
-				$image = Image::fromFile($file);
-				$image->resize($this->width, $this->height);
-				$image->save($cacheFile);
-			}
-			$response = new FileResponse($cacheFile, null, isset($contentType) ? $contentType : null, null);
-			$this->sendResponse($response);
-		}
-		throw new \Nette\Application\BadRequestException("No such image [$path].", 404);
 	}
 
 	public function createComponentAddForm($name) {

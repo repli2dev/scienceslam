@@ -49,6 +49,27 @@ class Page extends DAO {
 		return $this->findAll()->where('gallery_meta')->order('gallery_meta_weight ASC');
 	}
 
+	public function findGalleriesPath()
+	{
+		$output = [];
+		$data = $this->findAll()->where('LENGTH(gallery_path) > 0 OR LENGTH(gallery_meta_title) > 0')->fetchAll();
+		foreach ($data as $row) {
+			$output[] = $row->gallery_path;
+			$output[] = dirname($row->gallery_meta_title);
+		}
+		return array_unique(array_filter($output));
+	}
+	public function findGalleriesPathReversed()
+	{
+		$output = [];
+		$data = $this->findAll()->where('LENGTH(gallery_path) > 0 OR LENGTH(gallery_meta_title) > 0')->fetchAll();
+		foreach ($data as $row) {
+			$output[$row->gallery_path] = $row->page_id;
+			$output[dirname($row->gallery_meta_title)] = $row->page_id;
+		}
+		return $output;
+	}
+
 	public function findByUrlAndEventId($url, $eventId) {
 		if(empty($eventId)) {
 			return $this->findAll()->where('event_id IS NULL AND url = ?', $url)->fetch();
