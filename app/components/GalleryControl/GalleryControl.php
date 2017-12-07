@@ -56,7 +56,7 @@ class GalleryControl extends VisualControl
 		foreach ($images as $image) {
 			$original = Strings::replace($image->getPathname(), '#^' . preg_quote($filesystemPath, '#') . '#', '');
 			$cached = Strings::replace($original, '#^/#', $publicCachePath);
-			if (!file_exists(__DIR__ . '/../../../' . $cached)) {
+			if (!file_exists(__DIR__ . '/../../../' . $original) || !file_exists(__DIR__ . '/../../../' . $cached)) {
 				continue;
 			}
 			$output[$cached] = $original;
