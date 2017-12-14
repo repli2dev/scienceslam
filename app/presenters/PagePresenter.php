@@ -76,7 +76,7 @@ class PagePresenter extends BasePresenter {
 		if (!$page) {
 			throw new \Nette\Application\BadRequestException;
 		}
-		$count = $this->refreshGallery($page->gallery_path, $page->gallery_meta_title);
+        $count = $this->refreshGallery(isset($page->gallery_path) ? $page->gallery_path : null, isset($page->gallery_meta_title) ? $page->gallery_meta_title : null);
 		$this->flashMessage('Byl přegenerován následující počet obrázků galerie: ' . $count);
 		if ($fileReturnPath) {
 			$this->redirect('File:default', $fileReturnPath);
@@ -216,7 +216,7 @@ class PagePresenter extends BasePresenter {
 		try {
 			$this->pageDAO->save($row);
 
-			$count = $this->refreshGallery($row->gallery_path, $row->gallery_meta_title);
+			$count = $this->refreshGallery(isset($values->gallery_path) ? $values->gallery_path : null, isset($values->gallery_meta_title) ? $values->gallery_meta_title : null);
 			if ($count) {
 				$this->flashMessage('Byl přegenerován následující počet obrázků galerie: ' . $count);
 			}
@@ -258,7 +258,7 @@ class PagePresenter extends BasePresenter {
 			return;
 		}
 
-		$count = $this->refreshGallery($row->gallery_path, $row->gallery_meta_title);
+        $count = $this->refreshGallery(isset($values->gallery_path) ? $values->gallery_path : null, isset($values->gallery_meta_title) ? $values->gallery_meta_title : null);
 		if ($count) {
 			$this->flashMessage('Byl přegenerován následující počet obrázků galerie: ' . $count);
 		}
