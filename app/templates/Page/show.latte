@@ -64,16 +64,23 @@
 			{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::REGISTRATION}
 				<div class="block_1x1_halves right {$block->classes}">
 					{include block-options, block => $block}
-					<a href="{plink Sign:up}">
-						<span class="sub-block_half1">Chtěl bys prezentovat svůj vlastní výzkum a vyhrát?
-							<h1>Registrace</h1>
+					{capture $registrationContent}{control snippet:render, 'registration'}{/capture}
+					<a href="{plink Sign:up}" n:if="$registrationContent">
+						<span class="sub-block_half1">
+							{$registrationContent|noEscape}
 						</span>
 					</a>
-					<!-- <a href="{plink Page:show, null, ticket}"> -->
-						<span class="sub-block_half2">Zajímá tě, jaké to bude? Přijď!
-							<h1>Vstupné dobrovolné</h1>
+					{capture $ticketsContent}{control snippet:render, 'tickets'}{/capture}
+					{capture $ticketsLink}{control snippet:render, 'tickets-link'}{/capture}
+					{if $ticketsLink}
+						<a href="{$ticketsLink}">
+					{/if}
+					<span class="sub-block_half2" n:if="$ticketsContent">
+						{$ticketsContent|noEscape}
 					</span>
-					<!-- </a> -->
+					{if $ticketsLink}
+						</a>
+					{/if}
 				</div>
 			{elseif $block->block_type_id == Muni\ScienceSlam\Model\ListBlockType::IMAGE}
 				<div class="block_{$block->size} left {$block->classes}" {if !empty($block->style)}style="background: url('/{!$block->style}'); background-size: cover;"{/if}>

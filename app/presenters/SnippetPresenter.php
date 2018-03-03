@@ -129,6 +129,7 @@ class SnippetPresenter extends BasePresenter {
 			->setRequired('Vyplňte, prosím, klíč snippetu pod kterým bude dostupný.')
 			->setOption('description', 'musí být unikátní');
 		$form->addCheckbox('is_protected', 'Chránit před smazáním');
+        $form->addCheckbox('is_plaintext', 'Plaintext (žádné formátování)');
 		$form->addGroup('Obsah');
 		$form->addTextArea('content', '', 53, 15)
 			->setOption('description', TexyFactory::getSyntaxHelp('snippet'))

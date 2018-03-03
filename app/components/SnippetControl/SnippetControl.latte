@@ -1,1 +1,1 @@
-{$content|texyWithoutSnippets|noEscape}
+{if $isPlainText}{$content|noEscape}{else}{$content|texyWithoutSnippets|noEscape}{/if}

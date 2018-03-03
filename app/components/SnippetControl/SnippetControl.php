@@ -17,6 +17,7 @@ class SnippetControl extends VisualControl
 		$snippet = $this->snippetDAO->getByKey($key);
 		if ($snippet) {
 			$this->template->content = $snippet->content;
+			$this->template->isPlainText = $snippet->is_plaintext;
 		}
 		$this->render();
 	}
