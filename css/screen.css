@@ -73,9 +73,8 @@ body.no-scroll { height: 100%; overflow:hidden; }
 	width: 150px;
 	margin: 40px 40px 40px 10px;
 	position: relative;
-	background: url("../images/design/logo2.png");
+	background: url("../images/design/logo3.png");
 }
-.header-logo:hover { background-position: 150px 0; }
 
 .header-menu {
 	margin: 40px 0 40px 0;
